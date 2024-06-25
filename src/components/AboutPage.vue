@@ -65,7 +65,7 @@ export default {
 
 .header {
   display: block;
-  background-color: #596164;
+  background-color: #0c0f11 ;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -156,7 +156,7 @@ export default {
 
   .header {
     display: block;
-    background-color: #596164;
+    background-color: #0c0f11 ;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

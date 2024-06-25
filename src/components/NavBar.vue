@@ -102,7 +102,7 @@ button.menu-toggle {
   width: calc(100% - 4rem);
   height: 60px;
   padding: 0 2rem;
-  background-color: #596164;
+  background-color: #0c0f11 ;
   color: #ffffff;
   z-index: 100;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -212,7 +212,7 @@ button.menu-toggle {
       top: 100%;
       left: 0;
       right: 0;
-      background-color: #596164;
+      background-color: #0c0f11 ;
       padding: 1rem;
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
       opacity: 1;
@@ -248,7 +248,7 @@ button.menu-toggle {
     z-index: 10;
     width: 100vw;
 
-    background-color: #596164;
+    background-color: #0c0f11 ;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
     transform: translateY(-200%);
     transition: transform 0.6s ease-in-out;
@@ -268,7 +268,7 @@ button.menu-toggle {
       line-height: 50px;
       height: 50px;
       width: 200px;
-      background: #596164;
+      background: #0c0f11 ;
 
 
       &.active::after {
@@ -276,7 +276,7 @@ button.menu-toggle {
         display: none !important;
         width: 5px;
         height: 5px;
-        background: #596164;
+        background: #0c0f11 ;
         border-radius: 50%;
         margin: 0 auto;
         margin-top: 5px;

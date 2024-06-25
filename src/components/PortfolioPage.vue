@@ -40,7 +40,7 @@ export default {
   line-height: 80px;
   letter-spacing: -1.77px;
   letter-spacing: .5px;
-  background: #596164;
+  background: #0c0f11 ;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;

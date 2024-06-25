@@ -37,12 +37,12 @@ export default {
   align-items: center;
 
   .greetings {
-    margin-top: 40px;
+    margin-top: 20px;
     color: #fff;
     font-family: Brandon;
-    font-size: 59px;
+    font-size: 40px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 72px; /* 122.034% */
     letter-spacing: -1.77px;
   }

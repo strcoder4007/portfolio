@@ -4,28 +4,24 @@
       <el-col class="intro-section">
 
         <div class="intro-text">
+          <span class="profile-text">Machine Learning Engineer</span>
           <p class="email">mynameshubham23@gmail.com</p>
           <section class="about">
-              <p>Write a brief description about yourself, your education, current role, and previous experiences here.</p>
+              <p>
+                I am passionate about leveraging machine learning to solve 
+                complex problems which were deemed impossible in the near past. 
+                I have background in Web development and competitive programming. 
+                Explore my work and see how I can contribute to your team's success.
+              </p>
           </section>
           
-          <a href="#" class="btn">About Me</a>
+          <a href="#" class="btn">Resume</a>
           
           <div class="social-icons">
             <a href="#" title="GitHub">&#xf09b;</a>
             <a href="#" title="Facebook">&#xf09a;</a>
             <a href="#" title="Instagram">&#xf16d;</a>
           </div>
-        </div>
-        <div class="resume-container">
-          <el-button class="action-btn" @click="scrollToWork()">
-            See my work
-            <img src="../../assets/icons/arrow-down.png" alt="Arrow Right Icon" />
-          </el-button>
-          <el-button class="action-btn" @click="download()">
-            Download CV
-            <img src="../../assets/icons/download.png" alt="Arrow Right Icon" />
-          </el-button>
         </div>
       </el-col>
     </el-row>
@@ -67,9 +63,13 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 15px;
+  padding: 0 30px;
 
   .intro-text {
+    text-align: left;
+    .profile-text {
+      font-size: 35px;
+    }
     .profile-img {
       width: 150px;
       height: 150px;
@@ -87,22 +87,23 @@ export default {
     }
     .about {
         text-align: left;
-        margin: 30px;
+        margin: 30px 0;
         color: #fff;
+        word-wrap: break-word;
     }
     .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        border: 1px solid #fff;
-        text-decoration: none;
-        color: #fff;
-        margin-bottom: 30px;
+      display: grid;
+      padding: 10px 20px;
+      border: 1px solid #fff;
+      text-decoration: none;
+      color: #fff;
+      margin-bottom: 30px;
     }
     .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-bottom: 30px;
+      display: flex;
+      justify-content: start;
+      gap: 15px;
+      margin-bottom: 30px;
     }
     .social-icons a {
         color: #fff;
@@ -122,7 +123,7 @@ export default {
     font-style: normal;
     font-weight: 330;
     line-height: 72px;
-    background: #596164;
+    background: #0c0f11 ;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -165,7 +166,7 @@ export default {
     line-height: 30px;
     border-radius: 100px;
     padding: 36px 48px;
-    background: #596164;
+    background: #0c0f11 ;
     box-shadow: 0px 2.76726px 2.21381px 0px rgba(0, 0, 0, 0.02), 0px 6.6501px 5.32008px 0px rgba(0, 0, 0, 0.03), 0px 12.52155px 10.01724px 0px rgba(0, 0, 0, 0.04), 0px 22.33631px 17.86905px 0px rgba(0, 0, 0, 0.04);
     img {
       width: 20px;
@@ -181,6 +182,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 10px;
 
     .greetings {
       font-weight: 400;

@@ -44,7 +44,7 @@ html {
 }
 body {
   margin: 0;
-  background: #596164;
+  background: #0c0f11 ;
   background-position: 0 0;
   background-size: 200% 100%;
   animation: background-move 10s linear infinite;

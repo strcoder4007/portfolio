@@ -95,11 +95,11 @@ export default {
 
 <style lang="scss" scoped>
 .project-landing-page {
-  margin: 20px;
+  margin: 0 20px;
 }
 .image-container {
-    width: 400px;
-    height: 250px;
+    width: 300px;
+    height: 180px;
     background-color: #f0f0f0; 
     background-repeat: no-repeat;
     background-size: cover;
@@ -115,7 +115,7 @@ export default {
 
 
 .cvfy-container {
-  max-width: 400px;
+  max-width: 300px;
   margin: 50px auto;
 }
 

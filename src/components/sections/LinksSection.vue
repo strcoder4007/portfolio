@@ -23,7 +23,7 @@
     height: auto;
     min-height: 300px;
     width: 100vw;
-    background: #596164;
+    background: #0c0f11 ;
     backdrop-filter: blur(2px);
     display: flex;
     flex-direction: column;
