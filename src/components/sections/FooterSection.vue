@@ -3,11 +3,6 @@
         <el-col :span="12" class="policy-and-terms-section">
             © 2024 Shubham Singh. All rights reserved.
         </el-col>
-        <el-col :span="12" class="social-section">
-            <a href="https://www.behance.net/rinyyadav" target="_blank"><img src="../../assets/icons/dribble-icon.png" alt="Dribble Icon" class="dribble-icon social-icon" /></a>
-            <a href="https://www.behance.net/rinyyadav" target="_blank"><img src="../../assets/icons/linkedin-icon.png" alt="LinkedIn Icon" class="social-icon" /></a>
-            <a href="https://www.behance.net/rinyyadav" target="_blank"><img src="../../assets/icons/behance-icon.png" alt="Behance Icon" class="social-icon" /></a>
-        </el-col>
     </el-row>
 </template>
 <script>
@@ -18,9 +13,7 @@
 <style scoped>
 .footer-section {
     width: 100%;
-    min-height: 80px;
-    height: auto;
-    max-height: 200px;
+    height: 50px;
     background: transparent;
     backdrop-filter: blur(2px);
     display: flex;
@@ -32,12 +25,12 @@
 }
 .policy-and-terms-section {
     cursor: pointer;
-    color: var(--black75, rgba(38, 31, 34, 0.75));
+    color: #ffffff;
     font-family: "Brandon";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 80px;
+    line-height: 50px;
 }
 .social-section {
     a {

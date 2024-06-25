@@ -23,7 +23,7 @@
 <style scoped>
 .contact-page {
   height: auto;
-  min-height: calc(100vh - 60px - 80px);
+  min-height: calc(100vh - 60px - 50px);
   display: flex;
   flex-direction: column;
   justify-content: center;

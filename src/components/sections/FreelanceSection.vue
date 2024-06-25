@@ -60,7 +60,7 @@
 }
 .subtitle {
     display: block;
-    color: var(--black75, rgba(38, 31, 34, 0.75));
+    color: #ffffff;
     font-family: Bricolage;
     font-size: 18px;
     font-style: normal;
@@ -125,7 +125,7 @@
     align-items: center;
     border-radius: 100px;
     border: none;
-    background: var(--brand-gradient, linear-gradient(90deg, #FE572E 0%, #FC3A79 100%));
+    background: #596164;
     box-shadow: 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04);
 }
 @media (max-width: 768px) {

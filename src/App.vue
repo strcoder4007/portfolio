@@ -34,7 +34,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #fff;
   opacity: 0; /* Start invisible */
   animation: fade-in 1s ease-in-out forwards;
 }
@@ -44,7 +44,7 @@ html {
 }
 body {
   margin: 0;
-  background: linear-gradient(to bottom, #ffffff 0%, #FF745B 100%);
+  background: #596164;
   background-position: 0 0;
   background-size: 200% 100%;
   animation: background-move 10s linear infinite;

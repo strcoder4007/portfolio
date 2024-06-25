@@ -1,8 +1,8 @@
 <template>
   <header class="navbar">
     <div class="navbar-container">
-      <div class="brand-section">
-        <img src="../assets/icons/brand-icon.png" alt="Brand Icon" class="brand-icon" @click="handleSelect('Home')" />
+      <div class="terminal" @click="handleSelect('Home')">
+          &gt; Shubham Singh<span class="cursor"></span>
       </div>
       <div class="navbar-menu">
         <button class="menu-toggle" @click="toggleMenu">
@@ -11,17 +11,14 @@
           <span class="icon-bar"></span>
         </button>
         <ul class="menu-items" :class="{ 'is-open': isMenuOpen }">
-          <li class="menu-item" :class="{ 'active': activeIndex === 'home' }" @click="handleSelect('Home')">Home</li>
+          <!-- <li class="menu-item" :class="{ 'active': activeIndex === 'home' }" @click="handleSelect('Home')">Home</li> -->
           <li class="menu-item" :class="{ 'active': activeIndex === 'work' }" @click="handleSelect('work')">Work</li>
+          <li class="menu-item" :class="{ 'active': activeIndex === 'projects' }" @click="handleSelect('projects')">Projects</li>
+          <li class="menu-item" :class="{ 'active': activeIndex === 'blogs' }" @click="handleSelect('blogs')">Blogs</li>
           <!-- <li v-if="!isMobile" class="menu-item shubhams-portfolio" @click="handleSelect('Home')">Shubham's Portfolio</li> -->
           <li class="menu-item" :class="{ 'active': activeIndex === 'about' }" @click="handleSelect('About')">About me</li>
-          <li class="menu-item" :class="{ 'active': activeIndex === 'contact' }" @click="handleSelect('Contact')">Contact</li>
+          <!-- <li class="menu-item" :class="{ 'active': activeIndex === 'contact' }" @click="handleSelect('Contact')">Contact</li> -->
         </ul>
-      </div>
-      <div class="social-section">
-        <img src="../assets/icons/dribble-icon.png" alt="Dribble Icon" class="social-icon" />
-        <img src="../assets/icons/linkedin-icon.png" alt="LinkedIn Icon" class="social-icon" />
-        <img src="../assets/icons/behance-icon.png" alt="Behance Icon" class="social-icon" />
       </div>
     </div>
   </header>
@@ -67,7 +64,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.terminal {
+    font-size: 20px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background-color: #ffffff ;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    0% { opacity: 0; }
+    49% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 1; }
+}
 button.menu-toggle {
   background: none;
   border: none;
@@ -80,7 +94,7 @@ button.menu-toggle {
   width: 20px;
   height: 2px;
   margin: 2px 0;
-  background-color: #333;
+  background-color: #ffffff;
   transition: 0.3s;
 }
 
@@ -88,7 +102,8 @@ button.menu-toggle {
   width: calc(100% - 4rem);
   height: 60px;
   padding: 0 2rem;
-  background-color: #FBE9E9;
+  background-color: #596164;
+  color: #ffffff;
   z-index: 100;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -97,7 +112,7 @@ button.menu-toggle {
 
 
   .shubhams-portfolio {
-    color: #261F22;
+    color: #ffffff;
     font-family: Brandon, sans-serif;
     font-size: 40px;
     font-style: normal;
@@ -147,7 +162,7 @@ button.menu-toggle {
       .menu-items {
         display: flex;
         flex-grow: 1;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         .menu-item {
           list-style: none;
@@ -161,7 +176,7 @@ button.menu-toggle {
             display: block;
             width: 5px;
             height: 5px;
-            background: linear-gradient(90deg, #FE572E 0%, #FC3A79 100%);
+            background: #ffffff;
             border-radius: 50%;
             margin: 0 auto;
             margin-top: 5px;
@@ -197,7 +212,7 @@ button.menu-toggle {
       top: 100%;
       left: 0;
       right: 0;
-      background-color: #FBE9E9;
+      background-color: #596164;
       padding: 1rem;
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
       opacity: 1;
@@ -233,7 +248,7 @@ button.menu-toggle {
     z-index: 10;
     width: 100vw;
 
-    background-color: #FBE9E9;
+    background-color: #596164;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
     transform: translateY(-200%);
     transition: transform 0.6s ease-in-out;
@@ -253,7 +268,7 @@ button.menu-toggle {
       line-height: 50px;
       height: 50px;
       width: 200px;
-      background: linear-gradient(90deg, #FE572E 0%, #FC3A79 100%);
+      background: #596164;
 
 
       &.active::after {
@@ -261,7 +276,7 @@ button.menu-toggle {
         display: none !important;
         width: 5px;
         height: 5px;
-        background: linear-gradient(90deg, #FE572E 0%, #FC3A79 100%);
+        background: #596164;
         border-radius: 50%;
         margin: 0 auto;
         margin-top: 5px;

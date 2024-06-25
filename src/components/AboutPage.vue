@@ -11,29 +11,6 @@
           </el-row>
         </el-col>
       </el-row>
-      <div class="promises-header">Regardless of project size, you will always get:</div>
-      <el-row>
-        <el-col :md="12" class="promises">
-          <img src="../assets/icons/clock.svg">
-          <span class="promise-subheader">On-time delivery</span>
-          <span class="promise-description">I know time is money so I don’t want to waste yours. Or mine. So I guarantee that I will always deliver what you pay for as promised.</span>
-        </el-col>
-        <el-col :md="12" class="promises">
-          <img src="../assets/icons/quality.svg">
-          <span class="promise-subheader">Quality</span>
-          <span class="promise-description">I don’t want to put my name on something subpar so my first concern is always quality. No matter what, you will love the end result.</span>
-        </el-col>
-        <el-col :md="12" class="promises">
-          <img src="../assets/icons/rocket.svg">
-          <span class="promise-subheader">I can design and build a responsive and accessible  website</span>
-          <span class="promise-description">My goal is to build accessible and responsive user interfaces for the web and mobile, while preserving the best practices for proper user experience. </span>
-        </el-col>
-        <el-col :md="12" class="promises">
-          <img src="../assets/icons/phone.svg">
-          <span class="promise-subheader">I can design a mobile app for iOS and Android</span>
-          <span class="promise-description">I started designing mobile apps and I love it. It’s a different process compared to traditional website design but I’ve been successful in all projects so far.</span>
-        </el-col>
-      </el-row>
     </div>
     <ToolsSection></ToolsSection>
     <FreelanceSection class="freelance-section"></FreelanceSection>
@@ -73,7 +50,7 @@ export default {
 <style lang="scss" scoped>
 .about-page {
   height: auto;
-  min-height: calc(100vh - 60px - 80px);
+  min-height: calc(100vh - 60px - 50px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,7 +65,7 @@ export default {
 
 .header {
   display: block;
-  background-image: linear-gradient(to right, #FE572E 0%, #FC3A79 100%);
+  background-color: #596164;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -103,7 +80,7 @@ export default {
 }
 .description {
   display: block;
-  color: var(--black75, rgba(38, 31, 34, 0.75));
+  color: #ffffff;
   font-family: Brandon;
   font-size: 21px;
   font-style: normal;
@@ -153,7 +130,7 @@ export default {
     margin-top: 10px;
   }
   .promise-description {
-    color: var(--black75, rgba(38, 31, 34, 0.75));
+    color: #ffffff;
     font-family: Bricolage;
     font-size: 17px;
     font-style: normal;
@@ -164,7 +141,7 @@ export default {
 @media (max-width: 768px) {
   .about-page {
     height: auto;
-    min-height: calc(100vh - 60px - 80px);
+    min-height: calc(100vh - 60px - 50px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -179,7 +156,7 @@ export default {
 
   .header {
     display: block;
-    background-image: linear-gradient(to right, #FE572E 0%, #FC3A79 100%);
+    background-color: #596164;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -194,7 +171,7 @@ export default {
   }
   .description {
     display: block;
-    color: var(--black75, rgba(38, 31, 34, 0.75));
+    color: #ffffff;
     font-family: Brandon;
     font-size: 18px;
     font-style: normal;

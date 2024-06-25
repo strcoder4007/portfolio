@@ -40,7 +40,7 @@ export default {
   line-height: 80px;
   letter-spacing: -1.77px;
   letter-spacing: .5px;
-  background: linear-gradient(to right, #FE572E, #FC3A79);
+  background: #596164;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;

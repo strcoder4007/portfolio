@@ -23,7 +23,7 @@
     height: auto;
     min-height: 300px;
     width: 100vw;
-    background: linear-gradient(180deg, #ffffff 0%, #FF745B 100%);
+    background: #596164;
     backdrop-filter: blur(2px);
     display: flex;
     flex-direction: column;

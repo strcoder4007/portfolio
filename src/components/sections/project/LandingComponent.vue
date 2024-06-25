@@ -25,10 +25,10 @@
             {{ project.description }}
           </div>
           <div class="links-container">
-            <div class="figma" @click="goToLink('figma')">Figma <img src="../../../assets/icons/arrow-right.png" alt="Arrow Right Icon" /></div>
-            <!-- <div class="behance" @click="goToLink('behance')">Behance <img src="../../../assets/icons/arrow-right.png" alt="Arrow Right Icon" /></div>
+            <!-- <div class="figma" @click="goToLink('figma')">Figma <img src="../../../assets/icons/arrow-right.png" alt="Arrow Right Icon" /></div> -->
+            <!-- <div class="behance" @click="goToLink('behance')">Behance <img src="../../../assets/icons/arrow-right.png" alt="Arrow Right Icon" /></div> -->
             <div class="live" @click="goToLink('live')">Live <img src="../../../assets/icons/arrow-right.png" alt="Arrow Right Icon" /></div>
-            <div class="code" @click="goToLink('code')">Code <img src="../../../assets/icons/arrow-right.png" alt="Arrow Right Icon" /></div> -->
+            <div class="code" @click="goToLink('code')">Code <img src="../../../assets/icons/arrow-right.png" alt="Arrow Right Icon" /></div>
           </div>
         </div>
       </el-col>
@@ -164,6 +164,7 @@ export default {
   font-weight: 600;
   font-family: 'Brandon';
   display: flex;
+  color: #fff;
 }
 
 .project-description {
@@ -172,6 +173,7 @@ export default {
   display: flex;
   text-align: left;
   margin: 10px 0;
+  color: #fff;
 }
 
 .links-container {
@@ -183,6 +185,7 @@ export default {
     font-weight: 500;
     font-family: 'Brandon';
     margin-right: 30px;
+    color: #fff;
     cursor: pointer;
     img {
       height: 20px;

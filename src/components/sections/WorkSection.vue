@@ -2,8 +2,7 @@
   <div class="container" id="work-section">
     <el-row>
       <el-col class="work-section">
-        <div class="greetings">My work</div>
-        <div class="description">I specialize in website design,<br>but I’ve also designed successful iOS and Android apps.</div>
+        <div class="greetings">Projects</div>
         <LandingComponent></LandingComponent>
       </el-col>
     </el-row>
@@ -24,7 +23,7 @@ export default {
 <style lang="scss" scoped>
 
 .container {
-  background: transparent;
+  background: #343a40;
   overflow-y: scroll;
 }
 .work-section {
@@ -39,7 +38,7 @@ export default {
 
   .greetings {
     margin-top: 40px;
-    color: var(--Black, #261F22);
+    color: #fff;
     font-family: Brandon;
     font-size: 59px;
     font-style: normal;
@@ -49,7 +48,7 @@ export default {
   }
 
   .description {
-    color: var(--Black, #261F22);
+    color: #fff;
     text-align: center;
     font-family: Bricolage;
     font-size: 21px;
