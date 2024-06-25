@@ -65,9 +65,10 @@ export default {
 
 <style lang="scss" scoped>
 .terminal {
-    font-size: 20px;
-    color: #ffffff;
-    cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
 }
 .cursor {
     display: inline-block;
@@ -157,12 +158,13 @@ button.menu-toggle {
     .navbar-menu {
       display: flex;
       flex-grow: 1;
-      padding: 0 150px;
+      padding: 0 20px;
 
       .menu-items {
         display: flex;
         flex-grow: 1;
-        justify-content: space-evenly;
+        justify-content: end;
+        gap: 100px;
 
         .menu-item {
           list-style: none;

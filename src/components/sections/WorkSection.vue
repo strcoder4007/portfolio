@@ -43,7 +43,7 @@ export default {
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
-    line-height: 72px; /* 122.034% */
+    line-height: 72px;
     letter-spacing: -1.77px;
   }
 

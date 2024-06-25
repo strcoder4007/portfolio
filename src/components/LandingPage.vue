@@ -59,9 +59,9 @@ a {
   color: #42b983;
 }
 .floating-card {
-  height: calc(100vh - 60px - 50px - 80px);
-  width: 94%;
-  margin: 40px;
+  height: calc(100vh - 60px - 40px);
+  width: 96%;
+  margin: 20px;
   background-color: white;
   border-radius: 20px;
   overflow-y: scroll;

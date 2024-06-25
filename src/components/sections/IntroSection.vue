@@ -5,12 +5,13 @@
 
         <div class="intro-text">
           <span class="profile-text">Machine Learning Engineer</span>
+          <p class="phone">(+91) 8126062707</p>
           <p class="email">mynameshubham23@gmail.com</p>
           <section class="about">
               <p>
-                I am passionate about leveraging machine learning to solve 
-                complex problems which were deemed impossible in the near past. 
-                I have background in Web development and competitive programming. 
+                Passionate about leveraging Computer Vision and Deep learning to solve 
+                problems deemed impossible in the recent past.<br><br>
+                I have background in Web Dev (Javascript/Vue/React) and Competitive programming (C++). <br><br>
                 Explore my work and see how I can contribute to your team's success.
               </p>
           </section>
@@ -56,19 +57,20 @@ export default {
   background: transparent;
 }
 .intro-section {
-  height: calc(100vh - 60px - 50px);
+  height: calc(100vh - 60px);
   background: transparent;
   backdrop-filter: blur(2px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 20px 0 30px;
 
   .intro-text {
     text-align: left;
     .profile-text {
-      font-size: 35px;
+      font-size: 50px;
+      font-weight: 700;
     }
     .profile-img {
       width: 150px;
@@ -76,20 +78,17 @@ export default {
       border-radius: 50%;
       object-fit: cover;
     }
-    h1 {
-        margin-top: 20px;
-        font-size: 24px;
-        text-transform: uppercase;
-    }
-    .email {
+    .email, .phone {
         color: #ffffff;
-        margin-bottom: 30px;
+        letter-spacing: 2px;
     }
     .about {
         text-align: left;
         margin: 30px 0;
+        font-size: 20px;
         color: #fff;
         word-wrap: break-word;
+        line-height: 25px;
     }
     .btn {
       display: grid;
