@@ -1,8 +1,10 @@
-# Shubham's Portfolio
+# Machine Learning Engineer Portfolio
 
-Welcome to the repository for Shubham's Portfolio! Here, you'll find design projects that showcase my passion for visual storytelling and creative problem-solving.
+This is a fully responsive portfolio website I've made in Vue 3 and Element Plus UI Library. Feel free to use it as your own, it would only need content change.
 
 ## Getting Started:
+
+Recommended: Node v20
 
 Clone the repository:
 
@@ -27,11 +29,8 @@ Typically, the project will open at http://localhost:8080/.
 
 Feel free to reach out if you have any questions or would like to collaborate!
 
-[Your Email]
-[Your Social Media Links]
-## Licensing
+[mynameshubham23@gmail.com]
 
-[Specify any licensing details if applicable]
 ## Contribute
 
 I'm open to contributions! Feel free to submit pull requests or open issues for any suggestions or improvements.
