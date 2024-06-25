@@ -2,10 +2,6 @@
   <div class="container">
     <el-row>
       <el-col class="intro-section">
-        <div class="greetings">Hey there, I'm Shubham</div>
-        <div class="profile">Machine Learning Engineer</div>
-        <div class="description">I help business grow by crafting amazing web experiences. If you’re looking for a designer that likes to get stuff done, let’s talk.</div>
-
         <div class="resume-container">
           <el-button class="action-btn" @click="scrollToWork()">
             See my work
@@ -50,7 +46,7 @@ export default {
   background: transparent;
 }
 .intro-section {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 60px - 80px);
   background: transparent;
   backdrop-filter: blur(2px);
   display: flex;
@@ -93,12 +89,13 @@ export default {
 
   .resume-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0;
+    padding: 20px 0;
   }
   .action-btn {
+    margin-bottom: 20px;
     color: #FFF;
     font-family: Bricolage;
     font-size: 21px;

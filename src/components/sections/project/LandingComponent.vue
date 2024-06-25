@@ -95,7 +95,7 @@ export default {
 
 <style lang="scss" scoped>
 .project-landing-page {
-  margin: 80px;
+  margin: 20px;
 }
 .image-container {
     width: 400px;

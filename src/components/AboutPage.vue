@@ -73,7 +73,7 @@ export default {
 <style lang="scss" scoped>
 .about-page {
   height: auto;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 60px - 80px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -164,7 +164,7 @@ export default {
 @media (max-width: 768px) {
   .about-page {
     height: auto;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 60px - 80px);
     display: flex;
     flex-direction: column;
     justify-content: center;

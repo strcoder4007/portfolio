@@ -86,7 +86,7 @@ button.menu-toggle {
 
 .navbar {
   width: calc(100% - 4rem);
-  height: 100px;
+  height: 60px;
   padding: 0 2rem;
   background-color: #FBE9E9;
   z-index: 100;

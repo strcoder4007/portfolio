@@ -25,10 +25,11 @@ export default {
 
 .container {
   background: transparent;
+  overflow-y: scroll;
 }
 .work-section {
-  min-height: 100vh;
-  height: auto;
+  overflow-y: scroll;
+  height: 100%;
   background: transparent;
   backdrop-filter: blur(2px);
   display: flex;
@@ -37,6 +38,7 @@ export default {
   align-items: center;
 
   .greetings {
+    margin-top: 40px;
     color: var(--Black, #261F22);
     font-family: Brandon;
     font-size: 59px;
@@ -61,6 +63,7 @@ export default {
   .work-section {
 
     .greetings {
+      margin-top: 20px;
       font-size: 40px;
       font-weight: 700;
     }

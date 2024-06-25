@@ -1,13 +1,23 @@
 <template>
   <div>
-    <IntroSection></IntroSection>
-    <WorkSection></WorkSection>
+    <el-row>
+      <el-col :sm="24" :md="8">
+        <IntroSection></IntroSection>
+      </el-col>
+      <el-col :sm="24" :md="16">
+        <div class="floating-card">
+          <WorkSection></WorkSection>
+        </div>
+      </el-col>
+    </el-row>
+    
+    <!-- 
     <ToolsSection></ToolsSection>
     <FreelanceSection></FreelanceSection>
     <span class="designed-by-me">
       <img src="../assets/icons/heart.png" alt="Heart Icon" />
       Designed by me
-    </span>
+    </span> -->
     <FooterSection></FooterSection>
   </div>
 </template>
@@ -15,9 +25,9 @@
 <script>
 import IntroSection from "./sections/IntroSection.vue";
 import WorkSection from "./sections/WorkSection.vue";
-import FreelanceSection from "./sections/FreelanceSection.vue";
+// import FreelanceSection from "./sections/FreelanceSection.vue";
+// import ToolsSection from "./sections/ToolsSection.vue";
 import FooterSection from "./sections/FooterSection.vue";
-import ToolsSection from "./sections/ToolsSection.vue";
 export default {
   name: "LandingPage",
   props: {
@@ -26,9 +36,9 @@ export default {
   components: {
     IntroSection,
     WorkSection,
-    FreelanceSection,
-    FooterSection,
-    ToolsSection
+    // FreelanceSection,
+    // ToolsSection,
+    FooterSection
   },
 };
 </script>
@@ -48,20 +58,14 @@ li {
 a {
   color: #42b983;
 }
-.designed-by-me {
-  img {
-    width: 18px;
-    height: 17px;
-    margin: 0 7px;
-  }
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Bricolage";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 80px;
-  color: black;
+.floating-card {
+  height: calc(100vh - 60px - 80px - 80px);
+  width: 94%;
+  margin: 40px;
+  background-color: white;
+  border-radius: 20px;
+  overflow-y: scroll;
+}
+@media (max-width: 768px) {
 }
 </style>
