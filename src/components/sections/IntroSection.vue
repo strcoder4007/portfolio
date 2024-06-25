@@ -36,7 +36,7 @@ export default {
     },
     download() {
       const link = document.createElement('a')
-      link.href = 'https://strcoder4007.github.io/graphic-designer-portfolio/resume.pdf'
+      link.href = 'https://strcoder4007.github.io/portfolio/resume.pdf'
       link.download = 'Shubham_Resume.pdf'
       link.click();
     }

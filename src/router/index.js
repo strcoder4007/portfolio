@@ -28,7 +28,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory('/graphic-designer-portfolio/'),
+  history: createWebHistory('/portfolio/'),
   routes,
 });
 
