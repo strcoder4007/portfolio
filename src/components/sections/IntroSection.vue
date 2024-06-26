@@ -9,20 +9,24 @@
           <p class="email">mynameshubham23@gmail.com</p>
           <section class="about">
               <p>
-                Passionate about leveraging Computer Vision and Deep learning to solve 
+                Passionate about leveraging <mark>Computer Vision</mark> and <mark>Deep learning</mark> to solve 
                 problems deemed impossible in the recent past.<br><br>
-                I have background in Web Dev (Javascript/Vue/React) and Competitive programming (C++). <br><br>
+                I have <mark>6 years of experience as a Software Engineer (Javascript/Vue/React)</mark> and a solid background in <mark>Algorithms and Data Structures (C++).</mark><br><br>
                 Explore my work and see how I can contribute to your team's success.
               </p>
           </section>
           
-          <a href="#" class="btn">Resume</a>
-          
-          <div class="social-icons">
-            <a href="#" title="GitHub">&#xf09b;</a>
-            <a href="#" title="Facebook">&#xf09a;</a>
-            <a href="#" title="Instagram">&#xf16d;</a>
+          <a href="#" class="btn">Resume <img src="../../assets/icons/right-arrow.png" alt="Arrow Icon"/></a>
+
+          <div class="social-section">
+            <a href="https://github.com/strcoder4007" target="_blank"><img src="../../assets/icons/github.png" alt="Github Icon" class="social-icon" /></a>
+            <a href="https://www.linkedin.com/in/riny-yadav-a24a90238/" target="_blank"><img src="../../assets/icons/linkedin.png" alt="LinkedIn Icon" class="social-icon" /></a>
           </div>
+
+          <span class="policy-and-terms-section">
+            © 2024 Shubham Singh. All rights reserved.
+          </span>
+        
         </div>
       </el-col>
     </el-row>
@@ -37,6 +41,11 @@ export default {
 
     return {
     };
+  },
+  mounted() {
+    setTimeout(() => {
+      document.querySelectorAll('mark').forEach(e => e.style.color = "black");
+    }, 2000);
   },
   methods: {
     scrollToWork() {
@@ -89,14 +98,42 @@ export default {
         color: #fff;
         word-wrap: break-word;
         line-height: 25px;
+
+        mark {
+          transition: color 1.5s ease;
+          -webkit-animation: 1.5s highlight 1.5s 1 normal forwards;
+          animation: 1.5s highlight 1.5s 1 normal forwards;
+          background-color: #0c0f11;
+          color: #fff;
+          background: linear-gradient(90deg, #1DB954 50%, #000 50%);
+          background-size: 200% 100%;
+          background-position: 100% 0;
+        }
+        @-webkit-keyframes highlight {
+          to {
+            background-position: 0 0;
+          }
+        }
+        @keyframes highlight {
+          to {
+            background-position: 0 0;
+          }
+        }
     }
     .btn {
-      display: grid;
+      display: block;
       padding: 10px 20px;
       border: 1px solid #fff;
       text-decoration: none;
       color: #fff;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
+      line-height: 25px;
+      img {
+        width: 20px;
+        height: auto;
+        margin-bottom: -5px;
+        margin-left: 5px;
+      }
     }
     .social-icons {
       display: flex;
@@ -112,6 +149,16 @@ export default {
     .footer {
         font-size: 12px;
         color: #fff;
+    }
+    .policy-and-terms-section {
+      color: #ffffff;
+      font-family: "Brandon";
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 50px;
+      position: absolute;
+      bottom: 0;
     }
   }
 
@@ -155,23 +202,16 @@ export default {
     align-items: center;
     padding: 20px 0;
   }
-  .action-btn {
-    margin-bottom: 20px;
-    color: #FFF;
-    font-family: Bricolage;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 30px;
-    border-radius: 100px;
-    padding: 36px 48px;
-    background: #0c0f11 ;
-    box-shadow: 0px 2.76726px 2.21381px 0px rgba(0, 0, 0, 0.02), 0px 6.6501px 5.32008px 0px rgba(0, 0, 0, 0.03), 0px 12.52155px 10.01724px 0px rgba(0, 0, 0, 0.04), 0px 22.33631px 17.86905px 0px rgba(0, 0, 0, 0.04);
-    img {
-      width: 20px;
-      height: 20px;
-      margin-left: 15px;
-    }
+}
+.social-section {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin: 20px 0;
+  gap: 15px;
+  img {
+      width: 30px;
+      height: auto;
   }
 }
 @media (max-width: 768px) {
@@ -197,17 +237,6 @@ export default {
       line-height: 20px;
       padding: 0 20px;
       margin-top: 20px;
-    }
-
-    .action-btn {
-      font-size: 15px;
-      line-height: 20px;
-      padding: 20px 25px;
-      img {
-        width: 15px;
-        height: 15px;
-        margin-left: 10px;
-      }
     }
   }
 }

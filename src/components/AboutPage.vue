@@ -14,13 +14,11 @@
     </div>
     <ToolsSection></ToolsSection>
     <FreelanceSection class="freelance-section"></FreelanceSection>
-    <FooterSection></FooterSection>
   </div>
 
 </template>
 
 <script>
-import FooterSection from './sections/FooterSection.vue';
 import ToolsSection from './sections/ToolsSection.vue';
 import FreelanceSection from './sections/FreelanceSection.vue';
 
@@ -41,7 +39,6 @@ export default {
   },
   components: {
     FreelanceSection,
-    FooterSection,
     ToolsSection
 },
 };

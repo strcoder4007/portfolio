@@ -2,19 +2,16 @@
   <div class="portfolio-page">
     <div class="greetings">Projects</div>
     <LandingComponent></LandingComponent>
-    <FooterSection></FooterSection>
   </div>
 </template>
 
 <script>
-import FooterSection from "./sections/FooterSection.vue";
 import LandingComponent from "./sections/project/LandingComponent.vue"
 export default {
   name: "PortfolioPage",
   mounted() {
   },
   components: {
-    FooterSection,
     LandingComponent
   },
 };

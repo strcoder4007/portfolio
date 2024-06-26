@@ -2,13 +2,13 @@
     <div class="links-section">
         <span class="header">Links</span>
         <span class="subheader">You can find my work here</span>
-        <div class="social-section">
+        <!-- <div class="social-section">
             <a href="https://www.behance.net/rinyyadav" target="_blank"><img src="../../assets/icons/behance-icon-colored.svg" alt="Behance Icon" class="social-icon" /></a>
             <a href="https://www.linkedin.com/in/riny-yadav-a24a90238/" target="_blank"><img src="../../assets/icons/linkedin-icon-colored.svg" alt="LinkedIn Icon" class="social-icon" /></a>
             <a href="" target="_blank"><img src="../../assets/icons/wix-icon-colored.svg" alt="Wix Icon" class="social-icon" /></a>
             <a href="https://dribbble.com/rinydesigns" target="_blank"><img src="../../assets/icons/dribble-icon-colored.svg" alt="Dribble Icon" class="social-icon" /></a>
             <a href="" target="_blank"><img src="../../assets/icons/pintrest-icon-colored.svg" alt="Pintrest Icon" class="social-icon" /></a>
-        </div>
+        </div> -->
     </div>
 </template>
 <script>

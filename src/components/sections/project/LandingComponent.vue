@@ -27,8 +27,8 @@
           <div class="links-container">
             <!-- <div class="figma" @click="goToLink('figma')">Figma <img src="../../../assets/icons/arrow-right.png" alt="Arrow Right Icon" /></div> -->
             <!-- <div class="behance" @click="goToLink('behance')">Behance <img src="../../../assets/icons/arrow-right.png" alt="Arrow Right Icon" /></div> -->
-            <div class="live" @click="goToLink('live')">Live <img src="../../../assets/icons/arrow-right.png" alt="Arrow Right Icon" /></div>
-            <div class="code" @click="goToLink('code')">Code <img src="../../../assets/icons/arrow-right.png" alt="Arrow Right Icon" /></div>
+            <div class="live" @click="goToLink('live')">Live <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" /></div>
+            <div class="code" @click="goToLink('code')">Code <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" /></div>
           </div>
         </div>
       </el-col>
@@ -116,13 +116,12 @@ export default {
 
 .cvfy-container {
   max-width: 350px;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 
 .cvfy-card {
   background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
   overflow: hidden;
   margin-bottom: 40px;
   cursor: pointer;
@@ -165,6 +164,7 @@ export default {
   font-family: 'Brandon';
   display: flex;
   color: #fff;
+  margin-top: -20px;
 }
 
 .project-description {
@@ -195,6 +195,8 @@ export default {
   }
   .live:hover, .code:hover, .behance:hover, .figma:hover {
     text-decoration: underline;
+    text-decoration-color: #1DB954;
+    text-decoration-thickness: 3px;
   }
 }
 

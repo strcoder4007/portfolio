@@ -2,7 +2,7 @@
   <header class="navbar">
     <div class="navbar-container">
       <div class="terminal" @click="handleSelect('Home')">
-          &gt; Shubham Singh<span class="cursor"></span>
+          <span class="carret">&gt;</span> Shubham Singh <span class="cursor"></span>
       </div>
       <div class="navbar-menu">
         <button class="menu-toggle" @click="toggleMenu">
@@ -12,9 +12,10 @@
         </button>
         <ul class="menu-items" :class="{ 'is-open': isMenuOpen }">
           <!-- <li class="menu-item" :class="{ 'active': activeIndex === 'home' }" @click="handleSelect('Home')">Home</li> -->
-          <li class="menu-item" :class="{ 'active': activeIndex === 'work' }" @click="handleSelect('work')">Work</li>
-          <li class="menu-item" :class="{ 'active': activeIndex === 'projects' }" @click="handleSelect('projects')">Projects</li>
+          <li class="menu-item" :class="{ 'active': activeIndex === 'home' }" @click="handleSelect('home')">Projects</li>
           <li class="menu-item" :class="{ 'active': activeIndex === 'blogs' }" @click="handleSelect('blogs')">Blogs</li>
+          <li class="menu-item" :class="{ 'active': activeIndex === 'work' }" @click="handleSelect('work')">Work</li>
+          <li class="menu-item" :class="{ 'active': activeIndex === 'github' }" @click="handleSelect('github')">Github Stats</li>
           <!-- <li v-if="!isMobile" class="menu-item shubhams-portfolio" @click="handleSelect('Home')">Shubham's Portfolio</li> -->
           <li class="menu-item" :class="{ 'active': activeIndex === 'about' }" @click="handleSelect('About')">About me</li>
           <!-- <li class="menu-item" :class="{ 'active': activeIndex === 'contact' }" @click="handleSelect('Contact')">Contact</li> -->
@@ -69,13 +70,17 @@ export default {
   font-size: 20px;
   color: #ffffff;
   cursor: pointer;
+  .carret {
+    font-size: 25px;
+    color: #1DB954;
+  }
 }
 .cursor {
-    display: inline-block;
-    width: 10px;
-    height: 20px;
-    background-color: #ffffff ;
-    animation: blink 0.7s infinite;
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background-color: #1DB954 ;
+  animation: blink 0.7s infinite;
 }
 @keyframes blink {
     0% { opacity: 0; }
@@ -106,10 +111,10 @@ button.menu-toggle {
   background-color: #0c0f11 ;
   color: #ffffff;
   z-index: 100;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
 
 
   .shubhams-portfolio {
@@ -158,7 +163,7 @@ button.menu-toggle {
     .navbar-menu {
       display: flex;
       flex-grow: 1;
-      padding: 0 20px;
+      padding: 0px;
 
       .menu-items {
         display: flex;
@@ -171,17 +176,19 @@ button.menu-toggle {
           font-weight: bold;
           text-decoration: none;
           cursor: pointer;
-          margin-top: 10px;
+
+          &.active {
+            color: #1DB954;
+          }
 
           &.active::after {
-            content: '';
+            content: '>';
             display: block;
-            width: 5px;
-            height: 5px;
-            background: #ffffff;
-            border-radius: 50%;
-            margin: 0 auto;
-            margin-top: 5px;
+            width: 0px;
+            height: 0px;
+            background: #1DB954;
+            margin-left: -12px;
+            margin-top: -20px;
           }
         }
       }

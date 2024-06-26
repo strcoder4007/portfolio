@@ -28,6 +28,10 @@ html {
   scroll-behavior: smooth;
   height: auto;
 }
+::selection {
+  color: #000;
+  background: #1DB954;
+}
 
 #app {
   font-family: Bricolage, Avenir, Helvetica, Arial, sans-serif;
@@ -44,7 +48,7 @@ html {
 }
 body {
   margin: 0;
-  background: #0c0f11 ;
+  background: #0c0f11;
   background-position: 0 0;
   background-size: 200% 100%;
   animation: background-move 10s linear infinite;

@@ -2,18 +2,15 @@
   <div class="contact-page">
       <FreelanceSection class="freelance-section"></FreelanceSection>
       <LinksSection class="links-section"></LinksSection>
-      <FooterSection></FooterSection>
   </div>
 </template>
   
 <script>
-  import FooterSection from './sections/FooterSection.vue';
   import LinksSection from './sections/LinksSection.vue';
   import FreelanceSection from './sections/FreelanceSection.vue';
   export default {
     name: "ContactPage",
     components: {
-      FooterSection,
       LinksSection,
       FreelanceSection
     },
