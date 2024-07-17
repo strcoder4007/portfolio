@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     scrollToWork() {
-      document.getElementById('work-section').scrollIntoView()
+      document.getElementById('projects-section').scrollIntoView()
     },
     download() {
       const link = document.createElement('a')

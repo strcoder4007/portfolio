@@ -6,38 +6,37 @@
       </el-col>
       <el-col :sm="24" :md="17">
         <div class="floating-card">
-          <WorkSection></WorkSection>
+          <!-- Dynamically render the section based on the current route -->
+          <component :is="currentSection"></component>
         </div>
       </el-col>
     </el-row>
-    
-    <!-- 
-    <ToolsSection></ToolsSection>
-    <FreelanceSection></FreelanceSection>
-    <span class="designed-by-me">
-      <img src="../assets/icons/heart.png" alt="Heart Icon" />
-      Designed by me
-    </span> -->
   </div>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
 import IntroSection from "./sections/IntroSection.vue";
-import WorkSection from "./sections/WorkSection.vue";
-// import FreelanceSection from "./sections/FreelanceSection.vue";
-// import ToolsSection from "./sections/ToolsSection.vue";
-export default {
-  name: "LandingPage",
-  props: {
-    msg: String,
-  },
-  components: {
-    IntroSection,
-    WorkSection,
-    // FreelanceSection,
-    // ToolsSection
-  },
+import ProjectsSection from "./sections/ProjectsSection.vue";
+import BlogsSection from "./sections/BlogsSection.vue";
+import GithubSection from "./sections/GithubSection.vue";
+import AboutSection from "./sections/AboutSection.vue";
+import ResumeSection from "./sections/ResumeSection.vue";
+
+const route = useRoute();
+
+// Define a reactive section to watch for changes in the current path
+const sectionsMap = {
+  '/': ProjectsSection,
+  '/projects': ProjectsSection,
+  '/blogs': BlogsSection,
+  '/github': GithubSection,
+  '/about': AboutSection,
+  '/resume': ResumeSection
 };
+const currentSection = computed(() => sectionsMap[route.path] || ProjectsSection);
+
 </script>
 
 <style scoped>

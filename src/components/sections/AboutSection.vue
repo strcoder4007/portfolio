@@ -6,8 +6,8 @@
           <span class="header">Hi! I’m Shubham Singh. </span>
           <span class="description" v-html="description"></span>
           <el-row class="image-section">
-            <el-col :md="12"><img src="../assets/portrait/one.png"></el-col>
-            <el-col :md="12"><img src="../assets/portrait/two.png"></el-col>
+            <el-col :md="12"><img src="../../assets/portrait/one.png"></el-col>
+            <el-col :md="12"><img src="../../assets/portrait/two.png"></el-col>
           </el-row>
         </el-col>
       </el-row>
@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import ToolsSection from './sections/ToolsSection.vue';
-import FreelanceSection from './sections/FreelanceSection.vue';
+import ToolsSection from '../sections/ToolsSection.vue';
+import FreelanceSection from '../sections/FreelanceSection.vue';
 
 export default {
   name: "AboutPage",

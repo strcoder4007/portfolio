@@ -1,21 +1,18 @@
 <template>
-  <div class="container" id="work-section">
+  <div class="container" id="github-section">
     <el-row>
-      <el-col class="work-section">
-        <div class="greetings">Projects</div>
-        <LandingComponent></LandingComponent>
+      <el-col class="github-section">
+        <div class="greetings">Github</div>
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
-import LandingComponent from "./project/LandingComponent.vue"
 
 export default {
-  name: "WorkSection",
+  name: "GithubSection",
   components: {
-    LandingComponent
   },
 };
 </script>
@@ -26,7 +23,7 @@ export default {
   background: #222222;
   overflow-y: scroll;
 }
-.work-section {
+.github-section {
   overflow-y: scroll;
   height: 100%;
   background: transparent;
@@ -59,7 +56,7 @@ export default {
   }
 }
 @media (max-width: 768px) {
-  .work-section {
+  .github-section {
 
     .greetings {
       margin-top: 20px;
