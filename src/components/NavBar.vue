@@ -119,7 +119,7 @@ button.menu-toggle {
 
   .shubhams-portfolio {
     color: #ffffff;
-    font-family: Brandon, sans-serif;
+    font-family: Ubuntu, Brandon, sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 900 !important;
@@ -268,7 +268,7 @@ button.menu-toggle {
       text-decoration: none;
       cursor: pointer;
 
-      font-family: Brandon, sans-serif;
+      font-family: Ubuntu, Brandon, sans-serif;
 
       border-radius: 4px;
       color: #FFFFFF;

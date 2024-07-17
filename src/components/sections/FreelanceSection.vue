@@ -50,7 +50,7 @@
 .title {
     display: block;
     color: var(--Black, #261F22);
-    font-family: Brandon;
+    font-family: Ubuntu, Brandon;
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
@@ -61,7 +61,7 @@
 .subtitle {
     display: block;
     color: #ffffff;
-    font-family: Bricolage;
+    font-family: Montserrat, Bricolage;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -104,7 +104,7 @@
     background: #ffffff;
     color: #000;
 
-    font-family: Brandon;
+    font-family: Ubuntu, Brandon;
     font-size: 18px;
     font-style: normal;
     font-weight: 450;
@@ -112,7 +112,7 @@
 }
 .connect {
     color: #FFF;
-    font-family: Bricolage;
+    font-family: Montserrat, Bricolage;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;

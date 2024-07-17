@@ -152,7 +152,7 @@ export default {
     }
     .policy-and-terms-section {
       color: #ffffff;
-      font-family: "Brandon";
+      font-family: Ubuntu, Brandon;
       font-size: 13px;
       font-style: normal;
       font-weight: 400;
@@ -164,7 +164,7 @@ export default {
 
   .greetings {
     text-align: center;
-    font-family: Brandon;
+    font-family: Ubuntu, Brandon;
     font-size: 59px;
     font-style: normal;
     font-weight: 330;
@@ -177,7 +177,7 @@ export default {
   .profile {
     color: var(--Black, #261F22);
     text-align: center;
-    font-family: Bricolage;
+    font-family: Montserrat, Bricolage;
     font-size: 119px;
     font-style: normal;
     font-weight: 700;
@@ -188,7 +188,7 @@ export default {
   .description {
     color: #ffffff;
     text-align: center;
-    font-family: Bricolage;
+    font-family: Montserrat, Bricolage;
     font-size: 21px;
     font-style: normal;
     font-weight: 400;

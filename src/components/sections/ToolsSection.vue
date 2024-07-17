@@ -63,7 +63,7 @@
     .title {
         display: block;
         color: var(--Black, #261F22);
-        font-family: Brandon;
+        font-family: Ubuntu, Brandon;
         font-size: 36px;
         font-style: normal;
         font-weight: 700;

@@ -39,7 +39,7 @@ export default {
   .greetings {
     margin-top: 20px;
     color: #fff;
-    font-family: Brandon;
+    font-family: Montserrat, Bricolage;
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
@@ -50,7 +50,7 @@ export default {
   .description {
     color: #fff;
     text-align: center;
-    font-family: Bricolage;
+    font-family: Montserrat, Bricolage;
     font-size: 21px;
     font-style: normal;
     font-weight: 400;

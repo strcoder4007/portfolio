@@ -33,7 +33,7 @@
 
     .header {
         color: var(--Black, #261F22);
-        font-family: "Brandon";
+        font-family: Ubuntu, Brandon;
         font-size: 59px;
         font-style: normal;
         font-weight: 330;
@@ -43,7 +43,7 @@
 
     .subheader {
         color: #000;
-        font-family: 'Bricolage';
+        font-family: Montserrat, Bricolage;
         font-size: 21px;
         font-style: normal;
         font-weight: 400;

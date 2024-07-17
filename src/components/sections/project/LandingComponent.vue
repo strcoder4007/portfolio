@@ -161,7 +161,7 @@ export default {
 .project-name {
   font-size: 25px;
   font-weight: 600;
-  font-family: 'Brandon';
+  font-family: Ubuntu, Brandon;
   display: flex;
   color: #fff;
   margin-top: -20px;
@@ -169,7 +169,7 @@ export default {
 
 .project-description {
   font-size: 15px;
-  font-family: 'Bricolage';
+  font-family: Montserrat, Bricolage;
   display: flex;
   text-align: left;
   margin: 10px 0;
@@ -183,7 +183,7 @@ export default {
   .live, .code, .behance, .figma {
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Brandon';
+    font-family: Ubuntu, Brandon;
     margin-right: 30px;
     color: #fff;
     cursor: pointer;

@@ -30,7 +30,7 @@ export default {
 .greetings {
   margin-top: 100px;
   color: var(--Black, #261F22);
-  font-family: Brandon;
+  font-family: Ubuntu, Brandon;
   font-size: 59px;
   font-style: normal;
   font-weight: 700;

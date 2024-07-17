@@ -68,7 +68,7 @@ export default {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 
-  font-family: "Brandon";
+  font-family: Ubuntu, Brandon;
   font-size: 84px;
   font-style: normal;
   font-weight: 700;
@@ -78,7 +78,7 @@ export default {
 .description {
   display: block;
   color: #ffffff;
-  font-family: Brandon;
+  font-family: Ubuntu, Brandon;
   font-size: 21px;
   font-style: normal;
   font-weight: 400;
@@ -99,7 +99,7 @@ export default {
 
 .promises-header {
   color: var(--Black, #261F22);
-  font-family: "Brandon";
+  font-family: Ubuntu, Brandon;
   font-size: 59px;
   font-style: normal;
   font-weight: 330;
@@ -118,7 +118,7 @@ export default {
   .promise-subheader {
     display: block;
     color: var(--Black, #261F22);
-    font-family: "Brandon";
+    font-family: Ubuntu, Brandon;
     font-size: 30px;
     font-style: normal;
     font-weight: 450;
@@ -128,7 +128,7 @@ export default {
   }
   .promise-description {
     color: #ffffff;
-    font-family: Bricolage;
+    font-family: Montserrat, Bricolage;
     font-size: 17px;
     font-style: normal;
     font-weight: 400;
@@ -159,7 +159,7 @@ export default {
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 
-    font-family: "Brandon";
+    font-family: Ubuntu, Brandon;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -169,7 +169,7 @@ export default {
   .description {
     display: block;
     color: #ffffff;
-    font-family: Brandon;
+    font-family: Ubuntu, Brandon;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -190,7 +190,7 @@ export default {
 
   .promises-header {
     color: var(--Black, #261F22);
-    font-family: "Brandon";
+    font-family: Ubuntu, Brandon;
     font-size: 30px;
     font-style: normal;
     font-weight: 330;

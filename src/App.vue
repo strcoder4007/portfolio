@@ -34,7 +34,7 @@ html {
 }
 
 #app {
-  font-family: Bricolage, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Montserrat, Bricolage, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -74,6 +74,6 @@ input:focus {
 }
 
 .el-message__content {
-  font-family: Bricolage;
+  font-family: Montserrat, Bricolage;
 }
 </style>
