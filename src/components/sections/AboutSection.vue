@@ -3,12 +3,12 @@
     <div class="about-page">
       <el-row>
         <el-col :span="24">
-          <span class="header">Hi! I’m Shubham Singh. </span>
+          <span class="header">Hi! I’m Shubham</span>
           <span class="description" v-html="description"></span>
-          <el-row class="image-section">
+          <!-- <el-row class="image-section">
             <el-col :md="12"><img src="../../assets/portrait/one.png"></el-col>
             <el-col :md="12"><img src="../../assets/portrait/two.png"></el-col>
-          </el-row>
+          </el-row> -->
         </el-col>
       </el-row>
     </div>
@@ -28,11 +28,15 @@ export default {
     
   },
   setup() {
-    const description = `An illustrator, designer who brings inclusive, minimal and future oriented user experience to people in need.<br><br>
-    I came to graphic design from a background in human resources, which gives me a strong background in communication, It was the best decision I ever made because it showed me what I wanted to do for the rest of my life.<br><br>
-    I was driven to designing because it felt exciting and rewarding to learn about people’s goals and desires, help them solve their problems and make their lives easier.<br><br>
-    I help businesses all around the world by designing websites and mobile apps.<br><br>
-    Right now I’m based in Noida.`;
+    const description = `I'm an enthusiastic Deep Learning and Computer Vision Engineer with a keen interest in
+all three pillars of Deep learning i.e Vision, NLP and Reinforcement Learning, but particularly focused on computer vision. With extensive experience in Python, C++ and Javascript, I have been at the cutting edge of developing advanced technologies that enable machines to perceive and interpret visual data more effectively.
+<br><br>
+Throughout my career, I've had the privilege of working on impactful projects across various sectors including Fintech, Healthcare, and consumer-facing apps. 
+My expertise in translating theoretical knowledge into practical, scalable solutions has improved the existing systems in my past Startups.
+<br><br>
+Using PyTorch and TensorFlow as foundational tools, I've developed robust neural networks capable of processing enormous
+volumes of visual data with impressive accuracy. These tools along with Numpy, Pandas, Matplotlib, OpenCV have allowed me to 
+experiment quickly, iterate effectively, and make interesting side projects.`;
     return {
       description
     }
@@ -45,6 +49,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  background: #222222;
+  overflow-y: scroll;
+}
 .about-page {
   height: auto;
   min-height: calc(100vh - 60px - 50px);
@@ -52,7 +60,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
-  margin: 200px 150px 50px 150px;
+  margin: 20px 100px 50px 100px;
   text-align: left;
 }
 
@@ -77,9 +85,9 @@ export default {
 }
 .description {
   display: block;
-  color: #ffffff;
+  color: #333333;
   font-family: Ubuntu, Brandon;
-  font-size: 21px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
@@ -127,7 +135,7 @@ export default {
     margin-top: 10px;
   }
   .promise-description {
-    color: #ffffff;
+    color: #333333;
     font-family: Bricolage;
     font-size: 17px;
     font-style: normal;
@@ -168,7 +176,7 @@ export default {
   }
   .description {
     display: block;
-    color: #ffffff;
+    color: #333333;
     font-family: Ubuntu, Brandon;
     font-size: 18px;
     font-style: normal;
