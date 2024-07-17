@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <el-row>
-      <el-col class="intro-section">
+      <el-col class="intro-section" >
 
         <div class="intro-text">
           <span class="profile-text">Machine Learning Engineer</span>
@@ -9,9 +9,9 @@
           <p class="email">mynameshubham23@gmail.com</p>
           <section class="about">
               <p>
-                Passionate about leveraging <mark>Computer Vision</mark> and <mark>Deep learning</mark> to solve 
+                Passionate about leveraging<mark> Computer Vision </mark>and<mark> Deep learning </mark>to solve 
                 problems deemed impossible in the recent past.<br><br>
-                I have <mark>6 years of experience as a Software Engineer (Javascript/Vue/React)</mark> and a solid background in <mark>Algorithms and Data Structures (C++).</mark><br><br>
+                I have<mark> 6 years of experience as a Software Engineer (Javascript/Vue/React) </mark>and a solid background in<mark> Algorithms and Data Structures (C++)</mark>.<br><br>
                 Explore my work and see how I can contribute to your team's success.
               </p>
           </section>
@@ -73,12 +73,12 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 20px 0 30px;
+  padding: 0 70px 0 30px;
 
   .intro-text {
     text-align: left;
     .profile-text {
-      font-size: 50px;
+      font-size: 40px;
       font-weight: 700;
     }
     .profile-img {
@@ -94,7 +94,7 @@ export default {
     .about {
         text-align: left;
         margin: 30px 0;
-        font-size: 20px;
+        font-size: 18px;
         color: #fff;
         word-wrap: break-word;
         line-height: 25px;
@@ -103,9 +103,9 @@ export default {
           transition: color 1.5s ease;
           -webkit-animation: 1.5s highlight 1.5s 1 normal forwards;
           animation: 1.5s highlight 1.5s 1 normal forwards;
-          background-color: #0c0f11;
+          background-color: #111111;
           color: #fff;
-          background: linear-gradient(90deg, #1DB954 50%, #000 50%);
+          background: linear-gradient(90deg, #1DB954 50%, #111111 50%);
           background-size: 200% 100%;
           background-position: 100% 0;
         }
@@ -169,7 +169,7 @@ export default {
     font-style: normal;
     font-weight: 330;
     line-height: 72px;
-    background: #0c0f11 ;
+    background: #111111 ;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -177,7 +177,7 @@ export default {
   .profile {
     color: var(--Black, #261F22);
     text-align: center;
-    font-family: Montserrat, Bricolage;
+    font-family: Bricolage;
     font-size: 119px;
     font-style: normal;
     font-weight: 700;
@@ -188,7 +188,7 @@ export default {
   .description {
     color: #ffffff;
     text-align: center;
-    font-family: Montserrat, Bricolage;
+    font-family: Bricolage;
     font-size: 21px;
     font-style: normal;
     font-weight: 400;

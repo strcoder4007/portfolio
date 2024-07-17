@@ -62,7 +62,7 @@ export default {
 
 .header {
   display: block;
-  background-color: #0c0f11 ;
+  background-color: #111111 ;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -128,7 +128,7 @@ export default {
   }
   .promise-description {
     color: #ffffff;
-    font-family: Montserrat, Bricolage;
+    font-family: Bricolage;
     font-size: 17px;
     font-style: normal;
     font-weight: 400;
@@ -153,7 +153,7 @@ export default {
 
   .header {
     display: block;
-    background-color: #0c0f11 ;
+    background-color: #111111 ;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

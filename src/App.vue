@@ -29,12 +29,12 @@ html {
   height: auto;
 }
 ::selection {
-  color: #000;
+  color: #111111;
   background: #1DB954;
 }
 
 #app {
-  font-family: Montserrat, Bricolage, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Bricolage, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -48,7 +48,7 @@ html {
 }
 body {
   margin: 0;
-  background: #0c0f11;
+  background: #111111;
   background-position: 0 0;
   background-size: 200% 100%;
   animation: background-move 10s linear infinite;
@@ -74,6 +74,6 @@ input:focus {
 }
 
 .el-message__content {
-  font-family: Montserrat, Bricolage;
+  font-family: Bricolage;
 }
 </style>

@@ -23,7 +23,7 @@
     height: auto;
     min-height: 300px;
     width: 100vw;
-    background: #0c0f11 ;
+    background: #111111 ;
     backdrop-filter: blur(2px);
     display: flex;
     flex-direction: column;
@@ -42,8 +42,8 @@
     }
 
     .subheader {
-        color: #000;
-        font-family: Montserrat, Bricolage;
+        color: #111111;
+        font-family: Bricolage;
         font-size: 21px;
         font-style: normal;
         font-weight: 400;

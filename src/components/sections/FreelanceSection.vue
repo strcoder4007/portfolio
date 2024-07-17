@@ -61,7 +61,7 @@
 .subtitle {
     display: block;
     color: #ffffff;
-    font-family: Montserrat, Bricolage;
+    font-family: Bricolage;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -102,7 +102,7 @@
     border: none;
     border-radius: 8px;
     background: #ffffff;
-    color: #000;
+    color: #111111;
 
     font-family: Ubuntu, Brandon;
     font-size: 18px;
@@ -112,7 +112,7 @@
 }
 .connect {
     color: #FFF;
-    font-family: Montserrat, Bricolage;
+    font-family: Bricolage;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -125,7 +125,7 @@
     align-items: center;
     border-radius: 100px;
     border: none;
-    background: #0c0f11 ;
+    background: #111111 ;
     box-shadow: 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04);
 }
 @media (max-width: 768px) {

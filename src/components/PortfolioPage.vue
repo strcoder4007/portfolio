@@ -37,7 +37,7 @@ export default {
   line-height: 80px;
   letter-spacing: -1.77px;
   letter-spacing: .5px;
-  background: #0c0f11 ;
+  background: #111111 ;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;

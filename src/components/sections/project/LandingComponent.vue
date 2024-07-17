@@ -10,7 +10,6 @@
                 <span class="control yellow"></span>
                 <span class="control green"></span>
               </div>
-              <span class="app-title">{{ project.name }}</span>
             </div>
             <div class="card-body image-container">
               <img v-if="project.image === 'dashboard_design'" src="../../../assets/projects/dashboard_design.png" />
@@ -151,17 +150,10 @@ export default {
 .control.yellow { background-color: #cccccc; }
 .control.green { background-color: #cccccc; }
 
-.app-title {
-  font-size: 13px;
-  margin: 0;
-  font-weight: 500;
-}
-
-
 .project-name {
   font-size: 25px;
   font-weight: 600;
-  font-family: Ubuntu, Brandon;
+  font-family: Ubuntu, Bricolage;
   display: flex;
   color: #fff;
   margin-top: -20px;
@@ -169,7 +161,7 @@ export default {
 
 .project-description {
   font-size: 15px;
-  font-family: Montserrat, Bricolage;
+  font-family: Bricolage;
   display: flex;
   text-align: left;
   margin: 10px 0;
@@ -183,7 +175,7 @@ export default {
   .live, .code, .behance, .figma {
     font-size: 18px;
     font-weight: 500;
-    font-family: Ubuntu, Brandon;
+    font-family: ubuntu-medium, Brandon;
     margin-right: 30px;
     color: #fff;
     cursor: pointer;

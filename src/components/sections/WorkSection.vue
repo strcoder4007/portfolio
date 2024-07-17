@@ -23,7 +23,7 @@ export default {
 <style lang="scss" scoped>
 
 .container {
-  background: #343a40;
+  background: #222222;
   overflow-y: scroll;
 }
 .work-section {
@@ -39,7 +39,7 @@ export default {
   .greetings {
     margin-top: 20px;
     color: #fff;
-    font-family: Montserrat, Bricolage;
+    font-family: Bricolage;
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
@@ -50,7 +50,7 @@ export default {
   .description {
     color: #fff;
     text-align: center;
-    font-family: Montserrat, Bricolage;
+    font-family: Bricolage;
     font-size: 21px;
     font-style: normal;
     font-weight: 400;

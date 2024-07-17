@@ -79,7 +79,7 @@
             justify-content: center;
             align-items: center;
             .tool {
-                background: #0c0f11 ;
+                background: #111111 ;
                 height: 100px;
                 width: 65%;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
