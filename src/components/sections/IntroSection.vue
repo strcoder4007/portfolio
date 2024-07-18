@@ -11,7 +11,7 @@
               <p>
                 Passionate about leveraging<mark> Computer Vision </mark>and<mark> Deep learning </mark>to solve 
                 problems deemed impossible in the recent past.<br><br>
-                I have<mark> 6 years of experience as a Software Engineer (Javascript/Vue/React) </mark>and a solid background in<mark> Algorithms and Data Structures (C++)</mark>.<br><br>
+                I have<mark> 6 years of experience as a Software Engineer (JS) </mark>and a solid background in<mark> Algorithms and Data Structures (C++)</mark>.<br><br>
                 Explore my work and see how I can contribute to your team's success.
               </p>
           </section>

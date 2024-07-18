@@ -1,5 +1,7 @@
 <template>
   <div class="container" id="projects-section">
+    <br>
+    Work in progress...
     <el-row>
       <el-col class="projects-section">
         <div class="greetings">Projects</div>

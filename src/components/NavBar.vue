@@ -62,6 +62,7 @@ export default {
 
 <style lang="scss" scoped>
 .terminal {
+  font-family: Ubuntu;
   font-weight: 600;
   font-size: 20px;
   color: #ffffff;

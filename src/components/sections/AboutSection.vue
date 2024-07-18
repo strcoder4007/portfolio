@@ -12,14 +12,14 @@
         </el-col>
       </el-row>
     </div>
-    <ToolsSection></ToolsSection>
+    <!-- <ToolsSection></ToolsSection> -->
     <FreelanceSection class="freelance-section"></FreelanceSection>
   </div>
 
 </template>
 
 <script>
-import ToolsSection from '../sections/ToolsSection.vue';
+// import ToolsSection from '../sections/ToolsSection.vue';
 import FreelanceSection from '../sections/FreelanceSection.vue';
 
 export default {
@@ -43,7 +43,7 @@ experiment quickly, iterate effectively, and make interesting side projects.`;
   },
   components: {
     FreelanceSection,
-    ToolsSection
+    // ToolsSection
 },
 };
 </script>
