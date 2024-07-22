@@ -13,14 +13,12 @@
       </el-row>
     </div>
     <!-- <ToolsSection></ToolsSection> -->
-    <FreelanceSection class="freelance-section"></FreelanceSection>
   </div>
 
 </template>
 
 <script>
 // import ToolsSection from '../sections/ToolsSection.vue';
-import FreelanceSection from '../sections/FreelanceSection.vue';
 
 export default {
   name: "AboutPage",
@@ -42,7 +40,6 @@ experiment quickly, iterate effectively, and make interesting side projects.`;
     }
   },
   components: {
-    FreelanceSection,
     // ToolsSection
 },
 };
@@ -62,10 +59,6 @@ experiment quickly, iterate effectively, and make interesting side projects.`;
   align-items: baseline;
   margin: 20px 100px 50px 100px;
   text-align: left;
-}
-
-.freelance-section {
-  margin-top: 80px;
 }
 
 .header {
@@ -153,10 +146,6 @@ experiment quickly, iterate effectively, and make interesting side projects.`;
     align-items: baseline;
     margin: 100px 30px 5px 50px;
     text-align: left;
-  }
-
-  .freelance-section {
-    margin-top: 40px;
   }
 
   .header {

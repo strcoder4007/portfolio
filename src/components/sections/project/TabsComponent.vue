@@ -16,13 +16,7 @@ export default {
     name: "ProjectTabsPage",
 
     setup() {
-        const goToLink = (name) => {
-        if (name === 'figma')
-            window.open('https://www.figma.com/design/hldHS5PGFtbHdixRlBe6YP/New-PORTFOLIO?node-id=120-112&t=S4MDqijKWPgN5Gf0-0', '_blank');
-        }
-        return {
-        goToLink
-        }
+
     },
     data() {
         return {
@@ -70,7 +64,7 @@ export default {
     height: 60px;
     background-color: #111111;
     border-radius: 5px;
-    box-shadow: 0px 2px 4px var(rgba(255, 255, 255, 0.1));
+    box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.3);
 
     .tab {
         background-color: #222222;

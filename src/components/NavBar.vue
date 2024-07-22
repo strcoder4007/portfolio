@@ -12,9 +12,9 @@
         </button>
         <ul class="menu-items" :class="{ 'is-open': isMenuOpen }">
           <li class="menu-item" :class="{ 'active': ['home', 'projects'].includes(activeIndex) }" @click="handleSelect('Projects')">Projects</li>
+          <li class="menu-item" :class="{ 'active': activeIndex === 'about' }" @click="handleSelect('About')">About</li>
           <li class="menu-item" :class="{ 'active': activeIndex === 'blogs' }" @click="handleSelect('Blogs')">Blogs</li>
           <li class="menu-item" :class="{ 'active': activeIndex === 'github' }" @click="handleSelect('Github')">Github Stats</li>
-          <li class="menu-item" :class="{ 'active': activeIndex === 'about' }" @click="handleSelect('About')">About me</li>
         </ul>
       </div>
     </div>

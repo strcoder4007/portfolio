@@ -3,6 +3,7 @@
     <el-row>
       <el-col class="github-section">
         <div class="greetings">Github</div>
+        <!-- <span>![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=strcoder4007&exclude_repo=github-readme-stats,anuraghazra.github.io)</span> -->
       </el-col>
     </el-row>
   </div>
@@ -25,7 +26,7 @@ export default {
 }
 .github-section {
   overflow-y: scroll;
-  height: 100%;
+  height: calc(100vh - 80px);
   background: transparent;
   backdrop-filter: blur(2px);
   display: flex;
@@ -41,7 +42,7 @@ export default {
     font-style: normal;
     font-weight: 600;
     line-height: 72px;
-    letter-spacing: -1.77px;
+    letter-spacing: -1px;
   }
 
   .description {

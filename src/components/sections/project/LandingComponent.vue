@@ -124,6 +124,7 @@ export default {
   overflow: hidden;
   margin-bottom: 40px;
   cursor: pointer;
+  box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.3);
 }
 
 .card-header {
@@ -162,6 +163,8 @@ export default {
 .project-description {
   font-size: 15px;
   font-family: Bricolage;
+  font-weight: 300;
+  line-height: 17px;
   display: flex;
   text-align: left;
   margin: 10px 0;
