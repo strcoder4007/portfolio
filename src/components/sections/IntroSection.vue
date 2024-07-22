@@ -23,6 +23,11 @@
             <a href="https://www.linkedin.com/in/riny-yadav-a24a90238/" target="_blank"><img src="../../assets/icons/linkedin.png" alt="LinkedIn Icon" class="social-icon" /></a>
           </div>
 
+          <span class="source-code">
+            Made in Vue 3. 
+            <a href="https://github.com/strcoder4007/portfolio" target="_blank">Code</a>
+          </span>
+
           <span class="policy-and-terms-section">
             © 2024 Shubham Singh. All rights reserved.
           </span>
@@ -150,7 +155,7 @@ export default {
         font-size: 12px;
         color: #fff;
     }
-    .policy-and-terms-section {
+    .source-code {
       color: #ffffff;
       font-family: Ubuntu, Brandon;
       font-size: 13px;
@@ -158,7 +163,21 @@ export default {
       font-weight: 400;
       line-height: 50px;
       position: absolute;
-      bottom: 0;
+      bottom: 20px;
+      a {
+        text-decoration-color: #1DB954;
+        color: #1DB954;
+        cursor: pointer;
+      }
+    }
+    .policy-and-terms-section {
+      color: #ffffff;
+      font-family: Ubuntu, Brandon;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      position: absolute;
+      bottom: 15px;
     }
   }
 

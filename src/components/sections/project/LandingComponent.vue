@@ -12,11 +12,11 @@
               </div>
             </div>
             <div class="card-body image-container">
-              <img v-if="project.image === 'dashboard_design'" src="../../../assets/projects/dashboard_design.png" />
+              <!-- <img v-if="project.image === 'dashboard_design'" src="../../../assets/projects/dashboard_design.png" />
               <img v-if="project.image === 'illustration'" src="../../../assets/projects/illustration.png" />
               <img v-if="project.image === 'website_design'" src="../../../assets/projects/website_design.png" />
               <img v-if="project.image === 'mobile_app_design'" src="../../../assets/projects/mobile_app_design.png" />
-              <img v-if="project.image === 'ui_ux_design'" src="../../../assets/projects/ui_ux_design.png" />
+              <img v-if="project.image === 'ui_ux_design'" src="../../../assets/projects/ui_ux_design.png" /> -->
             </div>
           </div>
           <div class="project-name">{{  project.name }}</div>
@@ -24,10 +24,9 @@
             {{ project.description }}
           </div>
           <div class="links-container">
-            <!-- <div class="figma" @click="goToLink('figma')">Figma <img src="../../../assets/icons/arrow-right.png" alt="Arrow Right Icon" /></div> -->
-            <!-- <div class="behance" @click="goToLink('behance')">Behance <img src="../../../assets/icons/arrow-right.png" alt="Arrow Right Icon" /></div> -->
-            <div class="live" @click="goToLink('live')">Live <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" /></div>
-            <div class="code" @click="goToLink('code')">Code <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" /></div>
+            <div v-if="project.hasOwnProperty('live')" class="live" @click="goToLink(project.live)">Live <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" /></div>
+            <div v-if="project.hasOwnProperty('code')" class="code" @click="goToLink(project.code)">Code <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" /></div>
+            <div v-if="project.hasOwnProperty('blog')" class="blog" @click="goToLink(project.blog)">Blog <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" /></div>
           </div>
         </div>
       </el-col>
@@ -40,49 +39,21 @@ export default {
   name: "ProjectLandingPage",
 
   setup() {
-    const goToLink = (name) => {
-      if (name === 'figma')
-        window.open('https://www.figma.com/design/hldHS5PGFtbHdixRlBe6YP/New-PORTFOLIO?node-id=120-112&t=S4MDqijKWPgN5Gf0-0', '_blank');
+    const goToLink = (url) => {
+      window.open(url, '_blank');
     }
     return {
       goToLink
     }
   },
+  props: {
+    projectList: {
+      type: Array,
+      required: true
+    },
+  },  
   data() {
-    return {
-      projectList: [
-        {
-          "id": "f86c5e5c-5075-4c5e-b57b-22a7a380de34",
-          "name": "Website Designs",
-          "image": "website_design",
-          "description": "Revamping an online marketplace with modern UI/UX, improved performance, and enhanced customer engagement features."
-        },
-        {
-          "id": "a5a5b332-73d6-4b61-aa60-6b4f6f1a10f7",
-          "name": "Mobile App Design",
-          "image": "mobile_app_design",
-          "description": "Creating a cross-platform mobile app for seamless user experience across iOS and Android devices."
-        },
-        {
-          "id": "16c2b2e7-5a6e-459d-8aa7-890f2ebc5a0f",
-          "name": "Dashboard Designs",
-          "image": "dashboard_design",
-          "description": "Building a comprehensive analytics dashboard to visualize key metrics and trends for business intelligence."
-        },
-        {
-          "id": "8fd7a21c-4f31-491b-9a9c-c53a23e3d1a3",
-          "name": "UI/UX Designs",
-          "image": "ui_ux_design",
-          "description": "Planning and executing a seamless migration of legacy systems to cloud infrastructure for scalability and efficiency."
-        },
-        {
-          "id": "cf3e6e24-c22e-4a61-97f8-6ff5b1e3a3e0",
-          "name": "Illustrations",
-          "image": "illustration",
-          "description": "Integrating blockchain technology into existing systems to enhance security, transparency, and transaction efficiency."
-        }
-      ]
-    }
+    return {}
   },
   mounted() {
     
@@ -172,7 +143,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: start;
-  .live, .code, .behance, .figma {
+  .live, .code, .blog, .behance, .figma {
     font-size: 18px;
     font-weight: 500;
     font-family: ubuntu-medium, Brandon;
@@ -185,7 +156,7 @@ export default {
       margin-left: 2px;
     }
   }
-  .live:hover, .code:hover, .behance:hover, .figma:hover {
+  .live:hover, .code:hover, .blog:hover, .behance:hover, .figma:hover {
     text-decoration: underline;
     text-decoration-color: #1DB954;
     text-decoration-thickness: 3px;

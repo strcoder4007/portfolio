@@ -33,7 +33,7 @@ export default {
     return {}
   },
   mounted() {
-
+    alert('is being used?')
   },
   methods: {
     getImageSrc() {
