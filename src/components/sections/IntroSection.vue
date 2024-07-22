@@ -1,37 +1,71 @@
 <template>
   <div class="container">
     <el-row>
-      <el-col class="intro-section" >
-
+      <el-col class="intro-section">
         <div class="intro-text">
           <span class="profile-text">Machine Learning Engineer</span>
-          <p class="phone">(+91) 8126062707</p>
-          <p class="email">mynameshubham23@gmail.com</p>
+          <br><br>
+          <p
+            class="phone"
+            @click="copyToClipboard('+918126062707', 'Phone Number')"
+          >
+            (+91) 8126062707
+            <img src="../../assets/icons/copy.png" title="Copy" />
+          </p>
+          <p
+            class="email"
+            @click="copyToClipboard('mynameshubham23@gmail.com', 'Email')"
+          >
+            mynameshubham23@gmail.com
+            <img src="../../assets/icons/copy.png" title="Copy" />
+          </p>
           <section class="about">
-              <p>
-                Passionate about leveraging<mark> Computer Vision </mark>and<mark> Deep learning </mark>to solve 
-                problems deemed impossible in the recent past.<br><br>
-                I have<mark> 6 years of experience as a Software Engineer (JS) </mark>and a solid background in<mark> Algorithms and Data Structures (C++)</mark>.<br><br>
-                Explore my work and see how I can contribute to your team's success.
-              </p>
+            <p>
+              Passionate about leveraging<mark> Computer Vision </mark>and<mark>
+                Deep learning </mark
+              >to solve problems deemed impossible in the recent past.<br /><br />
+              I have<mark>
+                6 years of experience as a Software Engineer (JS) </mark
+              >and a solid background in<mark>
+                Algorithms and Data Structures (C++)</mark
+              >.<br /><br />
+              Explore my work and see how I can contribute to your team's
+              success.
+            </p>
           </section>
-          
-          <a href="#" class="btn">Resume <img src="../../assets/icons/right-arrow.png" alt="Arrow Icon"/></a>
+
+          <a href="#" class="btn"
+            >Resume
+            <img src="../../assets/icons/right-arrow.png" alt="Arrow Icon"
+          /></a>
 
           <div class="social-section">
-            <a href="https://github.com/strcoder4007" target="_blank"><img src="../../assets/icons/github.png" alt="Github Icon" class="social-icon" /></a>
-            <a href="https://www.linkedin.com/in/riny-yadav-a24a90238/" target="_blank"><img src="../../assets/icons/linkedin.png" alt="LinkedIn Icon" class="social-icon" /></a>
+            <a href="https://github.com/strcoder4007" target="_blank"
+              ><img
+                src="../../assets/icons/github.png"
+                alt="Github Icon"
+                class="social-icon"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/riny-yadav-a24a90238/"
+              target="_blank"
+              ><img
+                src="../../assets/icons/linkedin.png"
+                alt="LinkedIn Icon"
+                class="social-icon"
+            /></a>
           </div>
 
           <span class="source-code">
-            Made in Vue 3. 
-            <a href="https://github.com/strcoder4007/portfolio" target="_blank">Code</a>
+            Made in Vue 3.
+            <a href="https://github.com/strcoder4007/portfolio" target="_blank"
+              >Code</a
+            >
           </span>
 
           <span class="policy-and-terms-section">
             © 2024 Shubham Singh. All rights reserved.
           </span>
-        
         </div>
       </el-col>
     </el-row>
@@ -43,26 +77,43 @@
 
 export default {
   setup() {
-
-    return {
-    };
+    return {};
   },
   mounted() {
     setTimeout(() => {
-      document.querySelectorAll('mark').forEach(e => e.style.color = "black");
+      document
+        .querySelectorAll("mark")
+        .forEach((e) => (e.style.color = "black"));
     }, 2000);
   },
   methods: {
+    copyToClipboard(text, textType) {
+      navigator.permissions
+        .query({ name: "clipboard-write" })
+        .then((result) => {
+          if (result.state == "granted" || result.state == "prompt") {
+            navigator.clipboard
+              .writeText(text)
+              .then(() =>
+                this.$message({
+                  message: textType + " Copied",
+                  type: "success",
+                })
+              )
+              .catch(() => console.log("failure"));
+          }
+        });
+    },
     scrollToWork() {
-      document.getElementById('projects-section').scrollIntoView()
+      document.getElementById("projects-section").scrollIntoView();
     },
     download() {
-      const link = document.createElement('a')
-      link.href = 'https://strcoder4007.github.io/portfolio/resume.pdf'
-      link.download = 'Shubham_Resume.pdf'
+      const link = document.createElement("a");
+      link.href = "https://strcoder4007.github.io/portfolio/resume.pdf";
+      link.download = "Shubham_Resume.pdf";
       link.click();
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -85,6 +136,7 @@ export default {
     .profile-text {
       font-size: 40px;
       font-weight: 700;
+      font-family: Ubuntu;
     }
     .profile-img {
       width: 150px;
@@ -92,38 +144,53 @@ export default {
       border-radius: 50%;
       object-fit: cover;
     }
-    .email, .phone {
-        color: #ffffff;
-        letter-spacing: 2px;
+    .email,
+    .phone {
+      margin: 8px 0;
+      color: #ffffff;
+      letter-spacing: 2px;
+      img {
+        width: 15px;
+        height: auto;
+        display: none;
+        float: right;
+        cursor: pointer;
+      }
+    }
+    .email:hover,
+    .phone:hover {
+      img {
+        display: inline;
+      }
     }
     .about {
-        text-align: left;
-        margin: 30px 0;
-        font-size: 18px;
-        color: #fff;
-        word-wrap: break-word;
-        line-height: 25px;
+      text-align: left;
+      margin: 30px 0;
+      font-size: 18px;
+      color: #fff;
+      word-wrap: break-word;
+      line-height: 25px;
 
-        mark {
-          transition: color 1.5s ease;
-          -webkit-animation: 1.5s highlight 1.5s 1 normal forwards;
-          animation: 1.5s highlight 1.5s 1 normal forwards;
-          background-color: #111111;
-          color: #fff;
-          background: linear-gradient(90deg, #1DB954 50%, #111111 50%);
-          background-size: 200% 100%;
-          background-position: 100% 0;
+      mark {
+        transition: color 1.5s ease;
+        -webkit-animation: 1.5s highlight 1.5s 1 normal forwards;
+        animation: 1.5s highlight 1.5s 1 normal forwards;
+        background-color: #111111;
+        color: #fff;
+        background: linear-gradient(90deg, #1db954 50%, #111111 50%);
+        background-size: 200% 100%;
+        background-position: 100% 0;
+      }
+      @-webkit-keyframes highlight {
+        to {
+          background-position: 0 0;
         }
-        @-webkit-keyframes highlight {
-          to {
-            background-position: 0 0;
-          }
+      }
+      @keyframes highlight {
+        to {
+          background-position: 0 0;
         }
-        @keyframes highlight {
-          to {
-            background-position: 0 0;
-          }
-        }
+      }
     }
     .btn {
       display: block;
@@ -147,13 +214,13 @@ export default {
       margin-bottom: 30px;
     }
     .social-icons a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 24px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 24px;
     }
     .footer {
-        font-size: 12px;
-        color: #fff;
+      font-size: 12px;
+      color: #fff;
     }
     .source-code {
       color: #ffffff;
@@ -165,8 +232,8 @@ export default {
       position: absolute;
       bottom: 20px;
       a {
-        text-decoration-color: #1DB954;
-        color: #1DB954;
+        text-decoration-color: #1db954;
+        color: #1db954;
         cursor: pointer;
       }
     }
@@ -188,13 +255,13 @@ export default {
     font-style: normal;
     font-weight: 330;
     line-height: 72px;
-    background: #111111 ;
+    background: #111111;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .profile {
-    color: var(--Black, #261F22);
+    color: var(--Black, #261f22);
     text-align: center;
     font-family: Bricolage;
     font-size: 119px;
@@ -229,8 +296,8 @@ export default {
   margin: 20px 0;
   gap: 15px;
   img {
-      width: 30px;
-      height: auto;
+    width: 30px;
+    height: auto;
   }
 }
 @media (max-width: 768px) {

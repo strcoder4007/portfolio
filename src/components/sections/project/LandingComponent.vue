@@ -1,7 +1,7 @@
 <template>
   <div class="project-landing-page">
     <el-row>
-      <el-col :md="12" :xl="8" v-for="project in projectList" :key="project.id" class="project-container">
+      <el-col :md="12" :lg="12" :xl="8" v-for="project in projectList" :key="project.id" class="project-container">
         <div class="cvfy-container">
           <div class="cvfy-card">
             <div class="card-header">
@@ -22,6 +22,9 @@
           <div class="project-name">{{  project.name }}</div>
           <div class="project-description">
             {{ project.description }}
+          </div>
+          <div class="tags-section">
+            <span :key="tag" v-for="tag in filterTags(project.tags)">{{ tag }}</span>
           </div>
           <div class="links-container">
             <div v-if="project.hasOwnProperty('live')" class="live" @click="goToLink(project.live)">Live <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" /></div>
@@ -58,6 +61,12 @@ export default {
   mounted() {
     
   },
+  methods: {
+    filterTags(projectTags) {
+      let tabs = ['show_all', 'ml', 'web_dev', 'algo']
+      return projectTags.filter(tag => !tabs.includes(tag))
+    }
+  },
   components: {
   },
 };
@@ -66,11 +75,16 @@ export default {
 <style lang="scss" scoped>
 .project-landing-page {
   margin: 0 20px;
+  width: 100%;
+}
+
+.project-container {
+
 }
 .image-container {
     width: 350px;
     height: 200px;
-    background-color: #f0f0f0; 
+    background-color: #666; 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -82,6 +96,21 @@ export default {
     align-items: center;
 }
 
+.tags-section {
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  span {
+    border: 2px solid #fff;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
 
 
 .cvfy-container {
@@ -90,7 +119,7 @@ export default {
 }
 
 .cvfy-card {
-  background-color: white;
+  background-color: #111;
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 40px;
@@ -102,7 +131,6 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px 10px 10px;
-  border-bottom: 1px solid #ebeef5;
   height: 5px;
 }
 
@@ -117,13 +145,14 @@ export default {
   border-radius: 50%;
 }
 
-.control.red { background-color: #cccccc; }
-.control.yellow { background-color: #cccccc; }
-.control.green { background-color: #cccccc; }
+.control.red { background-color: #666; }
+.control.yellow { background-color: #666; }
+.control.green { background-color: #666; }
 
 .project-name {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 600;
+  text-align: left;
   font-family: Ubuntu, Bricolage;
   display: flex;
   color: #fff;

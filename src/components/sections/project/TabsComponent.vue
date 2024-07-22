@@ -80,11 +80,11 @@ export default {
         gap: 10px;
         color: #ffffff;
         font-size: 14px;
-        font-family: Ubuntu;
+        font-family: Ubuntu, Brandon, sans-serif;
     }
 
     .tab.active {
-        border: 1px solid white;
+        border: 2px solid white;
     }
 }
 @media (max-width: 768px) {
