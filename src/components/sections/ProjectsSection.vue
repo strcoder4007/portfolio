@@ -25,16 +25,17 @@ const allProjects = [
         {
           id: "85b39e2d-f5a0-47c7-ae2d-06297acbe963",
           name: "NFS Self Driving Car",
-          images: ["nfs_self_driving.png"],
+          images: ["https://github.com/strcoder4007/Need-For-Speed-Self-driving/blob/main/images/nfsmw1.gif?raw=true"],
           tags: ["ml", "Tensorflow 2", "InceptionResNetV2", "Vision", "OpenCV", "Python"],
           code: "https://github.com/strcoder4007/Need-For-Speed-Self-driving",
+          blog: true,
           description:
             "Training a ConvNet to play Need for Speed Most Wanted only by looking at the game, just like humans learn. Using InceptionResNetV2, OpenCV, Tensorflow 2",
         },
         {
           id: "eb66bcbb-9ff3-4bcc-a42f-1b944cfb33ed",
           name: "Codeforces Submissions (C++)",
-          image: ["codeforces.png"],
+          images: ["codeforces.png"],
           tags: ["algo", "C++", "Math", "Number theory", "Bitmask", "Graph Theory", "Dynamic Programming"],
           code: "https://github.com/strcoder4007/Codeforces-Solutions",
           live: "https://codeforces.com/profile/__STR",
@@ -44,34 +45,37 @@ const allProjects = [
         {
           id: "4e8a86ee-5a59-4c24-b0c1-d78cd165f771",
           name: "Mario Reinforcement Learning",
-          image: ["mario_rl.png"],
+          images: ["https://github.com/strcoder4007/Mario-Reinforcement-Learning/blob/main/images/mario_ppo.gif?raw=true"],
           tags: ["ml", "Tensorflow 2", "Reinforcement Learning", "OpenAI Gym", "PPO Algorithm", "Python"],
           code: "https://github.com/strcoder4007/Mario-Reinforcement-Learning",
+          blog: true,
           description:
-            "Training a Mario reinforcement learning agent using Open AI Gym and Stable Baselines 3 PPO algorithm.",
+            "Training a Mario reinforcement learning agent on Level 1-1 using Open AI Gym and Stable Baselines 3 PPO algorithm.",
         },
         {
           id: "a3b859f2-f5ea-49a2-ae91-c5be0ddf3e86",
           name: "Training Layer Visualization",
-          image: ["layer_visualization.png"],
+          images: ["https://github.com/strcoder4007/Training-Visualization/blob/main/images/layers.gif?raw=true"],
           tags: ["ml", "PyTorch", "OpenCV", "Python"],
           code: "https://github.com/strcoder4007/Training-Visualization",
+          blog: true,
           description:
             "A tool to visualize the hidden layers of the model in real-time using PyTorch.",
         },
         {
           id: "9c19724b-bd93-4d52-aeb0-63adca6cfce9",
           name: "Detecting Covid-19 using X-Ray Images",
-          image: ["covid_19.png"],
+          images: ["covid_19.png"],
           tags: ["ml", "Tensorflow v1", "Vision", "AlexNet", "OpenCV", "Python"],
           code: "https://github.com/strcoder4007/COVID-19-Deep-Learning",
+          blog: true,
           description:
             "Detecting COVID-19 using X-ray Images, CT Scans and Deep Learning",
         },
         {
           id: "d4d3bcde-6b2a-46e2-aef0-be0f7ec87589",
           name: "Medical MRI segmentation using UNet",
-          image: ["unet_mri.png"],
+          images: ["unet.png"],
           tags: ["ml", "Tensorflow 2", "UNet", "Python"],
           code: "https://github.com/strcoder4007/U-Net-Image-Segmentation",
           description: "MRI Image Segmentation using U-Net implementation in Tensorflow 2",
@@ -79,7 +83,7 @@ const allProjects = [
         {
           id: "1c8c2951-fbd9-41ab-8bae-ccd0a437a7b2",
           name: "YOLO V1 Implementation",
-          image: ["yolo_v1.png"],
+          images: ["yolo_v1.png"],
           tags: ["ml", "Tensorflow v1", "DarkNet-19", "Vision", "Python"],
           code: "https://github.com/strcoder4007/YOLO-V1-TF1",
           description:
@@ -88,16 +92,17 @@ const allProjects = [
         {
           id: "f5a8f22a-65bc-47ea-a9ac-aa52848b12eb",
           name: "ML Algos from Scratch to Frameworks",
-          image: [""],
+          images: ["ml_dl_implementation.png"],
           tags: ["ml", "Python", "Tensorflow v1&2, PyTorch"],
           code: "https://github.com/strcoder4007/Machine-Learning-Deep-Learning-Practice",
+          blog: true,
           description:
             "My Code repo for all my implementations while learning ML. Implementation of Linear/Logistic Reg, K-NN, SVM, Clustering, K-Means, ConvNet, ResNet, MobileNet, RNN, LSTM, Reinforcement Learning etc. using Pandas, Matplotlib, NumPy PyTorch & TensorFlow v1&2",
         },
         {
           id: "6c5ec8e8-cfe9-41df-bf90-d3d0d0efcded",
           name: "Real Time Eyeball Tracking",
-          image: ["eye_tracking.png"],
+          images: [""],
           tags: ["ml", "web_dev", "OpenCV", "Python", "Javascript"],
           code: "https://github.com/strcoder4007/eye-tracking",
           live: "https://strcoder4007.github.io/eye-tracking/",
@@ -109,7 +114,7 @@ const allProjects = [
         {
           id: "bf07d3ca-ee63-4fcc-a061-ceabbe0b6b23",
           name: "Town Center (old portfolio website)",
-          images: ["town_center.png"],
+          images: [""],
           tags: ["web_dev", "Javascript", "Angular 7", "Typescript 3"],
           code: "https://github.com/strcoder4007/theTownCenter",
           description: "My 2018 Portfolio website to showcase all projects and code",
@@ -117,7 +122,7 @@ const allProjects = [
         {
           id: "bcd2eeab-bbef-4f5b-ad7a-c7db4edf89cb",
           name: "Instacode Online Judge",
-          image: ["instacode.png"],
+          images: ["instacode.png"],
           tags: ["web_dev", "Javascript"],
           code: "https://github.com/strcoder4007/Instacode-Online-Judge",
           description: "An online coding platform similar to HackerRank I made for College Practicals that evaluates code submissions in 14 different programming languages and ranks participants on a leaderboard.",
@@ -125,7 +130,7 @@ const allProjects = [
         {
           id: "3a98e5fc-0c4a-4c5f-a2ea-dd06a4a615b8",
           name: "Memory Sequence",
-          image: ["memseq.png"],
+          images: [""],
           tags: ["web_dev", "Javascript", "Angular 4", "Typescript 2"],
           code: "https://github.com/strcoder4007/memorySequence",
           description:
@@ -134,7 +139,7 @@ const allProjects = [
         {
           id: "7e5d83ac-ae1e-47ed-abeb-d39c2e28cbbe",
           name: "ML Engineer Portfolio Website",
-          image: ["portfolio.png"],
+          images: [""],
           tags: ["web_dev", "Javascript", "Vue 3", "Element UI"],
           code: "https://github.com/strcoder4007/portfolio",
           live: "https://strcoder4007.github.io/portfolio/",
@@ -144,7 +149,7 @@ const allProjects = [
         {
           id: "2b4eec0b-a6f9-4a9e-b1de-13994f1cf7b6",
           name: "Tensorflow.js Face Detection",
-          image: ["face_detection.png"],
+          images: [""],
           tags: ["web_dev", "Javascript", "Tensorflow.JS"],
           code: "https://github.com/strcoder4007/tensorflow-face-detection",
           live: "https://strcoder4007.github.io/eye-tracking/",
@@ -154,7 +159,7 @@ const allProjects = [
         {
           id: "c7bf5bc0-44dd-4b4d-a4c4-28ab2bb8ff8b",
           name: "Graphic Designer Portfolio Website",
-          image: ["graphic_designer_portfolio.png"],
+          images: ["graphic_designer_portfolio.png"],
           tags: ["web_dev", "Javascript", "Vue 3", "Element UI"],
           code: "https://github.com/strcoder4007/graphic-designer-portfolio",
           live: "https://strcoder4007.github.io/graphic-designer-portfolio/",
@@ -164,7 +169,7 @@ const allProjects = [
         {
           id: "9a3efbda-4a9e-498e-ad2c-d4b9c5f5d167",
           name: "TimeMyShow",
-          image: ["time_my_show.png"],
+          images: [""],
           tags: ["web_dev", "Javascript", "Angular 7", "Typescript 3"],
           code: "https://github.com/strcoder4007/timeMyShow",
           description:
@@ -173,7 +178,7 @@ const allProjects = [
         {
           id: "fd0a94dc-b5dd-4df8-aeba-c6d55425ceea",
           name: "BAJASAE India Website",
-          image: ["baja.png"],
+          images: [""],
           tags: ["web_dev", "Javascript"],
           code: "https://github.com/strcoder4007/SAE-KIET-Website",
           description: "Official website of the Mechanical BAJA SAE India",
@@ -181,7 +186,7 @@ const allProjects = [
         {
           id: "27a5e908-a946-4bdb-8dca-f2c7ad93abde",
           name: "Code Hour",
-          image: ["code_hour.png"],
+          images: [""],
           tags: ["web_dev", "Javascript"],
           code: "https://github.com/strcoder4007/Code_Hour",
           description:
@@ -192,7 +197,7 @@ const allProjects = [
         {
           id: "936ba873-6d1a-4edd-acf0-ffa5e1aa2c24",
           name: "Sphere Online Judge Submissions (C++)",
-          image: ["spoj.png"],
+          images: ["spoj.png"],
           tags: ["algo", "C++", "Math", "Number theory", "Bitmask", "Graph Theory"],
           code: "https://github.com/strcoder4007/spoj",
           live: "https://www.spoj.com/users/strcoder4007/",
@@ -248,17 +253,6 @@ export default {
     font-weight: 600;
     line-height: 72px;
     letter-spacing: -1px;
-  }
-
-  .description {
-    color: #fff;
-    text-align: center;
-    font-family: Bricolage;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-    margin-top: 20px;
   }
 }
 @media (max-width: 768px) {

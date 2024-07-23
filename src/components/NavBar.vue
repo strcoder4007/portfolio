@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { onMounted, ref, computed } from 'vue';
+import { onMounted, ref, computed, watch } from 'vue';
 import { useRouter } from 'vue-router'
 
 export default {
@@ -32,7 +32,15 @@ export default {
     const isMenuOpen = ref(false);
 
     onMounted(() => {
-    })
+
+    });
+
+    watch(
+      () => router.currentRoute.value, // Watch the entire current route object
+      (newVal) => {
+        activeIndex.value = newVal.name.toLowerCase()
+      }
+    );
 
     const handleSelect = (name) => {
       activeIndex.value = name.toLowerCase();

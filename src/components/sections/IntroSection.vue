@@ -10,14 +10,14 @@
             @click="copyToClipboard('+918126062707', 'Phone Number')"
           >
             (+91) 8126062707
-            <img src="../../assets/icons/copy.png" title="Copy" />
+            <img src="../../assets/icons/copy.png" title="Copy Phone" />
           </p>
           <p
             class="email"
             @click="copyToClipboard('mynameshubham23@gmail.com', 'Email')"
           >
             mynameshubham23@gmail.com
-            <img src="../../assets/icons/copy.png" title="Copy" />
+            <img src="../../assets/icons/copy.png" title="Copy Email" />
           </p>
           <section class="about">
             <p>
@@ -57,7 +57,7 @@
           </div>
 
           <span class="source-code">
-            Made in Vue 3.
+            Written in Vue 3.
             <a href="https://github.com/strcoder4007/portfolio" target="_blank"
               >Code</a
             >

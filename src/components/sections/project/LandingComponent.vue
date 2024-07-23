@@ -12,11 +12,12 @@
               </div>
             </div>
             <div class="card-body image-container">
-              <!-- <img v-if="project.image === 'dashboard_design'" src="../../../assets/projects/dashboard_design.png" />
-              <img v-if="project.image === 'illustration'" src="../../../assets/projects/illustration.png" />
-              <img v-if="project.image === 'website_design'" src="../../../assets/projects/website_design.png" />
-              <img v-if="project.image === 'mobile_app_design'" src="../../../assets/projects/mobile_app_design.png" />
-              <img v-if="project.image === 'ui_ux_design'" src="../../../assets/projects/ui_ux_design.png" /> -->
+              <template v-for="image in project.images" :key="image">
+                <img v-if="image.includes('.png')" :src="imageSources[image]" />
+                <img v-else :src="image" />
+                
+              </template>
+              
             </div>
           </div>
           <div class="project-name">{{  project.name }}</div>
@@ -27,9 +28,20 @@
             <span :key="tag" v-for="tag in filterTags(project.tags)">{{ tag }}</span>
           </div>
           <div class="links-container">
-            <div v-if="project.hasOwnProperty('live')" class="live" @click="goToLink(project.live)">Live <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" /></div>
-            <div v-if="project.hasOwnProperty('code')" class="code" @click="goToLink(project.code)">Code <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" /></div>
-            <div v-if="project.hasOwnProperty('blog')" class="blog" @click="goToLink(project.blog)">Blog <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" /></div>
+            <div v-if="project.hasOwnProperty('live')" class="live" @click="goToLink(project.live)">
+              Live 
+              <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" />
+            </div>
+
+            <div v-if="project.hasOwnProperty('code')" class="code" @click="goToLink(project.code)">
+              Code 
+              <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" />
+            </div>
+
+            <div v-if="project.hasOwnProperty('blog') && project.blog" class="blog" @click="goToLink(project.blog)">
+                Blog 
+                <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" />
+            </div>
           </div>
         </div>
       </el-col>
@@ -38,17 +50,49 @@
 </template>
 
 <script>
+import { useRouter } from 'vue-router';
+import nfsSelfDriving from '../../../assets/projects/nfs_self_driving.png';
+import codeforces from '../../../assets/projects/codeforces.png';
+import marioRl from '../../../assets/projects/mario_rl.gif';
+import layerVisualization from '../../../assets/projects/layer_visualization.gif';
+import covid19 from '../../../assets/projects/covid_19.png';
+import unet from '../../../assets/projects/unet.png';
+import yoloV1 from '../../../assets/projects/yolo_v1.png';
+import mlDlImplementation from '../../../assets/projects/ml_dl_implementation.png';
+import instacode from '../../../assets/projects/instacode.png';
+import graphicDesignerPortfolio from '../../../assets/projects/graphic_designer_portfolio.png';
+import spoj from '../../../assets/projects/spoj.png';
 export default {
   name: "ProjectLandingPage",
 
   setup() {
+    const router = useRouter();
     const goToLink = (url) => {
-      window.open(url, '_blank');
+      if (typeof url === 'boolean') {
+        router.push('/blogs');
+      } else window.open(url, '_blank');
     }
+
+    const imageSources = {
+      'nfs_self_driving.png': nfsSelfDriving,
+      'codeforces.png': codeforces,
+      'mario_rl.gif': marioRl,
+      'layer_visualization.gif': layerVisualization,
+      'covid_19.png': covid19,
+      'unet.png': unet,
+      'yolo_v1.png': yoloV1,
+      'ml_dl_implementation.png': mlDlImplementation,
+      'instacode.png': instacode,
+      'graphic_designer_portfolio.png': graphicDesignerPortfolio,
+      'spoj.png': spoj,
+    }
+
     return {
+      imageSources,
       goToLink
     }
   },
+
   props: {
     projectList: {
       type: Array,
@@ -57,9 +101,6 @@ export default {
   },  
   data() {
     return {}
-  },
-  mounted() {
-    
   },
   methods: {
     filterTags(projectTags) {
@@ -75,7 +116,7 @@ export default {
 <style lang="scss" scoped>
 .project-landing-page {
   margin: 0 20px;
-  width: 100%;
+  width: 96%;
 }
 
 .project-container {
@@ -84,16 +125,18 @@ export default {
 .image-container {
     width: 350px;
     height: 200px;
-    background-color: #666; 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden; 
-}
-.image-container.centered {
+    background-color: #111;
+    overflow: hidden;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
 }
 
 .tags-section {
@@ -164,7 +207,8 @@ export default {
   font-size: 15px;
   font-family: Bricolage;
   font-weight: 300;
-  line-height: 17px;
+  line-height: 19px;
+  letter-spacing: 1px;
   display: flex;
   text-align: left;
   margin: 10px 0;
@@ -178,7 +222,7 @@ export default {
   .live, .code, .blog, .behance, .figma {
     font-size: 18px;
     font-weight: 500;
-    font-family: ubuntu-medium, Brandon;
+    font-family: Ubuntu, Brandon;
     margin-right: 30px;
     color: #fff;
     cursor: pointer;

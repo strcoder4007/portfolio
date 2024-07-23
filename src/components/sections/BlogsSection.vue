@@ -22,20 +22,57 @@
 import { ref } from 'vue'
 import data from '../../assets/blogs/blogs.json'
 
-const blogs = ref(data);
+const blogs = ref(data)
+
+const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ]
+
 export default {
   name: "BlogsSection",
   data() {
     return {
-      localBlogs: blogs.value.filter(blog => !blog.tags.includes('personal')),
+      localBlogs: this.formatBlog(blogs.value),
       showBlogArray: []
     }
   },
   mounted() {
-    console.log(this.localBlogs)
     this.showBlogArray = this.localBlogs.map(() => false)
   },
   methods: {
+    getMonthIndex(monthName) {
+      return months.indexOf(monthName);
+    },
+    formatBlog(allBlogs) {
+
+      allBlogs = allBlogs.filter(blog => !blog.tags.includes('personal'))
+      // Sort blogs by the given date string in the format "day month year"
+      allBlogs.sort((a, b) => {
+        let dateA = a.time.split(' ')
+        let dateB = b.time.split(' ')
+
+        // Convert month names to their indices
+        let monthIndexA = this.getMonthIndex(dateA[1])
+        let monthIndexB = this.getMonthIndex(dateB[1])
+
+        // Compare years, then months, then days
+        if (dateA[2] !== dateB[2]) return parseInt(dateA[2]) - parseInt(dateB[2])
+        if (monthIndexA !== monthIndexB) return monthIndexA - monthIndexB
+        return parseInt(dateA[0]) - parseInt(dateB[0])
+      })
+      return allBlogs.reverse()
+    },
     toggleBlog(idx) {
       let blogState = this.showBlogArray[idx]
       this.showBlogArray = this.showBlogArray.map(() => false)
