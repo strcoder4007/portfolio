@@ -119,9 +119,6 @@ export default {
   width: 96%;
 }
 
-.project-container {
-
-}
 .image-container {
     width: 350px;
     height: 200px;
