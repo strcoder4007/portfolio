@@ -7,7 +7,7 @@
           <span class="text" v-html="intro"></span>
           <span class="header">Work Experience</span>
           <span class="text" v-html="workExperience"></span>
-          <span class="header">Things I can help with</span>
+          <span class="header">Things I can help you with</span>
           <span class="text" v-html="thingsICanHelpWith"></span>
         </el-col>
       </el-row>
@@ -27,25 +27,28 @@ export default {
   },
   setup() {
     const intro = `
-      I am a Machine Learning Engineer with 1.5 years of experience in creating and optimizing models, collecting data, setting up production pipelines, and fine-tuning. Additionally, I have 4.5 years of experience in Software Engineering, building high-performance web applications.
+      I am a Machine Learning Engineer with 1.5 years of experience in creating and optimizing models, preprocessing data, setting up production pipelines, and fine-tuning. Additionally, I have 4.5 years of experience in Software Engineering, building high-performance web applications for hospitals and banks.
       <br><br>
-      In 2014, during my first year of college, I delved into competitive programming with C++. The leaderboard challenge captivated me, and I pursued it for 3 years before transitioning to Web Development (JavaScript, React, Vue) in 2017.
+      In 2014, during my first year of college, I delved into competitive programming with C++ which required programming optimized code implementations of Algorithmic problems under time, runtime and memory constraints. The leaderboard challenge captivated me, and I pursued it for 3 years before transitioning to Web Development (JavaScript, React, Vue) in 2017.
       <br><br>
-      Since then, I've had the privilege of building software for a Swiss Fintech startup (1 year) and a Silicon Valley-based healthcare startup (5 years), both focused on consumer-facing applications.`
+      Since then, I've had the privilege of building software for a Swiss Fintech startup (1 year) and a Silicon Valley based healthcare startup (5 years), both focused on consumer-facing applications.`
 
-      const workExperience = `<h3>DoctorPlan (2019 - 2024)</h3>
-      I am a Machine Learning Engineer with 1.5 years of experience in creating and optimizing models, collecting data, setting up production pipelines, and fine-tuning. Additionally, I have 4.5 years of experience in Software Engineering, building high-performance web applications.
+      const workExperience = `
+      <h3>DoctorPlan (2019 - 2024)</h3>
+      Built and maintained the critical app used by the doctors and patients. Handled all frontend tasks across the whole product. Work closely with US team and other cross-functional teams, including developers, designers, and product managers. We used Vue 2 on frontend and ExpressJS as backend.
       <br><br>
       <h3>ALLPS Digital GmBH (2018 - 2019)</h3>
-      I am a Machine Learning Engineer with 1.5 years of experience in creating and optimizing models, collecting data, setting up production pipelines, and fine-tuning. Additionally, I have 4.5 years of experience in Software Engineering, building high-performance web applications.
+      Worked at a Swiss Fintech startup, most of my work was related to processing invoice and extracting the right information using computer vision as well as building dashboards and payment gateway for our partner bank Generali. 
+      <br>
+      I made the character recognizing algorithm work more efficiently by taking into account every detail by feeding more and more data.
       <br><br>
       <h3>Cartesian (3 Months in 2018)</h3>
-      I am a Machine Learning Engineer with 1.5 years of experience in creating and optimizing models, collecting data, setting up production pipelines, and fine-tuning. Additionally, I have 4.5 years of experience in Software Engineering, building high-performance web applications.
+      My internship here was focused on building a live streaming service using AWS, ffmepg and python.
       <br><br>`
 
       const thingsICanHelpWith = `  <ul>
     <li>
-      I can help with designing, implementing, and optimizing deep learning models using frameworks like TensorFlow and PyTorch. I can tackle a wide range of tasks, from data preprocessing to hyperparameter tuning and performance optimization.
+      I can help with designing, implementing, and optimizing deep learning models using frameworks like TensorFlow and PyTorch. I can tackle a wide range of tasks, from data engineering to hyperparameter tuning and performance optimization.
     </li>
     <li>
       I can successfully develope and deploy neural networks for various applications, including computer vision, natural language processing, and time series analysis, ensuring high performance and accuracy.
