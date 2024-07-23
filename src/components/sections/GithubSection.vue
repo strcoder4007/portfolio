@@ -3,18 +3,18 @@
     <el-row>
       <el-col class="github-section">
         <div class="greetings">Github</div>
-        <!-- <span>![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=strcoder4007&exclude_repo=github-readme-stats,anuraghazra.github.io)</span> -->
+        <el-row class="container">
+          <img src="https://streak-stats.demolab.com?user=strcoder4007&theme=&background=111111&border=111111&stroke=1DB954&ring=1DB954&fire=1DB954&currStreakNum=1DB954&sideNums=1DB954&currStreakLabel=1DB954&sideLabels=1DB954&dates=1DB954&card_width=600&border_radius=2" alt="GitHub Streak" />
+        </el-row>
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "GithubSection",
-  components: {
-  },
+
 };
 </script>
 
@@ -27,7 +27,7 @@ export default {
 .github-section {
   overflow-y: scroll;
   height: calc(100vh - 80px);
-  background: transparent;
+  background: #222;
   backdrop-filter: blur(2px);
   display: flex;
   flex-direction: column;
@@ -45,15 +45,8 @@ export default {
     letter-spacing: -1px;
   }
 
-  .description {
-    color: #fff;
-    text-align: center;
-    font-family: Bricolage;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-    margin-top: 20px;
+  .container {
+    margin-top: 40px;
   }
 }
 @media (max-width: 768px) {
@@ -65,11 +58,6 @@ export default {
       font-weight: 700;
     }
 
-    .description {
-      padding: 0 20px;
-      font-size: 15px;
-      line-height: 20px;
-    }
   }
 }
 </style>
