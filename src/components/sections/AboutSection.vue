@@ -35,15 +35,37 @@ export default {
 
       const workExperience = `
       <h3>DoctorPlan (2019 - 2024)</h3>
-      Built and maintained the critical app used by the doctors and patients. Handled all frontend tasks across the whole product. Work closely with US team and other cross-functional teams, including developers, designers, and product managers. We used Vue 2 on frontend and ExpressJS as backend.
-      <br><br>
+      Worked at this US healthcare startup as a Software Engineer. Later transitioned into Machine Learning role within the company. I worked extensively on the primary products i.e the Doctor's/Hospital's app and the Patient web app. Along with other internal apps.
+      <ul>
+        <li>
+          Preprocessed large amounts of sensitive patient data according to HIPAA guidelines using Python, Numpy and Pandas.
+        </li>
+        <li>
+          Wrote the code for batch processing all patient data which ran once every night along with setting up the ML pipeline. Using Sagemaker, Inferencia and MLFlow.
+        </li>
+        <li>
+          Led the development and maintenance of a critical app used by doctors and patients, focusing on enhancing user experience and functionality. Managed all frontend tasks across the entire product lifecycle, utilizing Vue 2.
+        </li>
+        <li>
+          Collaborated closely with cross-functional teams in the US, including developers, designers, and product managers, to ensure seamless integration and delivery.
+        </li>
+        <li>
+        </li>
+      </ul>
       <h3>ALLPS Digital GmBH (2018 - 2019)</h3>
-      Worked at a Swiss Fintech startup, most of my work was related to processing invoice and extracting the right information using computer vision as well as building dashboards and payment gateway for our partner bank Generali. 
-      <br>
-      I made the character recognizing algorithm work more efficiently by taking into account every detail by feeding more and more data.
-      <br><br>
+      <ul>
+        <li>
+          Contributed to a Swiss Fintech startup by improving invoice processing and information extraction through advanced computer vision techniques.
+        </li>
+        <li>
+          Developed dashboards and a payment gateway for our partner bank, Generali. 
+        </li>
+        <li>
+          Enhanced the efficiency of a character recognition algorithm by optimizing data inputs and refining machine learning models.
+        </li>
+      </ul>
       <h3>Cartesian (3 Months in 2018)</h3>
-      My internship here was focused on building a live streaming service using AWS, ffmepg and python.
+        Completed an internship focused on developing a live streaming service using AWS, FFmpeg, and Python. Gained hands-on experience in cloud computing and real-time video processing technologies.
       <br><br>`
 
       const thingsICanHelpWith = `  <ul>
@@ -107,10 +129,10 @@ export default {
   display: block;
   color: #333333;
   font-family: Ubuntu, Brandon;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 25px;
   width: auto;
   min-width: 400px;
   margin-bottom: 80px;

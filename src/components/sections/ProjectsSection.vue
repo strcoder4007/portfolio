@@ -106,7 +106,7 @@ const allProjects = [
           id: "bcd2eeab-bbef-4f5b-ad7a-c7db4edf89cb",
           name: "Instacode Online Judge",
           images: ["instacode.png"],
-          tags: ["web_dev", "Javascript"],
+          tags: ["web_dev", "PHP"],
           code: "https://github.com/strcoder4007/Instacode-Online-Judge",
           description: "An online coding platform similar to HackerRank I made for College Practicals that evaluates code submissions in 14 different programming languages and ranks participants on a leaderboard.",
         },
