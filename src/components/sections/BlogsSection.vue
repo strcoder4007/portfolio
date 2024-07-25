@@ -126,13 +126,13 @@ export default {
     width: 80%;
     background: #111;
     border-radius: 5px;
-    padding: 15px;
+    padding: 20px;
     cursor: pointer;
     box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.3);
 
     .blog-name {
-      font-size: 22px;
-      font-weight: 600;
+      font-size: 24px;
+      font-weight: 700;
       text-align: left;
       font-family: Ubuntu, Bricolage;
       color: #fff;
