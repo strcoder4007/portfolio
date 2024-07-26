@@ -29,33 +29,38 @@ export default {
     const intro = `
       I am a Machine Learning Engineer with 1.5 years of experience in creating and optimizing models, preprocessing data, setting up production pipelines, and fine-tuning. Additionally, I have 4.5 years of experience in Software Engineering, building high-performance web applications for hospitals and banks.
       <br><br>
-      In 2014, during my first year of college, I delved into competitive programming with C++ which required programming optimized code implementations of Algorithmic problems under time, runtime and memory constraints. The leaderboard challenge captivated me, and I pursued it for 3 years before transitioning to Web Development (JavaScript, React, Vue) in 2017.
+      In 2014, during my first year of college, I delved into competitive programming with C++ which required programming optimized implementations of Algorithmic problems under time, runtime and memory constraints. The leaderboard challenge captivated me, and I pursued it for 3 years before transitioning to Web Development (JavaScript, React, Vue) in 2017.
       <br><br>
-      Since then, I've had the privilege of building software for a Swiss Fintech startup (1 year) and a Silicon Valley based healthcare startup (5 years), both focused on consumer-facing applications.`
+      Since then, I've had the privilege of building software for a Swiss Fintech startup (1 year) and a healthcare startup (5 years), both focused on consumer-facing applications.`
 
       const workExperience = `
       <h3>DoctorPlan (2019 - 2024)</h3>
-      Worked at this US healthcare startup as a Software Engineer. Later transitioned into Machine Learning role within the company. I worked extensively on the primary products i.e the Doctor's/Hospital's app and the Patient web app. Along with other internal apps.
+      DoctorPlan is a Silicon Valley based healthcare start-up which helps healthcare organizations create deep relationships with patients, using a data-driven approach to personalize care delivery.
+
+      <h4>Key Responsibilities:</h4>
       <ul>
         <li>
-          Preprocessed large amounts of sensitive patient data according to HIPAA guidelines using Python, Numpy and Pandas.
+          I was responsible for developing and maintaining all three of our major platforms i.e the Our Hospital app and our Patient web app and our internal admin dashboard.
+        </li>
+        <li>
+          Preprocessed large amounts of sensitive patient medical data (under HIPAA guidelines) using Python, Numpy and Pandas.
         </li>
         <li>
           Wrote the code for batch processing all patient data which ran once every night along with setting up the ML pipeline. Using Sagemaker, Inferencia and MLFlow.
         </li>
         <li>
-          Led the development and maintenance of a critical app used by doctors and patients, focusing on enhancing user experience and functionality. Managed all frontend tasks across the entire product lifecycle, utilizing Vue 2.
-        </li>
-        <li>
           Collaborated closely with cross-functional teams in the US, including developers, designers, and product managers, to ensure seamless integration and delivery.
         </li>
         <li>
+          I refactored and optimized our key platform decreasing the load time by 11x. 
         </li>
       </ul>
       <h3>ALLPS Digital GmBH (2018 - 2019)</h3>
+      ALLPS is a platform which matches candidates with recruiters using AI.
+      <h4>Key Responsibilities:</h4>
       <ul>
         <li>
-          Contributed to a Swiss Fintech startup by improving invoice processing and information extraction through advanced computer vision techniques.
+          Improved invoice processing and information extraction from reciepts and cheques through advanced computer vision techniques.
         </li>
         <li>
           Developed dashboards and a payment gateway for our partner bank, Generali. 
