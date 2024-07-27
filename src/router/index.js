@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from "vue-router";
+import { createWebHashHistory, createRouter } from "vue-router";
 import Home from "@/components/LandingPage.vue";
 
 const routes = [
@@ -35,7 +35,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory('/portfolio/'),
+  history: createWebHashHistory('/portfolio/'),
   routes,
 });
 
