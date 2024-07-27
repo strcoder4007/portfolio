@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-row class="app-container">
+    <el-row class="app-container" id="app-container">
       <el-col :sm="24" :md="7">
         <IntroSection></IntroSection>
       </el-col>

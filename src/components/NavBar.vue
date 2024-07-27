@@ -47,6 +47,13 @@ export default {
       isMenuOpen.value = false; // Close menu after selection
       // Handle navigation or route changes based on selected item
       router.push({name});
+      setTimeout(() => {
+        if (name === 'Home') {
+          document.getElementById("app-container").scrollIntoView()
+        } else if (document.getElementById("projects-section"))
+          document.getElementById("projects-section").scrollIntoView()
+      }, 500);
+      
     };
 
     const toggleMenu = () => {
@@ -231,7 +238,7 @@ button.menu-toggle {
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
       opacity: 1;
       transform: translateY(0);
-      transition: all 0.3s ease-in-out;
+      transition: all 0.03s ease-in-out;
     }
   }
 
@@ -266,7 +273,7 @@ button.menu-toggle {
     background-color: #111111;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
     transform: translateY(-200%);
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.4s ease-in-out;
 
     .menu-item {
       list-style: none;

@@ -14,7 +14,9 @@
 <script>
 export default {
   name: "GithubSection",
-
+  mounted() {
+    document.getElementById("github-section").scrollIntoView()
+  }
 };
 </script>
 

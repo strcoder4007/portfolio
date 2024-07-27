@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="intro-section">
     <el-row>
       <el-col class="intro-section">
         <div class="intro-text">
@@ -39,18 +39,18 @@
           /></a>
 
           <div class="social-section">
-            <a href="https://github.com/strcoder4007" target="_blank"
-              ><img
-                src="../../assets/icons/github.png"
-                alt="Github Icon"
-                class="social-icon"
-            /></a>
             <a
               href="https://www.linkedin.com/in/shubham-singh-96b159267"
               target="_blank"
               ><img
                 src="../../assets/icons/linkedin.png"
                 alt="LinkedIn Icon"
+                class="social-icon"
+            /></a>
+            <a href="https://github.com/strcoder4007" target="_blank"
+              ><img
+                src="../../assets/icons/github.png"
+                alt="Github Icon"
                 class="social-icon"
             /></a>
           </div>
@@ -262,10 +262,10 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 10px;
+    padding: 80px 10px 0 10px ;
 
     .intro-text {
-      padding: 40px 15px;
+      padding: 40px 10px 0 10px;
       .profile-text {
         font-size: 30px;
         font-weight: 700;
@@ -312,7 +312,7 @@ export default {
         margin: 20px 0;
         gap: 15px;
         img {
-          width: 20px;
+          width: 30px;
           height: auto;
         }
       }

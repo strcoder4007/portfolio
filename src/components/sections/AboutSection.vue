@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container" id="about-section">
     <div class="about-page">
       <el-row>
         <el-col :span="24">
@@ -25,7 +25,7 @@
 export default {
   name: "AboutPage",
   mounted() {
-    
+    document.getElementById("about-section").scrollIntoView()
   },
   setup() {
     const intro = `
@@ -118,7 +118,6 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  background: #222222;
   overflow-y: scroll;
 }
 .about-page {
@@ -161,8 +160,10 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding-top: 60px;
+  }
   .about-page {
-    padding-top: 30px;
     height: auto;
     min-height: calc(100vh - 60px);
     display: flex;
@@ -193,7 +194,9 @@ export default {
     font-style: normal;
     font-weight: 400;
     line-height: 25px;
-    width: calc(100vw - 40px);
+    width: auto;
+    min-width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
     margin-bottom: 40px;
     word-break: break-word;
   }

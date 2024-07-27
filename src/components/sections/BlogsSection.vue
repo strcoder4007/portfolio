@@ -155,6 +155,7 @@ export default {
       line-height: 22px;
       text-align: left;
       color: #fff;
+      overflow-x: clip;
     }
   }
 }
