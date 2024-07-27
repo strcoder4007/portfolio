@@ -65,5 +65,12 @@ a {
   overflow-y: scroll;
 }
 @media (max-width: 768px) {
+  .floating-card {
+    height: auto;
+    width: 100vw;
+    background-color: white;
+    overflow-y: scroll;
+    margin: 0;
+  }
 }
 </style>

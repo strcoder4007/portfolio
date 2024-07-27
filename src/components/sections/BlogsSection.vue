@@ -48,6 +48,7 @@ export default {
     }
   },
   mounted() {
+    document.getElementById("blogs-section").scrollIntoView()
     this.showBlogArray = this.localBlogs.map(() => false)
   },
   methods: {
@@ -158,18 +159,22 @@ export default {
   }
 }
 @media (max-width: 768px) {
-  .blogs-section {
+  .container {
+    padding-top: 60px;
+    .blogs-section {
+      height: auto;
+      min-height: calc(100vh - 60px);
+      .greetings {
+        margin-top: 20px;
+        font-size: 30px;
+        font-weight: 700;
+      }
 
-    .greetings {
-      margin-top: 20px;
-      font-size: 40px;
-      font-weight: 700;
-    }
-
-    .description {
-      padding: 0 20px;
-      font-size: 15px;
-      line-height: 20px;
+      .description {
+        padding: 0 20px;
+        font-size: 15px;
+        line-height: 20px;
+      }
     }
   }
 }

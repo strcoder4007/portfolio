@@ -238,7 +238,8 @@ export default {
 
 @media (max-width: 768px) {
   .project-landing-page {
-    margin: 60px 5px;
+    margin: 0;
+    width: 100vw;
   }
 }
 </style>

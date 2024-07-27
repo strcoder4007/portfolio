@@ -82,6 +82,31 @@ export default {
     }
 }
 @media (max-width: 768px) {
+    .tab-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+        margin-top: 20px;
+
+        width: 95vw;
+        gap: 10px;
+        height: 60px;
+
+        .tab {
+            background-color: #222222;
+            border: none;
+            width: 75px;
+            padding: 5px;
+            gap: 10px;
+            color: #ffffff;
+            font-size: 12px;
+            font-family: Ubuntu, Brandon, sans-serif;
+        }
+
+        .tab.active {
+            border: 2px solid white;
+        }
+    }
 }
 </style>

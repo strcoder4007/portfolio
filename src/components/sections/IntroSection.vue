@@ -29,8 +29,7 @@
               >and a solid background in<mark>
                 Algorithms and Data Structures (C++)</mark
               >.<br /><br />
-              Explore my work and see how I can contribute to your team's
-              success.
+              I'm on the lookout for Machine Learning Opportunities starting August 2024! Please reach out if you think I would be a good fit for your team.
             </p>
           </section>
 
@@ -47,7 +46,7 @@
                 class="social-icon"
             /></a>
             <a
-              href="https://www.linkedin.com/in/riny-yadav-a24a90238/"
+              href="https://www.linkedin.com/in/shubham-singh-96b159267"
               target="_blank"
               ><img
                 src="../../assets/icons/linkedin.png"
@@ -207,20 +206,16 @@ export default {
         margin-left: 5px;
       }
     }
-    .social-icons {
+    .social-section {
       display: flex;
       justify-content: start;
+      align-items: start;
+      margin: 20px 0;
       gap: 15px;
-      margin-bottom: 30px;
-    }
-    .social-icons a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 24px;
-    }
-    .footer {
-      font-size: 12px;
-      color: #fff;
+      img {
+        width: 30px;
+        height: auto;
+      }
     }
     .source-code {
       color: #ffffff;
@@ -248,18 +243,6 @@ export default {
     }
   }
 
-  .greetings {
-    text-align: center;
-    font-family: Ubuntu, Brandon;
-    font-size: 59px;
-    font-style: normal;
-    font-weight: 330;
-    line-height: 72px;
-    background: #111111;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
   .profile {
     color: var(--Black, #261f22);
     text-align: center;
@@ -270,59 +253,75 @@ export default {
     line-height: 144px; /* 121.008% */
     letter-spacing: -3.57px;
   }
-
-  .description {
-    color: #ffffff;
-    text-align: center;
-    font-family: Bricolage;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px; /* 142.857% */
-  }
-
-  .resume-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-  }
 }
-.social-section {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  margin: 20px 0;
-  gap: 15px;
-  img {
-    width: 30px;
-    height: auto;
-  }
-}
+
 @media (max-width: 768px) {
   .intro-section {
-    height: 70vh;
+    height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 10px;
+    padding: 80px 10px;
 
-    .greetings {
-      font-weight: 400;
-      font-size: 30px;
-    }
-    .profile {
-      font-size: 50px;
-      line-height: 60px;
-    }
+    .intro-text {
+      padding: 40px 15px;
+      .profile-text {
+        font-size: 30px;
+        font-weight: 700;
+        font-family: Ubuntu;
+      }
+      .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .email,
+      .phone {
+        font-size: 14px;
 
-    .description {
-      font-size: 15px;
-      line-height: 20px;
-      padding: 0 20px;
-      margin-top: 20px;
+        img {
+          width: 13px;
+          height: auto;
+          display: inline;
+          float: right;
+          cursor: pointer;
+        }
+      }
+      .about {
+        margin: 30px 0;
+        font-size: 15px;
+      }
+      .btn {
+        padding: 5px 10px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        line-height: 25px;
+        img {
+          width: 18px;
+          height: auto;
+          margin-bottom: -5px;
+          margin-left: 5px;
+        }
+      }
+      .social-section {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        margin: 20px 0;
+        gap: 15px;
+        img {
+          width: 20px;
+          height: auto;
+        }
+      }
+      .source-code {
+        display: none;
+      }
+      .policy-and-terms-section {
+        display: none;
+      }
     }
   }
 }

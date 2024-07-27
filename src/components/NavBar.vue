@@ -241,9 +241,10 @@ button.menu-toggle {
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    top: 40px;
+    top: 22px;
     right: 30px;
     z-index: 100;
+    cursor: pointer;
   }
 
   .menu-items {
@@ -257,12 +258,12 @@ button.menu-toggle {
 
     position: absolute;
     height: 350px;
-    top: 85px;
+    top: 60px;
     left: 0;
     z-index: 10;
     width: 100vw;
 
-    background-color: #111111 ;
+    background-color: #111111;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
     transform: translateY(-200%);
     transition: transform 0.6s ease-in-out;
@@ -275,14 +276,18 @@ button.menu-toggle {
 
       font-family: Ubuntu, Brandon, sans-serif;
 
-      border-radius: 4px;
-      color: #FFFFFF;
-      margin-top: -40px;
-      margin-bottom: 15px;
+      border-radius: 1px;
+      color: #111111;
+      margin-top: -47px;
+      margin-bottom: -26px;
       line-height: 50px;
       height: 50px;
       width: 200px;
-      background: #111111 ;
+      background: #1DB954;
+
+      &.active {
+        color: #ffffff !important;
+      }
 
 
       &.active::after {

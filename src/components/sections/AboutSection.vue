@@ -9,6 +9,8 @@
           <span class="text" v-html="workExperience"></span>
           <span class="header">Things I can help you with</span>
           <span class="text" v-html="thingsICanHelpWith"></span>
+          <span class="header">Other interests</span>
+          <span class="text" v-html="interests"></span>
         </el-col>
       </el-row>
     </div>
@@ -81,23 +83,31 @@ export default {
       </ul>`
 
       const thingsICanHelpWith = `  <ul>
-    <li>
-      I can help with designing, implementing, and optimizing deep learning models using frameworks like TensorFlow and PyTorch. I can tackle a wide range of tasks, from data engineering to hyperparameter tuning and performance optimization.
-    </li>
-    <li>
-      I can successfully develope and deploy neural networks for various applications, including computer vision, natural language processing, and time series analysis, ensuring high performance and accuracy.
-    </li>
-    <li>
-      I can set up and manage scalable ML pipelines, ensuring efficient data flow from ingestion to model training and deployment experience in configuring and managing CI/CD systems for ML.
-    </li>
-    <li>
-      I can help with optimizing model performance through techniques like pruning, quantization, and knowledge distillation, ensuring models run efficiently on both cloud and edge devices.
-    </li>
-  </ul>`
+        <li>
+          I can help with designing, implementing, and optimizing deep learning models using frameworks like TensorFlow and PyTorch. I can tackle a wide range of tasks, from data engineering to hyperparameter tuning and performance optimization.
+        </li>
+        <li>
+          I can successfully develope and deploy neural networks for various applications, including computer vision, natural language processing, and time series analysis, ensuring high performance and accuracy.
+        </li>
+        <li>
+          I can set up and manage scalable ML pipelines, ensuring efficient data flow from ingestion to model training and deployment experience in configuring and managing CI/CD systems for ML.
+        </li>
+        <li>
+          I can help with optimizing model performance through techniques like pruning, quantization, and knowledge distillation, ensuring models run efficiently on both cloud and edge devices.
+        </li>
+      </ul>`
+
+      const interests = `<ul style="font-size: 17px">
+                          <li>GPUs</li>
+                          <li>Home Servers</li>
+                          <li>Psychology & Psychoanalytics</li>
+                          <li>Camping</li>
+                        </ul>`
     return {
       intro,
       workExperience,
-      thingsICanHelpWith
+      thingsICanHelpWith,
+      interests
     }
   },
   components: {
@@ -150,63 +160,17 @@ export default {
   margin-bottom: 80px;
 }
 
-.image-section {
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      margin-bottom: 40px;
-    }
-} 
-
-.promises-header {
-  color: var(--Black, #261F22);
-  font-family: Ubuntu, Brandon;
-  font-size: 59px;
-  font-style: normal;
-  font-weight: 330;
-  line-height: 72px; 
-  letter-spacing: -1.77px;
-  margin: 10px 0 100px 0;
-}
-
-.promises {
-  padding: 0 40px 40px 0;
-  margin-bottom: 50px;
-  img {
-    width: 64px;
-    height: 64px;
-  }
-  .promise-subheader {
-    display: block;
-    color: var(--Black, #261F22);
-    font-family: Ubuntu, Brandon;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: 40px;
-    margin-bottom: 30px;
-    margin-top: 10px;
-  }
-  .promise-description {
-    color: #333333;
-    font-family: Bricolage;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-  }
-}
 @media (max-width: 768px) {
   .about-page {
+    padding-top: 30px;
     height: auto;
-    min-height: calc(100vh - 60px - 50px);
+    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
-    margin: 100px 30px 5px 50px;
-    text-align: left;
+    margin: 60px 10px;
+    width: calc(100vw - 40px);
   }
 
   .header {
@@ -218,66 +182,20 @@ export default {
     -moz-text-fill-color: transparent;
 
     font-family: Ubuntu, Brandon;
-    font-size: 32px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 700;
     line-height: 40px;
     margin-bottom: 20px;
   }
-  .description {
-    display: block;
-    color: #333333;
-    font-family: Ubuntu, Brandon;
-    font-size: 18px;
+  .text {
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px;
-    width: auto;
-    min-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .image-section {
-      img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        margin-bottom: 10px;
-      }
-  } 
-
-  .promises-header {
-    color: var(--Black, #261F22);
-    font-family: Ubuntu, Brandon;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 330;
-    line-height: 40px; 
-    margin: 30px 0 40px 0;
-  }
-
-  .promises {
-    padding: 0 10px 10px 0;
+    line-height: 25px;
+    width: calc(100vw - 40px);
     margin-bottom: 40px;
-    img {
-      width: 40px;
-      height: 40px;
-    }
-    .promise-subheader {
-      display: block;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 25px;
-      margin-bottom: 20px;
-      margin-top: 10px;
-    }
-    .promise-description {
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 15px;
-    }
+    word-break: break-word;
   }
 }
 

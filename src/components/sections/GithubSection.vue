@@ -51,7 +51,6 @@ export default {
 }
 @media (max-width: 768px) {
   .github-section {
-
     .greetings {
       margin-top: 20px;
       font-size: 40px;

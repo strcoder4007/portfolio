@@ -256,17 +256,18 @@ export default {
   }
 }
 @media (max-width: 768px) {
+  .container {
+    padding-top: 60px;
+  }
   .projects-section {
+    height: auto;
+    width: 100vw;
     .greetings {
+      float: left;
+      text-align: left;
       margin-top: 20px;
-      font-size: 40px;
+      font-size: 30px;
       font-weight: 700;
-    }
-
-    .description {
-      padding: 0 20px;
-      font-size: 15px;
-      line-height: 20px;
     }
   }
 }
