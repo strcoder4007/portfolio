@@ -27,51 +27,58 @@ export default {
   },
   setup() {
     const intro = `
-      I am a Machine Learning Engineer with 1.5 years of experience in creating and optimizing models, preprocessing data, setting up production pipelines, and fine-tuning. Additionally, I have 4.5 years of experience in Software Engineering, building high-performance web applications for hospitals and banks.
+      I'm a seasoned Software Engineer with 6 years of experience architecting and developing high-performance SaaS platforms for healthcare and fintech industries. My expertise spans full-stack development, with a recent focus on cutting-edge Machine Learning projects.
       <br><br>
-      In 2014, during my first year of college, I delved into competitive programming with C++ which required programming optimized implementations of Algorithmic problems under time, runtime and memory constraints. The leaderboard challenge captivated me, and I pursued it for 3 years before transitioning to Web Development (JavaScript, React, Vue) in 2017.
+      In 2014, during my first year of college, I delved into competitive programming with C++. This experience instilled in me a deep appreciation for algorithmic efficiency and optimization under strict constraints. The leaderboard challenge captivated me, and I pursued it for 3 years before transitioning to Web Development (JavaScript, React, Vue) in 2017.
       <br><br>
-      Since then, I've had the privilege of building software for a Swiss Fintech startup (1 year) and a healthcare startup (5 years), both focused on consumer-facing applications.`
+      Since then, I've worked at a Swiss Fintech startup for a year, where I contributed to innovative financial technology solutions and for 5 years at a healthcare startup, where I played a key role in developing patient-centric applications that improved healthcare delivery and accessibility.`
 
       const workExperience = `
       <h3>DoctorPlan (2019 - 2024)</h3>
-      DoctorPlan is a Silicon Valley based healthcare start-up which helps healthcare organizations create deep relationships with patients, using a data-driven approach to personalize care delivery.
+      <strong>Senior Software Engineer</strong>
+      <br>
+      Skills: <b>Javascript · VueJS · Python · Data Analysis · HIPAA Compliance</b>
+      <p>DoctorPlan is a Silicon Valley-based healthcare startup revolutionizing patient care through data-driven personalization.</p>
+      <h4>Key Achievements:</h4>
+      <ul>
+        <li>Spearheaded development and maintenance of three major platforms: Hospital app, Patient web app, and internal admin dashboard, serving over 100,000 users.</li>
+        <li>Engineered robust data processing pipelines for sensitive patient medical data, ensuring HIPAA compliance and data integrity.</li>
+        <li>Led a performance optimization initiative, resulting in an 11x decrease in platform load time, significantly enhancing user experience and engagement.</li>
+        <li>Facilitated seamless collaboration between cross-functional teams across international boundaries, driving product innovation and timely delivery.</li>
+      </ul>
+      <br>
+      <h3>ALLPS Digital GmbH (2018 - 2019)</h3>
+      <strong>Full-Stack Developer & Machine Learning Engineer</strong>
+      <br>
+      Skills: <b>Python · SQL · Javascript · ReactJS · Computer Vision · Machine Learning</b>
+      <p>ALLPS is a Swiss fintech startup partnering with banks to revolutionize invoice processing through digitization.</p>
 
-      <h4>Key Responsibilities:</h4>
+      <h4>Key Contributions:</h4>
       <ul>
-        <li>
-          I was responsible for developing and maintaining all three of our major platforms i.e the Our Hospital app and our Patient web app and our internal admin dashboard.
-        </li>
-        <li>
-          Preprocessed large amounts of sensitive patient medical data (under HIPAA guidelines) using Python, Numpy and Pandas.
-        </li>
-        <li>
-          Wrote the code for batch processing all patient data which ran once every night along with setting up the ML pipeline. Using Sagemaker, Inferencia and MLFlow.
-        </li>
-        <li>
-          Collaborated closely with cross-functional teams in the US, including developers, designers, and product managers, to ensure seamless integration and delivery.
-        </li>
-        <li>
-          I refactored and optimized our key platform decreasing the load time by 11x. 
-        </li>
+        <li>Implemented advanced computer vision techniques (AlexNet) to enhance invoice processing accuracy by 40%, streamlining information extraction from receipts and cheques.</li>
+        <li>Architected and developed robust dashboards and a secure payment gateway for Generali, a major partner bank, facilitating seamless financial transactions for over 100,000 customers.</li>
+        <li>Optimized in-house OCR algorithm, improving character recognition accuracy by 25% through refined machine learning models and optimized data inputs.</li>
       </ul>
-      <h3>ALLPS Digital GmBH (2018 - 2019)</h3>
-      ALLPS is a platform which matches candidates with recruiters using AI.
-      <h4>Key Responsibilities:</h4>
+      <br>
+      <h3>Global Voices Ltd - UKSkills (2017 - 2018)</h3>
+      <strong>Software Engineer</strong>
+      <br>
+      Skills: <b>Python · Software Engineering · Operating Systems · SQL · CI/CD</b>
+
+      <h4>Notable Accomplishments:</h4>
       <ul>
-        <li>
-          Improved invoice processing and information extraction from reciepts and cheques through advanced computer vision techniques.
-        </li>
-        <li>
-          Developed dashboards and a payment gateway for our partner bank, Generali. 
-        </li>
-        <li>
-          Enhanced the efficiency of a character recognition algorithm by optimizing data inputs and refining machine learning models.
-        </li>
+        <li>Led the development and maintenance of the company's proprietary content management system, reducing critical bugs by 70% and implementing key features that improved system functionality and user experience.</li>
+        <li>Redesigned and optimized CI/CD pipelines, resulting in a 50% reduction in rollbacks and a 30% increase in deployment frequency, significantly enhancing product release efficiency and reliability.</li>
       </ul>
-      <h3>Cartesian (3 Months in 2018)</h3>
-        Completed an internship focused on developing a live streaming service using AWS, FFmpeg, and Python. Gained hands-on experience in cloud computing and real-time video processing technologies.
-      <br><br>`
+      <br>
+      <h3>Cartesian (3 Months in 2017 • Internship)</h3>
+      <strong>Software Engineering Intern</strong>
+      <br>
+      Skills: <b>Javascript · AWS · C++ · FFmpeg · Python</b>
+      <ul>
+        <li>Developed a scalable live streaming service utilizing AWS, FFmpeg, and Python, capable of handling concurrent streams for over 10,000 users.</li>
+        <li>Gained hands-on experience in cloud computing, real-time video processing, and large-scale system design, laying the foundation for future roles in high-performance computing.</li>
+      </ul>`
 
       const thingsICanHelpWith = `  <ul>
     <li>
