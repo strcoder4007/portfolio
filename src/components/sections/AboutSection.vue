@@ -62,10 +62,10 @@ export default {
         <li>Optimized in-house OCR algorithm, improving character recognition accuracy by 25% through refined machine learning models and optimized data inputs.</li>
       </ul>
       <br>
-      <h3>Global Voices Ltd - UKSkills (2017 - 2018)</h3>
+      <h3>Global Voices Ltd (2017 - 2018)</h3>
       <strong>Software Engineer</strong>
       <br>
-      Skills: <b>Python · Software Engineering · Operating Systems · SQL · CI/CD</b>
+      Skills: <b>Python · Software Engineering · SQL · CI/CD</b>
 
       <h4>Notable Accomplishments:</h4>
       <ul>
