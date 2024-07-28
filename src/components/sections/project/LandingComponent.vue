@@ -62,6 +62,8 @@ import mlDlImplementation from '../../../assets/projects/ml_dl_implementation.pn
 import instacode from '../../../assets/projects/instacode.png';
 import graphicDesignerPortfolio from '../../../assets/projects/graphic_designer_portfolio.png';
 import spoj from '../../../assets/projects/spoj.png';
+import mle from '../../../assets/projects/mle.png';
+import faceDetection from '../../../assets/projects/face_detection.png';
 export default {
   name: "ProjectLandingPage",
 
@@ -85,6 +87,8 @@ export default {
       'instacode.png': instacode,
       'graphic_designer_portfolio.png': graphicDesignerPortfolio,
       'spoj.png': spoj,
+      'mle.png': mle,
+      'face_detection.png': faceDetection
     }
 
     return {

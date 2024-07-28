@@ -31,15 +31,15 @@ export default {
     const intro = `
       I'm a seasoned Software Engineer with 6 years of experience architecting and developing high-performance SaaS platforms for healthcare and fintech industries. My expertise spans full-stack development, with a recent focus on cutting-edge Machine Learning projects.
       <br><br>
-      In 2014, during my first year of college, I delved into competitive programming with C++. This experience instilled in me a deep appreciation for algorithmic efficiency and optimization under strict constraints. The leaderboard challenge captivated me, and I pursued it for 3 years before transitioning to Web Development (JavaScript, React, Vue) in 2017.
+      In 2014, during my first year of college, I delved into competitive programming with C++. This experience instilled in me a deep appreciation for algorithmic efficiency and optimization under strict constraints. Alos, the leaderboard challenge captivated me, and I pursued it for 3 years before transitioning to Web Development (JavaScript, React, Vue) in 2017 and did couple of internships.
       <br><br>
-      Since then, I've worked at a Swiss Fintech startup for a year, where I contributed to innovative financial technology solutions and for 5 years at a healthcare startup, where I played a key role in developing patient-centric applications that improved healthcare delivery and accessibility.`
+      Since then, I've worked full-time at a Swiss Fintech startup for a year, where I contributed in building fintech solutions and for 5 years at a healthcare startup, where I played a key role in developing patient and doctor-centric applications that improved healthcare delivery and accessibility.`
 
       const workExperience = `
       <h3>DoctorPlan (2019 - 2024)</h3>
-      <strong>Senior Software Engineer</strong>
+      <strong>Software Engineer</strong>
       <br>
-      Skills: <b>Javascript · VueJS · Python · Data Analysis · HIPAA Compliance</b>
+      Skills: <b>Javascript · VueJS · Data Analysis · HIPAA Compliance</b>
       <p>DoctorPlan is a Silicon Valley-based healthcare startup revolutionizing patient care through data-driven personalization.</p>
       <h4>Key Achievements:</h4>
       <ul>

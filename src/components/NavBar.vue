@@ -284,29 +284,23 @@ button.menu-toggle {
       font-family: Ubuntu, Brandon, sans-serif;
 
       border-radius: 1px;
-      color: #111111;
+      color: #1DB954;
       margin-top: -47px;
       margin-bottom: -26px;
       line-height: 50px;
       height: 50px;
       width: 200px;
-      background: #1DB954;
+      background: transparent;
 
-      &.active {
-        color: #ffffff !important;
-      }
-
-
-      &.active::after {
-        content: '';
-        display: none !important;
-        width: 5px;
-        height: 5px;
-        background: #111111 ;
-        border-radius: 50%;
-        margin: 0 auto;
-        margin-top: 5px;
-      }
+          &.active::after {
+            content: '>';
+            display: block;
+            width: 0px;
+            height: 0px;
+            background: #1DB954;
+            margin-left: 36px !important;
+            margin-top: -51px !important;
+          }
     }
   }
 
