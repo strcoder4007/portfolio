@@ -21,8 +21,7 @@
           </p>
           <section class="about">
             <p>
-              Passionate about leveraging<mark> Computer Vision </mark>and<mark>
-                Deep learning </mark
+              Passionate about leveraging<mark> Deep learning models</mark
               >to solve problems deemed impossible in the recent past.<br /><br />
               I have<mark>
                 6 years of experience as a Software Engineer (JS) </mark
@@ -194,7 +193,7 @@ export default {
       color: #fff;
       background-color: transparent;
       font-family: Bricolage;
-      width: 300px;
+      width: 100%;
       font-size: 15px;
       text-align: left;
       margin-bottom: 10px;

@@ -9,6 +9,8 @@
           <span class="text" v-html="workExperience"></span>
           <span class="header">Things I can help you with</span>
           <span class="text" v-html="thingsICanHelpWith"></span>
+          <span class="header">Deep Learning interests</span>
+          <span class="text" v-html="deeplearninginterests"></span>
           <span class="header">Other interests</span>
           <span class="text" v-html="interests"></span>
         </el-col>
@@ -98,6 +100,13 @@ export default {
         </li>
       </ul>`
 
+      const deeplearninginterests = `<ul>
+        <li>Computer Vision</li>
+        <li>Recommendation Systems</li>
+        <li>LLMs, RAG, Agents</li>
+        <li>Multimodal Models</li>
+        </ul>`
+
       const interests = `<ul style="font-size: 17px">
                           <li>GPUs</li>
                           <li>Home Servers</li>
@@ -107,6 +116,7 @@ export default {
     return {
       intro,
       workExperience,
+      deeplearninginterests,
       thingsICanHelpWith,
       interests
     }
