@@ -43,9 +43,9 @@ export default {
       <p>DoctorPlan is a Silicon Valley-based healthcare startup revolutionizing patient care through data-driven personalization.</p>
       <h4>Key Achievements:</h4>
       <ul>
-        <li>Spearheaded development and maintenance of three major platforms: Hospital app, Patient web app, and internal admin dashboard, serving over 100,000 users.</li>
+        <li>Played a pivotal role in development and maintenance of our three major platforms: Hospital app, Patient web app and internal admin dashboard, serving over 100k patients.</li>
         <li>Engineered robust data processing pipelines for sensitive patient medical data, ensuring HIPAA compliance and data integrity.</li>
-        <li>Led a performance optimization initiative, resulting in an 11x decrease in platform load time, significantly enhancing user experience and engagement.</li>
+        <li>Led a performance optimization initiative by refactoring and redesigning schema leading to 11x decrease in platform load time.</li>
         <li>Facilitated seamless collaboration between cross-functional teams across international boundaries, driving product innovation and timely delivery.</li>
       </ul>
       <br>
@@ -62,7 +62,16 @@ export default {
         <li>Optimized in-house OCR algorithm, improving character recognition accuracy by 25% through refined machine learning models and optimized data inputs.</li>
       </ul>
       <br>
-      <h3>Global Voices Ltd (2017 - 2018)</h3>
+      <h3>Cartesian (3 Months in 2018 • Internship)</h3>
+      <strong>Software Engineering Intern</strong>
+      <br>
+      Skills: <b>Javascript · AWS · C++ · FFmpeg · Python</b>
+      <ul>
+        <li>Developed a scalable live streaming service utilizing AWS, FFmpeg, and Python, capable of handling concurrent streams for over 10,000 users.</li>
+        <li>Gained hands-on experience in cloud computing, real-time video processing, and large-scale system design, laying the foundation for future roles in high-performance computing.</li>
+      </ul>
+      <br>
+      <h3>Global Voices Ltd (4 Months in 2017 • Internship)</h3>
       <strong>Software Engineer</strong>
       <br>
       Skills: <b>Python · Software Engineering · SQL · CI/CD</b>
@@ -72,15 +81,7 @@ export default {
         <li>Led the development and maintenance of the company's proprietary content management system, reducing critical bugs by 70% and implementing key features that improved system functionality and user experience.</li>
         <li>Redesigned and optimized CI/CD pipelines, resulting in a 50% reduction in rollbacks and a 30% increase in deployment frequency, significantly enhancing product release efficiency and reliability.</li>
       </ul>
-      <br>
-      <h3>Cartesian (3 Months in 2017 • Internship)</h3>
-      <strong>Software Engineering Intern</strong>
-      <br>
-      Skills: <b>Javascript · AWS · C++ · FFmpeg · Python</b>
-      <ul>
-        <li>Developed a scalable live streaming service utilizing AWS, FFmpeg, and Python, capable of handling concurrent streams for over 10,000 users.</li>
-        <li>Gained hands-on experience in cloud computing, real-time video processing, and large-scale system design, laying the foundation for future roles in high-performance computing.</li>
-      </ul>`
+`
 
       const thingsICanHelpWith = `  <ul>
         <li>

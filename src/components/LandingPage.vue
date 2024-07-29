@@ -22,7 +22,6 @@ import ProjectsSection from "./sections/ProjectsSection.vue";
 import BlogsSection from "./sections/BlogsSection.vue";
 import GithubSection from "./sections/GithubSection.vue";
 import AboutSection from "./sections/AboutSection.vue";
-import ResumeSection from "./sections/ResumeSection.vue";
 
 const route = useRoute();
 
@@ -32,8 +31,7 @@ const sectionsMap = {
   '/projects': ProjectsSection,
   '/blogs': BlogsSection,
   '/github': GithubSection,
-  '/about': AboutSection,
-  '/resume': ResumeSection
+  '/about': AboutSection
 };
 const currentSection = computed(() => sectionsMap[route.path] || ProjectsSection);
 

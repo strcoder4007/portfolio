@@ -33,7 +33,7 @@
             </p>
           </section>
 
-          <a href="#" class="btn"
+          <a href="https://drive.google.com/file/d/1TrqF77gH4cCIGAFalZLai0uDGSspymMp/view?usp=sharing" target="_blank" class="btn"
             >Resume
             <img src="../../assets/icons/right-arrow.png" alt="Arrow Icon"
           /></a>
@@ -72,12 +72,7 @@
 </template>
 
 <script>
-// import { ref } from 'vue';
-
 export default {
-  setup() {
-    return {};
-  },
   mounted() {
     setTimeout(() => {
       document
@@ -197,6 +192,11 @@ export default {
       border: 1px solid #fff;
       text-decoration: none;
       color: #fff;
+      background-color: transparent;
+      font-family: Bricolage;
+      width: 300px;
+      font-size: 15px;
+      text-align: left;
       margin-bottom: 10px;
       line-height: 25px;
       img {
