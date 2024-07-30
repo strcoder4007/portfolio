@@ -43,7 +43,7 @@ export default {
       <br>
       Skills: <b>Javascript · VueJS · Data Analysis · HIPAA Compliance</b>
       <p>DoctorPlan is a Silicon Valley-based healthcare startup revolutionizing patient care through data-driven personalization.</p>
-      <h4>Key Achievements:</h4>
+      <h4>Key Responsibilities:</h4>
       <ul>
         <li>Played a pivotal role in development and maintenance of our three major platforms: Hospital app, Patient web app and internal admin dashboard, serving over 100k patients.</li>
         <li>Engineered robust data processing pipelines for sensitive patient medical data, ensuring HIPAA compliance and data integrity.</li>
@@ -90,7 +90,7 @@ export default {
           I can help with designing, implementing, and optimizing deep learning models using frameworks like TensorFlow and PyTorch. I can tackle a wide range of tasks, from data engineering to hyperparameter tuning and performance optimization.
         </li>
         <li>
-          I can successfully develope and deploy neural networks for various applications, including computer vision, natural language processing, and time series analysis, ensuring high performance and accuracy.
+          I can successfully develop and deploy neural networks for various applications, including computer vision, natural language processing, and time series analysis, ensuring high performance and accuracy.
         </li>
         <li>
           I can set up and manage scalable ML pipelines, ensuring efficient data flow from ingestion to model training and deployment experience in configuring and managing CI/CD systems for ML.

@@ -21,14 +21,14 @@
           </p>
           <section class="about">
             <p>
-              Passionate about leveraging<mark> Deep learning models</mark
+              Passionate about leveraging<mark> Deep learning models </mark
               >to solve problems deemed impossible in the recent past.<br /><br />
-              I have<mark>
+              With<mark>
                 6 years of experience as a Software Engineer (JS) </mark
               >and a solid background in<mark>
                 Algorithms and Data Structures (C++)</mark
-              >.<br /><br />
-              I'm on the lookout for Machine Learning Opportunities starting August 2024! Please reach out if you think I would be a good fit for your team.
+              >, I bring a robust skill set to the table.<br /><br />
+              I'm on the lookout for Machine Learning opportunities starting August 2024! Please reach out if you think I would be a good fit for your team.
             </p>
           </section>
 
@@ -193,7 +193,6 @@ export default {
       color: #fff;
       background-color: transparent;
       font-family: Bricolage;
-      width: 100%;
       font-size: 15px;
       text-align: left;
       margin-bottom: 10px;
