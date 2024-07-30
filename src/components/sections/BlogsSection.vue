@@ -89,7 +89,7 @@ export default {
 
 .container {
   background: #222222;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 .blogs-section {
   overflow-y: scroll;

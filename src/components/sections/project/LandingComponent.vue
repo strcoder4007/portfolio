@@ -13,7 +13,7 @@
             </div>
             <div class="card-body image-container">
               <template v-for="image in project.images" :key="image">
-                <img v-if="image.includes('.png')" :src="imageSources[image]" />
+                <img v-if="image.includes('.png') || image.includes('.jpeg')" :src="imageSources[image]" />
                 <img v-else :src="image" />
                 
               </template>
@@ -59,11 +59,14 @@ import covid19 from '../../../assets/projects/covid_19.png';
 import unet from '../../../assets/projects/unet.png';
 import yoloV1 from '../../../assets/projects/yolo_v1.png';
 import mlDlImplementation from '../../../assets/projects/ml_dl_implementation.png';
-import instacode from '../../../assets/projects/instacode.png';
+import instacode from '../../../assets/projects/instacode.jpeg';
 import graphicDesignerPortfolio from '../../../assets/projects/graphic_designer_portfolio.png';
 import spoj from '../../../assets/projects/spoj.png';
 import mle from '../../../assets/projects/mle.png';
 import faceDetection from '../../../assets/projects/face_detection.png';
+import townCenter from '../../../assets/projects/town_center.jpeg';
+import memseq from '../../../assets/projects/memseq.jpeg';
+import tms from '../../../assets/projects/tms.jpeg';
 export default {
   name: "ProjectLandingPage",
 
@@ -84,11 +87,14 @@ export default {
       'unet.png': unet,
       'yolo_v1.png': yoloV1,
       'ml_dl_implementation.png': mlDlImplementation,
-      'instacode.png': instacode,
+      'instacode.jpeg': instacode,
       'graphic_designer_portfolio.png': graphicDesignerPortfolio,
       'spoj.png': spoj,
       'mle.png': mle,
-      'face_detection.png': faceDetection
+      'face_detection.png': faceDetection,
+      'town_center.jpeg': townCenter,
+      'memseq.jpeg': memseq,
+      'tms.jpeg': tms
     }
 
     return {

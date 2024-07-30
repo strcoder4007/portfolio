@@ -60,14 +60,14 @@ a {
   width: 96.5%;
   margin: 0 20px 20px 20px;
   background-color: white;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 @media (max-width: 768px) {
   .floating-card {
     height: auto;
     width: 100vw;
     background-color: white;
-    overflow-y: scroll;
+    overflow-y: hidden;
     margin: 0;
   }
 }

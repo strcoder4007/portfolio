@@ -24,7 +24,7 @@ export default {
 
 .container {
   background: #222222;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 .github-section {
   overflow-y: scroll;

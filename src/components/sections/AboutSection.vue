@@ -1,28 +1,23 @@
 <template>
   <div class="container" id="about-section">
-    <div class="about-page">
-      <el-row>
-        <el-col :span="24">
-          <span class="header">Hi! I’m Shubham</span>
-          <span class="text" v-html="intro"></span>
-          <span class="header">Work Experience</span>
-          <span class="text" v-html="workExperience"></span>
-          <span class="header">Things I can help you with</span>
-          <span class="text" v-html="thingsICanHelpWith"></span>
-          <span class="header">Deep Learning interests</span>
-          <span class="text" v-html="deeplearninginterests"></span>
-          <span class="header">Other interests</span>
-          <span class="text" v-html="interests"></span>
-        </el-col>
-      </el-row>
-    </div>
-    <!-- <ToolsSection></ToolsSection> -->
+    <el-row class="about-section">
+      <el-col :span="24">
+        <span class="header">Hi! I’m Shubham</span>
+        <span class="text" v-html="intro"></span>
+        <span class="header">Work Experience</span>
+        <span class="text" v-html="workExperience"></span>
+        <span class="header">Things I can help you with</span>
+        <span class="text" v-html="thingsICanHelpWith"></span>
+        <span class="header">Deep Learning interests</span>
+        <span class="text" v-html="deeplearninginterests"></span>
+        <span class="header">Other interests</span>
+        <span class="text" v-html="interests"></span>
+      </el-col>
+    </el-row>
   </div>
-
 </template>
 
 <script>
-// import ToolsSection from '../sections/ToolsSection.vue';
 
 export default {
   name: "AboutPage",
@@ -121,24 +116,22 @@ export default {
       interests
     }
   },
-  components: {
-    // ToolsSection
-},
+  components: {},
 };
 </script>
 
 <style lang="scss" scoped>
 .container {
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
-.about-page {
-  height: auto;
-  min-height: calc(100vh - 60px - 50px);
+.about-section {
+  overflow-y: scroll;
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: baseline;
-  margin: 200px 100px 50px 100px;
+  padding: 200px 100px 50px 100px;
   text-align: left;
 }
 
@@ -174,15 +167,15 @@ export default {
   .container {
     padding-top: 60px;
   }
-  .about-page {
-    height: auto;
-    min-height: calc(100vh - 60px);
+  .about-section {
+    overflow-y: scroll;
+    height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: baseline;
-    margin: 60px 10px;
-    width: calc(100vw - 40px);
+    padding: 60px 10px;
+    width: 100%;
   }
 
   .header {

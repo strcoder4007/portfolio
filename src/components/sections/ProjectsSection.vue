@@ -105,7 +105,7 @@ const allProjects = [
         {
           id: "bcd2eeab-bbef-4f5b-ad7a-c7db4edf89cb",
           name: "Instacode Online Judge",
-          images: ["instacode.png"],
+          images: ["instacode.jpeg"],
           tags: ["2016", "web_dev", "Javascript", "PHP"],
           code: "https://github.com/strcoder4007/Instacode-Online-Judge",
           description: "An online coding platform similar to HackerRank I made for College Practicals that evaluates code submissions in 14 different programming languages and ranks participants on a leaderboard.",
@@ -123,7 +123,7 @@ const allProjects = [
         {
           id: "bf07d3ca-ee63-4fcc-a061-ceabbe0b6b23",
           name: "Town Center (old portfolio website)",
-          images: [""],
+          images: ["town_center.jpeg"],
           tags: ["2017", "web_dev", "Javascript", "Angular 7", "Typescript 3"],
           code: "https://github.com/strcoder4007/theTownCenter",
           description: "My 2018 Portfolio website to showcase all projects and code",
@@ -141,7 +141,7 @@ const allProjects = [
         {
           id: "3a98e5fc-0c4a-4c5f-a2ea-dd06a4a615b8",
           name: "Memory Sequence",
-          images: [""],
+          images: ["memseq.jpeg"],
           tags: ["2017", "web_dev", "Javascript", "Angular 4", "Typescript 2"],
           code: "https://github.com/strcoder4007/memorySequence",
           description:
@@ -159,7 +159,7 @@ const allProjects = [
         {
           id: "9a3efbda-4a9e-498e-ad2c-d4b9c5f5d167",
           name: "TimeMyShow",
-          images: [""],
+          images: ["tms.jpeg"],
           tags: ["2017", "web_dev", "Javascript", "Angular 7", "Typescript 3"],
           code: "https://github.com/strcoder4007/timeMyShow",
           description:
@@ -222,7 +222,7 @@ export default {
 <style lang="scss" scoped>
 .container {
   background: #222222;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 .projects-section {
   overflow-y: scroll;

@@ -159,7 +159,7 @@ export default {
     .about {
       text-align: left;
       margin: 30px 0;
-      font-size: 18px;
+      font-size: 17px;
       color: #fff;
       word-wrap: break-word;
       line-height: 25px;
@@ -253,6 +253,28 @@ export default {
   }
 }
 
+@media (max-width: 1200px) {
+  .intro-section {
+    padding: 20px 10px 0 10px ;
+
+    .intro-text {
+      padding: 10px 10px 0 10px;
+      .profile-text {
+        font-size: 27px;
+        font-weight: 700;
+        font-family: Ubuntu;
+      }
+      .profile-img {
+        display: none;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .intro-section {
     height: calc(100vh - 60px);
@@ -260,12 +282,12 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 10px 0 10px ;
+    padding: 30px 10px 0 10px ;
 
     .intro-text {
-      padding: 40px 10px 0 10px;
+      padding: 10px 10px 0 10px;
       .profile-text {
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 700;
         font-family: Ubuntu;
       }
