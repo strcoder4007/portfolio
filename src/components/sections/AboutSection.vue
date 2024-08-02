@@ -26,7 +26,7 @@ export default {
   },
   setup() {
     const intro = `
-      I'm a seasoned Software Engineer with 6 years of experience architecting and developing high-performance SaaS platforms for healthcare and fintech industries. My expertise spans full-stack development, with a recent focus on cutting-edge Machine Learning projects.
+      I'm a seasoned Software Engineer with 6 years of experience interested in Machine Learning, Computer Vision, NLP and Recommendation Systems. 
       <br><br>
       In 2014, during my first year of college, I delved into competitive programming with C++. This experience instilled in me a deep appreciation for algorithmic efficiency and optimization under strict constraints. Alos, the leaderboard challenge captivated me, and I pursued it for 3 years before transitioning to Web Development (JavaScript, React, Vue) in 2017 and did couple of internships.
       <br><br>

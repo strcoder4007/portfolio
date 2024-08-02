@@ -21,13 +21,10 @@
           </p>
           <section class="about">
             <p>
-              Passionate about leveraging<mark> Deep learning models </mark
-              >to solve problems deemed impossible in the recent past.<br /><br />
-              With<mark>
-                6 years of experience as a Software Engineer (JS) </mark
-              >and a solid background in<mark>
-                Algorithms and Data Structures (C++)</mark
-              >, I bring a robust skill set to the table.<br /><br />
+              Passionate about leveraging Python and Deep learning 
+              to solve problems deemed impossible in the recent past.<br/><br/>
+              With 6 years of experience as a Software Engineer and a solid background in 
+              Algorithms and Data Structures (C++), I bring a robust skill set to the table.<br /><br />
               I'm on the lookout for Machine Learning opportunities starting August 2024! Please reach out if you think I would be a good fit for your team.
             </p>
           </section>
@@ -39,7 +36,7 @@
 
           <div class="social-section">
             <a
-              href="https://www.linkedin.com/in/shubham-singh-96b159267"
+              href="https://www.linkedin.com/in/str4007"
               target="_blank"
               ><img
                 src="../../assets/icons/linkedin.png"
