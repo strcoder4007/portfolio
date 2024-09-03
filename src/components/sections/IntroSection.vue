@@ -21,15 +21,13 @@
           </p>
           <section class="about">
             <p>
-              Passionate about leveraging Python and Deep learning 
-              to solve problems deemed impossible in the recent past.<br/><br/>
-              With 6 years of experience as a Software Engineer and a solid background in 
-              Algorithms and Data Structures (C++), I bring a robust skill set to the table.<br /><br />
-              I'm on the lookout for Machine Learning opportunities starting August 2024! Please reach out if you think I would be a good fit for your team.
+              With 6 years of total experience(Python), of which ML engineer (5 years) and Software Engineer (1 yr) and a solid background in 
+              Algorithms and Data Structures(C++), I bring a robust skill set to the table.<br /><br />
+              I'm on the lookout for Machine Learning opportunities please reach out if you think I would be a good fit for your team.
             </p>
           </section>
 
-          <a href="https://drive.google.com/file/d/1TrqF77gH4cCIGAFalZLai0uDGSspymMp/view?usp=sharing" target="_blank" class="btn"
+          <a href="https://drive.google.com/file/d/1YRJ_NUOA3VuoPRGCOGm_ff9AFEtTionj/view?usp=sharing" target="_blank" class="btn"
             >Resume
             <img src="../../assets/icons/right-arrow.png" alt="Arrow Icon"
           /></a>
