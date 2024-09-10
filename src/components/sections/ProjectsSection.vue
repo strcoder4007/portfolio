@@ -23,8 +23,18 @@ import LandingComponent from "./project/LandingComponent.vue";
 
 const allProjects = [
         {
+          id: "85b39e2d-f5a0-67c7-ae2d-06297acbe963",
+          name: "Multi Agent AI System",
+          images: ["https://github.com/strcoder4007/Multi-Agent-AI-System/blob/main/image.jpg?raw=true"],
+          tags: ["Gen AI", "Crew AI", "Langchain", "Agent", "2024"],
+          code: "https://github.com/strcoder4007/Multi-Agent-AI-System",
+          blog: false,
+          description:
+            "Multi-agent AI system designed to conduct comprehensive research across various subreddits based on user queries. Utilizing CrewAI, Langchain, and the Gemini API.",
+        },
+        {
           id: "85b39e2d-f5a0-47c7-ae2d-06297acbe963",
-          name: "NFS Self Driving Car",
+          name: "NFS Self Driving Simulation",
           images: ["https://github.com/strcoder4007/Need-For-Speed-Self-driving/blob/main/images/nfsmw1.gif?raw=true"],
           tags: ["ml", "Tensorflow 2", "InceptionResNetV2", "Vision", "OpenCV", "Python", "2024"],
           code: "https://github.com/strcoder4007/Need-For-Speed-Self-driving",
