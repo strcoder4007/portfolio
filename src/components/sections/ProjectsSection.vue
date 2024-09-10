@@ -26,7 +26,7 @@ const allProjects = [
           id: "85b39e2d-f5a0-67c7-ae2d-06297acbe963",
           name: "Multi Agent AI System",
           images: ["https://github.com/strcoder4007/Multi-Agent-AI-System/blob/main/image.jpg?raw=true"],
-          tags: ["Gen AI", "Crew AI", "Langchain", "Agent", "2024"],
+          tags: ["ml", "Gen AI", "Crew AI", "Langchain", "Agent", "2024"],
           code: "https://github.com/strcoder4007/Multi-Agent-AI-System",
           blog: false,
           description:
@@ -121,6 +121,24 @@ const allProjects = [
           description: "An online coding platform similar to HackerRank I made for College Practicals that evaluates code submissions in 14 different programming languages and ranks participants on a leaderboard.",
         },
         {
+          id: "6c5ec8e8-cfe9-41df-bf90-d3d0d0efcded",
+          name: "Real Time Gaze Tracking",
+          images: ["face_detection.png"],
+          tags: ["ml", "web_dev", "OpenCV", "Python", "Javascript"],
+          code: "https://github.com/strcoder4007/tensorflow-face-detection",
+          live: "https://strcoder4007.github.io/eye-tracking/",
+          description: "Tracking Eyeball and face mesh rendering in real time using OpenCV and MediaPipeFaceMesh.",
+        },
+        {
+          id: "3a98e5fc-0c4a-4c5f-a2ea-dd06a4a615b8",
+          name: "Memory Sequence",
+          images: ["memseq.jpeg"],
+          tags: ["2017", "web_dev", "Javascript", "Angular 4", "Typescript 2"],
+          code: "https://github.com/strcoder4007/memorySequence",
+          description:
+            "A web app for blogging with everything written from scratch. Made this to teach myself Angular 4 + Typescript back in 2017. Currently updated to Angular 7.",
+        },
+        {
           id: "c7bf5bc0-44dd-4b4d-a4c4-28ab2bb8ff8b",
           name: "Graphic Designer Portfolio Website",
           images: ["graphic_designer_portfolio.png"],
@@ -147,24 +165,6 @@ const allProjects = [
           live: "https://strcoder4007.github.io/portfolio/",
           description:
             "Machine Learning Engineer Portfolio website with blogs written in Vue 3",
-        },
-        {
-          id: "3a98e5fc-0c4a-4c5f-a2ea-dd06a4a615b8",
-          name: "Memory Sequence",
-          images: ["memseq.jpeg"],
-          tags: ["2017", "web_dev", "Javascript", "Angular 4", "Typescript 2"],
-          code: "https://github.com/strcoder4007/memorySequence",
-          description:
-            "A web app for blogging with everything written from scratch. Made this to teach myself Angular 4 + Typescript back in 2017. Currently updated to Angular 7.",
-        },
-        {
-          id: "6c5ec8e8-cfe9-41df-bf90-d3d0d0efcded",
-          name: "Real Time Gaze Tracking",
-          images: ["face_detection.png"],
-          tags: ["ml", "web_dev", "OpenCV", "Python", "Javascript"],
-          code: "https://github.com/strcoder4007/tensorflow-face-detection",
-          live: "https://strcoder4007.github.io/eye-tracking/",
-          description: "Tracking Eyeball and face mesh rendering in real time using OpenCV and MediaPipeFaceMesh.",
         },
         {
           id: "9a3efbda-4a9e-498e-ad2c-d4b9c5f5d167",
