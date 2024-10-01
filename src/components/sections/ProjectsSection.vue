@@ -30,7 +30,7 @@ const allProjects = [
           code: "https://github.com/strcoder4007/Multi-Agent-AI-System",
           blog: false,
           description:
-            "Multi-agent AI system designed to conduct comprehensive research across various subreddits based on user queries. Utilizing CrewAI, Langchain, and the Gemini API.",
+            "Multi-agent AI system designed to automate tasks with specialized AI Agents using CrewAI, Langchain and Llama3.1:8B, a team of agents that can work together to complete tasks using AI prompting techniques from creating tasks to generating keynote speeches.",
         },
         {
           id: "85b39e2d-f5a0-47c7-ae2d-06297acbe963",
