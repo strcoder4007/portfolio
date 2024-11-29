@@ -27,7 +27,7 @@
             </p>
           </section>
 
-          <a href="https://drive.google.com/file/d/1FVtRXqiKkCFf22nAzmSigfHXiN1rMubS/view?usp=sharing" target="_blank" class="btn"
+          <a href="https://drive.google.com/file/d/1hFxJwgCwkjmP4NJthSZMzYwBkHz8wHdj/view?usp=sharing" target="_blank" class="btn"
             >Resume
             <img src="../../assets/icons/right-arrow.png" alt="Arrow Icon"
           /></a>
