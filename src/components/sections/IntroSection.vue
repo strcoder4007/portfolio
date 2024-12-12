@@ -21,7 +21,7 @@
           </p>
           <section class="about">
             <p>
-              With 6 years of total experience(Python), of which ML engineer (5 years) and Software Engineer (1 yr) and a solid background in 
+              With 6 years of total experience as Software Engineer and a solid background in 
               Algorithms and Data Structures(C++), I bring a robust skill set to the table.<br /><br />
               I'm on the lookout for Machine Learning opportunities please reach out if you think I would be a good fit for your team.
             </p>

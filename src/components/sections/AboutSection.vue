@@ -26,7 +26,7 @@ export default {
   },
   setup() {
     const intro = `
-      I am a Machine Learning Engineer with over 5 years of experience in developing and deploying AI-driven solutions across multiple domains, with a strong focus on computer vision and natural language processing. Additionally, I have one year of experience as a Software Engineer.
+      I am aspiring Machine Learning Engineer with over 5 years of experience as a Software Engineer.
       <br><br>
       I am proficient in machine learning, statistical analysis, and predictive modeling, with hands-on experience in data acquisition, analysis, and building predictive models using techniques like logistic regression, decision trees, and deep neural networks. I have developed solutions for industries such as finance and healthcare, including models that predict patient outcomes to improve proactive care and resource management.
       <br><br>
@@ -36,8 +36,7 @@ export default {
 
       const workExperience = `
       
-      <h3><strong>Machine Learning Engineer</strong> @ DoctorPlan (2019 - 2024)</h3>
-      Skills: <b>Python · Tensorflow · SQL · ML Modeling · Data Analysis · HIPAA Compliance</b>
+      <h3><strong>Software Engineer</strong> @ DoctorPlan (2019 - 2024)</h3>
       <p>DoctorPlan is a Silicon Valley-based healthcare startup revolutionizing patient care through data-driven personalization.</p>
       <h4>Key Responsibilities:</h4>
       <ul>
