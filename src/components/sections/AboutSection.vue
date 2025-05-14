@@ -6,10 +6,6 @@
         <span class="text" v-html="intro"></span>
         <span class="header">Work Experience</span>
         <span class="text" v-html="workExperience"></span>
-        <span class="header">Things I can help you with</span>
-        <span class="text" v-html="thingsICanHelpWith"></span>
-        <span class="header">Deep Learning interests</span>
-        <span class="text" v-html="deeplearninginterests"></span>
         <span class="header">Other interests</span>
         <span class="text" v-html="interests"></span>
       </el-col>
@@ -26,17 +22,56 @@ export default {
   },
   setup() {
     const intro = `
-      I am aspiring Machine Learning Engineer with over 5 years of experience as a Software Engineer.
-      <br><br>
-      I am proficient in machine learning, statistical analysis, and predictive modeling, with hands-on experience in data acquisition, analysis, and building predictive models using techniques like logistic regression, decision trees, and deep neural networks. I have developed solutions for industries such as finance and healthcare, including models that predict patient outcomes to improve proactive care and resource management.
-      <br><br>
-      Since then, I've worked full-time at a Swiss Fintech startup for a year, where I contributed in building fintech solutions and for 5 years at a healthcare startup, where I played a key role in developing patient and doctor-centric applications that improved healthcare delivery and accessibility.
-      <br><br>
-      As a competitive programmer, I have solved over 800 problems on Codeforces, showcasing my strong problem-solving skills and adaptability.`
+      <p>I am a Senior AI/ML Engineer with over 6 years of specialized experience building cutting-edge AI solutions that deliver measurable business impact. My journey includes 5 years focusing on advanced AI systems—particularly generative AI, large language models (LLMs), and autonomous agents—plus an additional year as a Software Engineer.</p>
+
+<p>My experience spans the complete ML development lifecycle—from data acquisition and preprocessing to sophisticated model development, optimization, and production deployment. I specialize in building retrieval-augmented generation (RAG) systems that enhance LLM capabilities with external knowledge sources, creating autonomous AI agents capable of complex reasoning, and optimizing models through techniques like quantization, pruning, and knowledge distillation for efficient deployment.</p>
+
+<p>I've successfully implemented AI solutions across diverse domains including government intelligence systems, healthcare diagnostics, educational platforms, and cultural heritage preservation. My recent work includes developing Model Context Protocol (MCP) architectures for enhanced reasoning capabilities and reducing inference latency by 80% for interactive AI systems through advanced optimization techniques.</p>
+     
+<p>As a competitive programmer, I have solved over 800 problems on Codeforces, bringing exceptional algorithmic thinking and problem-solving skills to every AI challenge I tackle. This foundation enables me to develop efficient, scalable solutions even for the most complex AI engineering problems.</p>`
 
       const workExperience = `
-      
-      <h3><strong>Software Engineer</strong> @ DoctorPlan (2019 - 2024)</h3>
+      <h2><strong>Senior AI/ML Engineer</strong> @ Tagbin (December 2024 - Present)</h2>
+      <p>Tagbin is a company focused on creating immersive and interactive experiences.</p>
+
+      <h4>Key Projects:</h4>
+      <ul>
+        <li><b>AI-Powered Interactive Holobox Systems</b>
+          <ul>
+            <li>Architected end-to-end ML pipeline for interactive human-sized holographic displays featuring Indian leaders deployed across 7 cities in national museums and memorials</li>
+            <li>Optimized latency from 9-10s to 1.5-2s by engineering efficient pipeline using FasterWhisper, Qwen2.5 14B AWQ, Kokoro TTS, Audio2Face, and Unreal Engine 5</li>
+            <li>Key technologies: Large Language Models, Speech-to-Text, Text-to-Speech, Audio-to-Face Animation, Real-time Rendering</li>
+          </ul>
+        </li>
+        <li><b>Government AI Solutions</b>
+          <ul>
+            <li>BIPARD AI: Developed generative AI platform for Bihar government enabling natural language (text/audio) queries to extract insights from government datasets</li>
+            <li>Nandurba AI: Built advanced AI system for Maharashtra government integrating PostgreSQL GIS for geospatial intelligence and analytics (e.g., "List villages with no hospitals within 10km radius")</li>
+            <li>Key technologies: GenAI, LLMs, PostgreSQL GIS, Spatial Analytics, NLP</li>
+            <li>Law Enforcement AI: Implemented similar AI analytics solutions for Delhi Police and Goa Police</li>
+          </ul>
+        </li>
+        <li><b>Purnia AI Education Platform</b>
+          <ul>
+            <li>Led development of comprehensive AI education platform for Bihar government featuring live classes and AI-powered learning. Implemented multimodal AI enabling students to query NCERT syllabus content and lecture videos</li>
+            <li>Key technologies: Computer Vision, Speech-to-Text, Text-to-Speech, GenAI, LLMs</li>
+          </ul>
+        </li>
+        <li><b>Healthcare AI Innovation</b>
+          <ul>
+            <li>Partnered with AIIMS Delhi to develop computer vision system for leucocoria detection using YOLO architecture</li>
+            <li>Key technologies: Computer Vision, YOLO, Medical Image Processing</li>
+          </ul>
+        </li>
+        <li><b>Cultural Heritage Preservation</b>
+          <ul>
+            <li>Kaithi to Hindi Conversion: Trained ML model on manually annotated data to convert historical property, cultural, and irrigation scriptures from Kaithi script to modern Hindi</li>
+            <li>Indian Government Manuscript OCR: Contributed to 50 lakh manuscript digitization project, creating searchable database of Brahminic language texts with deep research capabilities</li>
+          </ul>
+        </li>
+      </ul>
+      <br>
+      <h2><strong>Software Engineer</strong> @ DoctorPlan (2019 - 2024)</h2>
       <p>DoctorPlan is a Silicon Valley-based healthcare startup revolutionizing patient care through data-driven personalization.</p>
       <h4>Key Responsibilities:</h4>
       <ul>
@@ -80,24 +115,6 @@ export default {
       </ul>
 `
 
-      const thingsICanHelpWith = `  <ul>
-        <li>
-          I can help build ML Models for Fraud detection and Recommendation systems to production.
-        </li>
-        <li>
-          I can help with designing, implementing, and optimizing deep learning models using frameworks like TensorFlow and PyTorch. I can tackle a wide range of tasks, from data engineering to hyperparameter tuning and performance optimization.
-        </li>
-        <li>
-          I can successfully develop and deploy neural networks for various applications, including computer vision, natural language processing, and time series analysis, ensuring high performance and accuracy.
-        </li>
-        <li>
-          I can set up and manage scalable ML pipelines, ensuring efficient data flow from ingestion to model training and deployment experience in configuring and managing CI/CD systems for ML.
-        </li>
-        <li>
-          I can help with optimizing model performance through techniques like pruning, quantization, and knowledge distillation, ensuring models run efficiently on both cloud and edge devices.
-        </li>
-      </ul>`
-
       const deeplearninginterests = `<ul>
         <li>ML Modeling</li>
         <li>Data Engineering</li>
@@ -117,7 +134,6 @@ export default {
       intro,
       workExperience,
       deeplearninginterests,
-      thingsICanHelpWith,
       interests
     }
   },
