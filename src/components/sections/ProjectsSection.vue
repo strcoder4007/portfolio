@@ -23,6 +23,46 @@ import LandingComponent from "./project/LandingComponent.vue";
 
 const allProjects = [
         {
+          id: "f0b5a7b2-2a4d-4f1e-9c51-7a8b3e50b1a1",
+          name: "Browser Agent",
+          images: [],
+          tags: ["ml", "Agent", "LLM", "Automation"],
+          code: "https://github.com/strcoder4007/browser-agent",
+          blog: false,
+          description:
+            "An AI browser automation agent that plans and executes multi‑step tasks using LLM reasoning and tool control.",
+        },
+        {
+          id: "a2c9e1d4-6b3f-45e2-9f7a-0c8b9d3e4f56",
+          name: "S2S Lipsync Unreal Avatar Backend",
+          images: [],
+          tags: ["ml", "Speech", "TTS", "STT", "Unreal Engine", "Realtime"],
+          code: "https://github.com/strcoder4007/S2S-Lipsync-UnrealAvatar-Backend",
+          blog: false,
+          description:
+            "Speech‑to‑speech backend powering real‑time lip‑sync for an Unreal Engine avatar, integrating STT, response generation, TTS, and viseme timing.",
+        },
+        {
+          id: "c5d7f9a1-83b2-4e9d-bc4f-2e7a6c9d0f12",
+          name: "Unreal WebSocket Bridge",
+          images: [],
+          tags: ["ml", "Unreal Engine", "WebSocket", "Realtime"],
+          code: "https://github.com/strcoder4007/unreal-websocket",
+          blog: false,
+          description:
+            "WebSocket bridge for Unreal Engine to receive AI‑driven commands, audio, and visemes from backend services for live character animation.",
+        },
+        {
+          id: "e17a5c2b-4f6d-49c0-9b21-83f1c4a9d7e3",
+          name: "Insta Sponsor Fetch",
+          images: [],
+          tags: ["ml", "Data", "ETL", "Instagram", "Analytics"],
+          code: "https://github.com/strcoder4007/insta-sponsor-fetch",
+          blog: false,
+          description:
+            "Data pipeline to fetch and normalize Instagram sponsorship/collaboration metadata for analytics and reporting.",
+        },
+        {
           id: "85b39e2d-f5a0-67c7-ae2d-06297acbe963",
           name: "Multi Agent AI System",
           images: ["https://github.com/strcoder4007/Multi-Agent-AI-System/blob/main/image.jpg?raw=true"],
