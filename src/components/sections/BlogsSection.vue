@@ -74,10 +74,26 @@ export default {
       })
       return allBlogs.reverse()
     },
-    toggleBlog(idx) {
-      let blogState = this.showBlogArray[idx]
+    async toggleBlog(idx) {
+      const blogState = this.showBlogArray[idx]
       this.showBlogArray = this.showBlogArray.map(() => false)
       this.showBlogArray[idx] = !blogState
+
+      // Lazy-load full content if a contentSource is provided
+      const blog = this.localBlogs[idx]
+      if (this.showBlogArray[idx] && blog && blog.contentSource && !blog.contentLoaded) {
+        try {
+          const base = process.env.BASE_URL || '/'
+          const res = await fetch(base + blog.contentSource)
+          const html = await res.text()
+          // Strip any <script> tags for safety
+          const sanitized = html.replace(/<script[\s\S]*?<\/script>/gi, '')
+          this.localBlogs[idx].content = sanitized
+          this.localBlogs[idx].contentLoaded = true
+        } catch (e) {
+          this.localBlogs[idx].content = '<p>Failed to load article. Please try again.</p>'
+        }
+      }
     }
   },  
   components: {

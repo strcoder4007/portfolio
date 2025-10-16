@@ -22,13 +22,13 @@ export default {
   },
   setup() {
     const intro = `
-      <p>I am a Senior AI/ML Engineer with over 6 years of specialized experience building cutting-edge AI solutions that deliver measurable business impact. My journey includes 5 years focusing on advanced AI systems—particularly generative AI, large language models (LLMs), and autonomous agents—plus an additional year as a Software Engineer.</p>
+      <p>I’m a Senior AI/ML Engineer with 7 years of experience — 2 years on GenAI, agentic systems, RAG, and LLMs; 4 years as an ML engineer; and 1 year in software engineering.</p>
 
-<p>My experience spans the complete ML development lifecycle—from data acquisition and preprocessing to sophisticated model development, optimization, and production deployment. I specialize in building retrieval-augmented generation (RAG) systems that enhance LLM capabilities with external knowledge sources, creating autonomous AI agents capable of complex reasoning, and optimizing models through techniques like quantization, pruning, and knowledge distillation for efficient deployment.</p>
+      <p>I work end to end: data, modeling, evaluation, and production. I focus on RAG systems, autonomous agents, and getting models fast and efficient for real‑time use with quantization, pruning, and distillation. Over the last two years, I’ve gone deep on agent architectures (including RL‑trained agents) and the real‑world pitfalls teams hit when taking agents to production.</p>
 
-<p>I've successfully implemented AI solutions across diverse domains including government intelligence systems, healthcare diagnostics, educational platforms, and cultural heritage preservation. My recent work includes developing Model Context Protocol (MCP) architectures for enhanced reasoning capabilities and reducing inference latency by 80% for interactive AI systems through advanced optimization techniques.</p>
-     
-<p>As a competitive programmer, I have solved over 800 problems on Codeforces, bringing exceptional algorithmic thinking and problem-solving skills to every AI challenge I tackle. This foundation enables me to develop efficient, scalable solutions even for the most complex AI engineering problems.</p>`
+      <p>I’ve shipped AI into government intelligence, healthcare diagnostics, education, and cultural heritage. Recently I built MCP‑style architectures to improve reasoning and cut inference latency by ~80% for interactive systems.</p>
+
+      <p>I’ve also solved 800+ problems on Codeforces, which keeps my algorithms and problem‑solving sharp.</p>`
 
       const workExperience = `
       <h2><strong>Senior AI/ML Engineer</strong> @ Tagbin (December 2024 - Present)</h2>
@@ -124,12 +124,7 @@ export default {
         <li>Multimodal Models</li>
         </ul>`
 
-      const interests = `<ul style="font-size: 17px">
-                          <li>GPUs</li>
-                          <li>PC Building</li>
-                          <li>Home Servers</li>
-                          <li>Psychology & Psychoanalytics</li>
-                        </ul>`
+      const interests = `<p style="font-size: 17px">I enjoy working with GPUs, building PCs, running home servers, and reading about psychology and psychoanalysis.</p>`
     return {
       intro,
       workExperience,

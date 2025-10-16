@@ -3,7 +3,7 @@
     <el-row>
       <el-col class="intro-section">
         <div class="intro-text">
-          <span class="profile-text">Machine Learning Engineer</span>
+          <span class="profile-text">Sr. AI/ML Engineer</span>
           <br><br>
           <p
             class="phone"
@@ -21,16 +21,19 @@
           </p>
           <section class="about">
             <p>
-              With 6 years of total experience as Software Engineer and a solid background in 
-              Algorithms and Data Structures(C++), I bring a robust skill set to the table.<br /><br />
-              I'm on the lookout for Machine Learning opportunities please reach out if you think I would be a good fit for your team.
+              I’m a Senior AI/ML engineer with seven years of experience — two years focused on GenAI, agentic systems, RAG, and LLMs, four years as an ML engineer, and one year in software engineering.<br><br>I’ve shipped AI into government, healthcare, education, and cultural heritage projects. I also solve problems on Codeforces (800+ solved) to keep my data structures & algorithms sharp.<br><br>Open to AI Engineering roles.
             </p>
           </section>
-
-          <a href="https://drive.google.com/file/d/1hFxJwgCwkjmP4NJthSZMzYwBkHz8wHdj/view?usp=sharing" target="_blank" class="btn"
-            >Resume
-            <img src="../../assets/icons/right-arrow.png" alt="Arrow Icon"
-          /></a>
+          <div class="cta-row">
+            <a href="https://drive.google.com/file/d/1SIoPoYCGpk9E8U_VdmdZguvivdUEoZU6/view?usp=sharing" target="_blank" class="btn">
+              Resume
+              <img src="../../assets/icons/right-arrow.png" alt="Arrow Icon" />
+            </a>
+            <a href="#" class="btn" @click.prevent="openCalendly">
+              Schedule time with me
+              <img src="../../assets/icons/right-arrow.png" alt="Arrow Icon" />
+            </a>
+          </div>
 
           <div class="social-section">
             <a
@@ -50,14 +53,12 @@
           </div>
 
           <span class="source-code">
-            Written in Vue 3.
-            <a href="https://github.com/strcoder4007/portfolio" target="_blank"
-              >Code</a
-            >
+            Built with Vue 3 —
+            <a href="https://github.com/strcoder4007/portfolio" target="_blank">Code</a>
           </span>
 
           <span class="policy-and-terms-section">
-            © 2024 Shubham Singh. All rights reserved.
+            © 2025 Shubham Singh. All rights reserved.
           </span>
         </div>
       </el-col>
@@ -101,6 +102,14 @@ export default {
       link.download = "Shubham_Resume.pdf";
       link.click();
     },
+    openCalendly() {
+      const url = 'https://calendly.com/mynameshubham23/discussion?hide_event_type_details=1&hide_gdpr_banner=1'
+      if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
+        window.Calendly.initPopupWidget({ url });
+      } else {
+        window.open(url, '_blank');
+      }
+    }
   },
 };
 </script>
@@ -154,10 +163,10 @@ export default {
     .about {
       text-align: left;
       margin: 30px 0;
-      font-size: 17px;
+      font-size: 16px;
       color: #fff;
       word-wrap: break-word;
-      line-height: 25px;
+      line-height: 23px;
 
       mark {
         transition: color 1.5s ease;
@@ -199,6 +208,20 @@ export default {
         margin-left: 5px;
       }
     }
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin: 10px 0 0 0;
+    }
+    .cta-row .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 0;
+      padding: 8px 14px;
+      border-radius: 3px;
+    }
     .social-section {
       display: flex;
       justify-content: start;
@@ -209,6 +232,7 @@ export default {
         width: 30px;
         height: auto;
       }
+      /* social icons only in this row; buttons live in .cta-row */
     }
     .source-code {
       color: #ffffff;

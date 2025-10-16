@@ -1,7 +1,7 @@
 <template>
   <div class="project-landing-page">
     <el-row>
-      <el-col :md="12" :lg="12" :xl="8" v-for="project in projectList" :key="project.id" class="project-container">
+      <el-col :md="8" :lg="8" :xl="8" v-for="project in projectList" :key="project.id" class="project-container">
         <div class="cvfy-container">
           <div class="cvfy-card">
             <div class="card-header">

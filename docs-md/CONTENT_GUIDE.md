@@ -38,6 +38,13 @@ Blogs
   - `tags`: array (e.g., `["ml", "genai"]`)
 - The UI sorts blogs by the `time` field (day, month name, year).
 
+Optional lazy-loaded full content
+
+- Instead of embedding the full HTML in `content`, you can provide:
+  - `contentSource`: relative path under `public/` (e.g., `blogs/external/my-post.html`)
+  - On first expand, the app fetches and injects that HTML into the post.
+- Place the HTML file at `public/blogs/...`. It will be served at `BASE_URL/blogs/...`.
+
 Content example:
 
 ```json

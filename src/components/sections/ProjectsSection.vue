@@ -30,7 +30,7 @@ const allProjects = [
           code: "https://github.com/strcoder4007/browser-agent",
           blog: false,
           description:
-            "An AI browser automation agent that plans and executes multi‑step tasks using LLM reasoning and tool control.",
+            "A browser automation agent that plans multi‑step tasks, reasons with an LLM, and controls tools end‑to‑end.",
         },
         {
           id: "a2c9e1d4-6b3f-45e2-9f7a-0c8b9d3e4f56",
@@ -40,7 +40,7 @@ const allProjects = [
           code: "https://github.com/strcoder4007/S2S-Lipsync-UnrealAvatar-Backend",
           blog: false,
           description:
-            "Speech‑to‑speech backend powering real‑time lip‑sync for an Unreal Engine avatar, integrating STT, response generation, TTS, and viseme timing.",
+            "Speech‑to‑speech backend for a real‑time Unreal Engine avatar — STT in, LLM response, TTS out, plus viseme timing for accurate lip‑sync.",
         },
         {
           id: "c5d7f9a1-83b2-4e9d-bc4f-2e7a6c9d0f12",
@@ -50,7 +50,7 @@ const allProjects = [
           code: "https://github.com/strcoder4007/unreal-websocket",
           blog: false,
           description:
-            "WebSocket bridge for Unreal Engine to receive AI‑driven commands, audio, and visemes from backend services for live character animation.",
+            "A lightweight WebSocket bridge that streams AI‑driven commands, audio, and visemes into Unreal Engine for live character animation.",
         },
         {
           id: "e17a5c2b-4f6d-49c0-9b21-83f1c4a9d7e3",
@@ -60,7 +60,7 @@ const allProjects = [
           code: "https://github.com/strcoder4007/insta-sponsor-fetch",
           blog: false,
           description:
-            "Data pipeline to fetch and normalize Instagram sponsorship/collaboration metadata for analytics and reporting.",
+            "A small ETL that pulls and normalizes Instagram sponsorship/collab data for analysis and reporting.",
         },
         {
           id: "85b39e2d-f5a0-67c7-ae2d-06297acbe963",
@@ -70,7 +70,7 @@ const allProjects = [
           code: "https://github.com/strcoder4007/Multi-Agent-AI-System",
           blog: false,
           description:
-            "Multi-agent AI system designed to automate tasks with specialized AI Agents using CrewAI, Langchain and Llama3.1:8B, a team of agents that can work together to complete tasks using AI prompting techniques from creating tasks to generating keynote speeches.",
+            "A multi‑agent system built with CrewAI, LangChain, and Llama 3.1 (8B). Agents coordinate to complete tasks — from planning to generating keynote‑style content.",
         },
         {
           id: "85b39e2d-f5a0-47c7-ae2d-06297acbe963",
@@ -80,7 +80,7 @@ const allProjects = [
           code: "https://github.com/strcoder4007/Need-For-Speed-Self-driving",
           blog: true,
           description:
-            "Training a ConvNet to play Need for Speed Most Wanted only by looking at the game, just like humans learn. Using InceptionResNetV2, OpenCV, Tensorflow 2",
+            "I trained a ConvNet to play Need for Speed: Most Wanted purely from pixels, using InceptionResNetV2, OpenCV, and TensorFlow 2.",
         },
         {
           id: "a3b859f2-f5ea-49a2-ae91-c5be0ddf3e86",
@@ -90,7 +90,7 @@ const allProjects = [
           code: "https://github.com/strcoder4007/Training-Visualization",
           blog: true,
           description:
-            "A tool to visualize the hidden layers of the model in real-time using PyTorch.",
+            "A real‑time view into a model’s hidden layers using PyTorch and OpenCV.",
         },
         {
           id: "eb66bcbb-9ff3-4bcc-a42f-1b944cfb33ed",
@@ -100,7 +100,7 @@ const allProjects = [
           code: "https://github.com/strcoder4007/Codeforces-Solutions",
           live: "https://codeforces.com/profile/__STR",
           description:
-            "My 800+ solved Codeforces problems on Algorithms and Data Structures using C++",
+            "800+ Codeforces problems solved in C++ — algorithms and data structures.",
         },
         {
           id: "4e8a86ee-5a59-4c24-b0c1-d78cd165f771",
@@ -110,7 +110,7 @@ const allProjects = [
           code: "https://github.com/strcoder4007/Mario-Reinforcement-Learning",
           blog: true,
           description:
-            "Training a Mario reinforcement learning agent on Level 1-1 using Open AI Gym and Stable Baselines 3 PPO algorithm.",
+            "Trained a Mario agent on Level 1‑1 with Stable Baselines 3 (PPO), TensorFlow 2, and OpenAI Gym.",
         },
         {
           id: "9c19724b-bd93-4d52-aeb0-63adca6cfce9",
@@ -120,7 +120,7 @@ const allProjects = [
           code: "https://github.com/strcoder4007/COVID-19-Deep-Learning",
           blog: true,
           description:
-            "Detecting COVID-19 using X-ray Images, CT Scans and Deep Learning",
+            "Built a COVID‑19 classifier on X‑ray and CT images using AlexNet, OpenCV, and TensorFlow (v1).",
         },
         {
           id: "d4d3bcde-6b2a-46e2-aef0-be0f7ec87589",
@@ -128,7 +128,7 @@ const allProjects = [
           images: ["unet.png"],
           tags: ["ml", "Tensorflow 2", "UNet", "Python", "2024"],
           code: "https://github.com/strcoder4007/U-Net-Image-Segmentation",
-          description: "MRI Image Segmentation using U-Net implementation in Tensorflow 2",
+          description: "MRI image segmentation with a U‑Net in TensorFlow 2.",
         },
         {
           id: "1c8c2951-fbd9-41ab-8bae-ccd0a437a7b2",
@@ -137,7 +137,7 @@ const allProjects = [
           tags: ["ml", "Tensorflow v1", "DarkNet-19", "Vision", "Python", "2021"],
           code: "https://github.com/strcoder4007/YOLO-V1-TF1",
           description:
-            "YOLO V1 implementation in Tensorflow 1 using Darknet-19 as backbone",
+            "A TensorFlow 1 re‑implementation of YOLOv1 using Darknet‑19 as the backbone.",
         },
         {
           id: "f5a8f22a-65bc-47ea-a9ac-aa52848b12eb",
@@ -147,7 +147,7 @@ const allProjects = [
           code: "https://github.com/strcoder4007/Machine-Learning-Deep-Learning-Practice",
           blog: true,
           description:
-            "My Code repo for all my implementations while learning ML. Implementation of Linear/Logistic Reg, K-NN, SVM, Clustering, K-Means, ConvNet, ResNet, MobileNet, RNN, LSTM, Reinforcement Learning etc. using Pandas, Matplotlib, NumPy PyTorch & TensorFlow v1&2",
+            "My ML practice repo: from algorithms (Linear/Logistic Reg, K‑NN, SVM, clustering, K‑Means) to deep learning (ConvNets, ResNet, MobileNet, RNN/LSTM, RL) using NumPy, Pandas, Matplotlib, TensorFlow v1/v2, and PyTorch.",
         },
 
 
@@ -158,7 +158,7 @@ const allProjects = [
           images: ["instacode.jpeg"],
           tags: ["2016", "web_dev", "Javascript", "PHP"],
           code: "https://github.com/strcoder4007/Instacode-Online-Judge",
-          description: "An online coding platform similar to HackerRank I made for College Practicals that evaluates code submissions in 14 different programming languages and ranks participants on a leaderboard.",
+          description: "An online judge I built for college practicals — evaluates submissions in 14 languages and ranks users on a leaderboard.",
         },
         {
           id: "6c5ec8e8-cfe9-41df-bf90-d3d0d0efcded",
@@ -167,7 +167,7 @@ const allProjects = [
           tags: ["ml", "web_dev", "OpenCV", "Python", "Javascript"],
           code: "https://github.com/strcoder4007/tensorflow-face-detection",
           live: "https://strcoder4007.github.io/eye-tracking/",
-          description: "Tracking Eyeball and face mesh rendering in real time using OpenCV and MediaPipeFaceMesh.",
+          description: "Real‑time eye tracking and face mesh rendering with OpenCV and MediaPipe FaceMesh. Live demo included.",
         },
         {
           id: "3a98e5fc-0c4a-4c5f-a2ea-dd06a4a615b8",
@@ -176,7 +176,7 @@ const allProjects = [
           tags: ["2017", "web_dev", "Javascript", "Angular 4", "Typescript 2"],
           code: "https://github.com/strcoder4007/memorySequence",
           description:
-            "A web app for blogging with everything written from scratch. Made this to teach myself Angular 4 + Typescript back in 2017. Currently updated to Angular 7.",
+            "A from‑scratch blogging app I wrote to learn Angular 4 + TypeScript 2 (later updated to Angular 7).",
         },
         {
           id: "c7bf5bc0-44dd-4b4d-a4c4-28ab2bb8ff8b",
@@ -186,7 +186,7 @@ const allProjects = [
           code: "https://github.com/strcoder4007/graphic-designer-portfolio",
           live: "https://strcoder4007.github.io/graphic-designer-portfolio/",
           description:
-            "Graphic Designer Portfolio Website written in Vue 3 and Element Plus UI",
+            "A portfolio site for a graphic designer, built with Vue 3 and Element Plus.",
         },
         {
           id: "bf07d3ca-ee63-4fcc-a061-ceabbe0b6b23",
@@ -194,17 +194,17 @@ const allProjects = [
           images: ["town_center.jpeg"],
           tags: ["2017", "web_dev", "Javascript", "Angular 7", "Typescript 3"],
           code: "https://github.com/strcoder4007/theTownCenter",
-          description: "My 2018 Portfolio website to showcase all projects and code",
+          description: "My 2018 portfolio site showcasing projects and code (Angular 7 + TypeScript 3).",
         },
         {
           id: "7e5d83ac-ae1e-47ed-abeb-d39c2e28cbbe",
-          name: "ML Engineer Portfolio Website",
+          name: "AI/ML Engineer Portfolio Website",
           images: ["mle.png"],
           tags: ["2024", "web_dev", "Javascript", "Vue 3", "Element UI"],
           code: "https://github.com/strcoder4007/portfolio",
           live: "https://strcoder4007.github.io/portfolio/",
           description:
-            "Machine Learning Engineer Portfolio website with blogs written in Vue 3",
+            "My current portfolio with blogs, built with Vue 3 and Element Plus.",
         },
         {
           id: "9a3efbda-4a9e-498e-ad2c-d4b9c5f5d167",
@@ -213,7 +213,7 @@ const allProjects = [
           tags: ["2017", "web_dev", "Javascript", "Angular 7", "Typescript 3"],
           code: "https://github.com/strcoder4007/timeMyShow",
           description:
-            "A progressive web app to search and subscribe to tv shows for new episodes of all subscribed shows sorted, written in Angular 7 & Typescript 3",
+            "A PWA to follow TV shows and get new‑episode alerts; built with Angular 7 and TypeScript 3.",
         },
         {
           id: "fd0a94dc-b5dd-4df8-aeba-c6d55425ceea",
@@ -221,7 +221,7 @@ const allProjects = [
           images: [""],
           tags: ["2016", "web_dev", "Javascript"],
           code: "https://github.com/strcoder4007/SAE-KIET-Website",
-          description: "Official website of the Mechanical BAJA SAE India",
+          description: "Official website for BAJA SAE India (mechanical team site).",
         },
         {
           id: "27a5e908-a946-4bdb-8dca-f2c7ad93abde",
@@ -230,7 +230,7 @@ const allProjects = [
           tags: ["2014", "web_dev", "Javascript"],
           code: "https://github.com/strcoder4007/Code_Hour",
           description:
-            "Code_Hour is an open-source web application which allows you to keep track of competitive programming contests across all websites. Code_Hour keeps you updated so you never miss a contest!",
+            "Open‑source tool that tracks competitive programming contests across sites so you never miss one.",
         },
 
 
@@ -242,7 +242,7 @@ const allProjects = [
           code: "https://github.com/strcoder4007/spoj",
           live: "https://www.spoj.com/users/strcoder4007/",
           description:
-            "180+ solved SPOJ problems on Algorithms and Data Structures using C++",
+            "180+ SPOJ problems solved in C++ — algorithms and data structures.",
         },
       ]
 

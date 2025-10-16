@@ -2,7 +2,7 @@
   <div class="container" id="github-section">
     <el-row>
       <el-col class="github-section">
-        <div class="greetings">Github</div>
+        <div class="greetings">GitHub</div>
         <el-row class="container">
           <img src="https://streak-stats.demolab.com?user=strcoder4007&theme=&background=111111&border=111111&stroke=1DB954&ring=1DB954&fire=1DB954&currStreakNum=1DB954&sideNums=1DB954&currStreakLabel=1DB954&sideLabels=1DB954&dates=1DB954&card_width=600&border_radius=2" alt="GitHub Streak" />
         </el-row>

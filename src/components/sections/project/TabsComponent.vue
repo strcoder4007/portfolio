@@ -2,9 +2,9 @@
     <div class="project-tabs-page">
         <el-row>
             <div class="tab-card">
-                <button id="show_all" class="tab active" @click="selectTab('show_all')">Show all</button>
-                <button id="ml" class="tab" @click="selectTab('ml')">ML</button>
-                <button id="web_dev" class="tab" @click="selectTab('web_dev')">Web Dev</button>
+                <button id="show_all" class="tab active" @click="selectTab('show_all')">All</button>
+                <button id="ml" class="tab" @click="selectTab('ml')">AI/ML</button>
+                <button id="web_dev" class="tab" @click="selectTab('web_dev')">Web Apps</button>
                 <button id="algo" class="tab" @click="selectTab('algo')">Algorithms</button>
             </div>
         </el-row>
