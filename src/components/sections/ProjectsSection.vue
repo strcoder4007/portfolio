@@ -25,8 +25,8 @@ const allProjects = [
         {
           id: "f0b5a7b2-2a4d-4f1e-9c51-7a8b3e50b1a1",
           name: "Browser Agent",
-          images: [],
-          tags: ["ml", "Agent", "LLM", "Automation"],
+          images: ["https://github.com/strcoder4007/browser-agent/blob/main/1.gif?raw=true"],
+          tags: ["ml", "Agent", "LLM", "Automation", "2025"],
           code: "https://github.com/strcoder4007/browser-agent",
           blog: false,
           description:
@@ -35,8 +35,8 @@ const allProjects = [
         {
           id: "a2c9e1d4-6b3f-45e2-9f7a-0c8b9d3e4f56",
           name: "S2S Lipsync Unreal Avatar Backend",
-          images: [],
-          tags: ["ml", "Speech", "TTS", "STT", "Unreal Engine", "Realtime"],
+          images: ["https://github.com/strcoder4007/S2S-Lipsync-UnrealAvatar-Backend/blob/main/images/2.gif?raw=true"],
+          tags: ["ml", "Speech", "TTS", "STT", "Unreal Engine", "Realtime", "2025"],
           code: "https://github.com/strcoder4007/S2S-Lipsync-UnrealAvatar-Backend",
           blog: false,
           description:
@@ -45,8 +45,8 @@ const allProjects = [
         {
           id: "c5d7f9a1-83b2-4e9d-bc4f-2e7a6c9d0f12",
           name: "Unreal WebSocket Bridge",
-          images: [],
-          tags: ["ml", "Unreal Engine", "WebSocket", "Realtime"],
+          images: ["https://github.com/strcoder4007/unreal-websocket/blob/main/images/3.gif?raw=true"],
+          tags: ["ml", "Unreal Engine", "WebSocket", "Realtime", "2025"],
           code: "https://github.com/strcoder4007/unreal-websocket",
           blog: false,
           description:
@@ -54,13 +54,13 @@ const allProjects = [
         },
         {
           id: "e17a5c2b-4f6d-49c0-9b21-83f1c4a9d7e3",
-          name: "Insta Sponsor Fetch",
-          images: [],
-          tags: ["ml", "Data", "ETL", "Instagram", "Analytics"],
-          code: "https://github.com/strcoder4007/insta-sponsor-fetch",
+          name: "Customer Call Sentiment Analysis",
+          images: ["https://github.com/strcoder4007/voice-sentiment-analysis/blob/main/images/4.gif?raw=true"],
+          tags: ["ml", "Data", "multimodal model", "", "Analytics", "2025"],
+          code: "https://github.com/strcoder4007/voice-sentiment-analysis",
           blog: false,
           description:
-            "A small ETL that pulls and normalizes Instagram sponsorship/collab data for analysis and reporting.",
+            "Customer call analysis app with: Speech-to-Text + speaker diarization. Takes into account not only the text but tone, rythym etc.",
         },
         {
           id: "85b39e2d-f5a0-67c7-ae2d-06297acbe963",
