@@ -43,14 +43,14 @@ const allProjects = [
             "Speech‑to‑speech backend for a real‑time Unreal Engine avatar — STT in, LLM response, TTS out, plus viseme timing for accurate lip‑sync.",
         },
         {
-          id: "c5d7f9a1-83b2-4e9d-bc4f-2e7a6c9d0f12",
-          name: "Unreal WebSocket Bridge",
-          images: ["https://github.com/strcoder4007/unreal-websocket/blob/main/images/3.gif?raw=true"],
-          tags: ["ml", "Unreal Engine", "WebSocket", "Realtime", "2025"],
-          code: "https://github.com/strcoder4007/unreal-websocket",
-          blog: false,
+          id: "a3b859f2-f5ea-49a2-ae91-c5be0ddf3e86",
+          name: "Training Layer Visualization",
+          images: ["https://github.com/strcoder4007/Training-Visualization/blob/main/images/layers.gif?raw=true"],
+          tags: ["ml", "PyTorch", "OpenCV", "Python", "2024"],
+          code: "https://github.com/strcoder4007/Training-Visualization",
+          blog: true,
           description:
-            "A lightweight WebSocket bridge that streams AI‑driven commands, audio, and visemes into Unreal Engine for live character animation.",
+            "A real‑time view into a model’s hidden layers using PyTorch and OpenCV.",
         },
         {
           id: "e17a5c2b-4f6d-49c0-9b21-83f1c4a9d7e3",
@@ -83,14 +83,14 @@ const allProjects = [
             "I trained a ConvNet to play Need for Speed: Most Wanted purely from pixels, using InceptionResNetV2, OpenCV, and TensorFlow 2.",
         },
         {
-          id: "a3b859f2-f5ea-49a2-ae91-c5be0ddf3e86",
-          name: "Training Layer Visualization",
-          images: ["https://github.com/strcoder4007/Training-Visualization/blob/main/images/layers.gif?raw=true"],
-          tags: ["ml", "PyTorch", "OpenCV", "Python", "2024"],
-          code: "https://github.com/strcoder4007/Training-Visualization",
-          blog: true,
+          id: "c5d7f9a1-83b2-4e9d-bc4f-2e7a6c9d0f12",
+          name: "Unreal WebSocket Bridge",
+          images: ["https://github.com/strcoder4007/unreal-websocket/blob/main/images/3.gif?raw=true"],
+          tags: ["ml", "Unreal Engine", "WebSocket", "Realtime", "2025"],
+          code: "https://github.com/strcoder4007/unreal-websocket",
+          blog: false,
           description:
-            "A real‑time view into a model’s hidden layers using PyTorch and OpenCV.",
+            "A lightweight WebSocket bridge that streams AI‑driven commands, audio, and visemes into Unreal Engine for live character animation.",
         },
         {
           id: "eb66bcbb-9ff3-4bcc-a42f-1b944cfb33ed",
