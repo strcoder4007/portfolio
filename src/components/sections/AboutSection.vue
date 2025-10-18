@@ -22,13 +22,14 @@ export default {
   },
   setup() {
     const intro = `
-      <p>I’m a Senior AI/ML Engineer with 7 years of experience — 2 years on GenAI, agentic systems, RAG, and LLMs; 4 years as an ML engineer; and 1 year in software engineering.</p>
 
-      <p>I work end to end: data, modeling, evaluation, and production. I focus on RAG systems, autonomous agents, and getting models fast and efficient for real‑time use with quantization, pruning, and distillation. Over the last two years, I’ve gone deep on agent architectures (including RL‑trained agents) and the real‑world pitfalls teams hit when taking agents to production.</p>
+      <p>I’m a Senior AI/ML Engineer with seven years of hands-on experience — two years focused on GenAI, agentic systems, RAG, and LLMs; four years as an ML engineer; and one year in software engineering.</p>
 
-      <p>I’ve shipped AI into government intelligence, healthcare diagnostics, education, and cultural heritage. Recently I built MCP‑style architectures to improve reasoning and cut inference latency by ~80% for interactive systems.</p>
+      <p>I build end-to-end systems: data, modeling, evaluation, and production. I concentrate on RAG pipelines, autonomous agents, and squeezing models down for real-time use with quantization, pruning, and distillation. In the last two years I’ve dug deep into agent architectures (including RL-trained agents) and learned the practical pitfalls teams hit when they try to run agents in production.</p>
 
-      <p>I’ve also solved 800+ problems on Codeforces, which keeps my algorithms and problem‑solving sharp.</p>`
+      <p>I’ve shipped AI across government intelligence, healthcare diagnostics, education, and cultural heritage. At Tagbin I worked on MCP-style architectures that improved reasoning and cut inference latency by roughly 80% for interactive systems.</p>
+
+      <p>I also solve problems on Codeforces — 800+ solved — which keeps my algorithms and problem-solving muscles sharp.</p>`
 
       const workExperience = `
       <h2><strong>Senior AI/ML Engineer</strong> @ Tagbin (December 2024 - Present)</h2>

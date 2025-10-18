@@ -21,7 +21,7 @@
           </p>
           <section class="about">
             <p>
-              I’m a Senior AI/ML engineer with seven years of experience — two years focused on GenAI, agentic systems, RAG, and LLMs, four years as an ML engineer, and one year in software engineering.<br><br>I’ve shipped AI into government, healthcare, education, and cultural heritage projects. I also solve problems on Codeforces (800+ solved) to keep my data structures & algorithms sharp.<br><br>Open to AI Engineering roles.
+              I’m a Senior AI/ML Engineer with around seven years of hands-on experience — about two years deep into GenAI, agentic systems, RAG, and LLMs, five years building and deploying ML systems, and a year in software engineering.<br><br>Over the years, I’ve worked on projects across government, healthcare, education, and even cultural heritage — actually putting AI into production where it matters. Outside of work, I like to stay sharp with algorithms and problem-solving — I’ve solved over 800 problems on Codeforces.<br><br>Open to AI Engineering roles.
             </p>
           </section>
           <div class="cta-row">
