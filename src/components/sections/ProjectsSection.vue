@@ -96,7 +96,7 @@ const allProjects = [
           id: "eb66bcbb-9ff3-4bcc-a42f-1b944cfb33ed",
           name: "Codeforces Submissions (C++)",
           images: ["codeforces.png"],
-          tags: ["2014-2017", "Algorithms", "C++", "Math", "Number theory", "Bitmask", "Graph Theory", "Dynamic Programming"],
+          tags: ["2014-2017", "Algorithms", "C++", "Math", "Number theory", "Bitmask", "Graph Theory", "algo", "Dynamic Programming"],
           code: "https://github.com/strcoder4007/Codeforces-Solutions",
           live: "https://codeforces.com/profile/__STR",
           description:

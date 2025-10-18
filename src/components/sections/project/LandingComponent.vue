@@ -130,7 +130,7 @@ export default {
 }
 
 .image-container {
-    width: 350px;
+    width: 320px;
     height: 200px;
     background-color: #111;
     overflow: hidden;
@@ -142,8 +142,11 @@ export default {
 .image-container img {
     max-width: 100%;
     max-height: 100%;
-    width: auto;
-    height: auto;
+    object-fit: contain;
+    display: block;
+    background-color: #000;
+    margin: 0 auto;
+    position: relative;
 }
 
 .tags-section {
@@ -164,8 +167,8 @@ export default {
 
 
 .cvfy-container {
-  max-width: 350px;
-  margin: 30px auto;
+  max-width: 320px;
+  margin: 20px auto;
 }
 
 .cvfy-card {
