@@ -26,17 +26,17 @@ const allProjects = [
           id: "f0b5a7b2-2a4d-4f1e-9c51-7a8b3e50b1a1",
           name: "Browser Agent",
           images: ["https://github.com/strcoder4007/browser-agent/blob/main/1.gif?raw=true"],
-          tags: ["ml", "Agent", "LLM", "Automation", "2025"],
+          tags: ["2025", "ml", "Autonomous Agent", "LLM", "Automation"],
           code: "https://github.com/strcoder4007/browser-agent",
           blog: false,
           description:
-            "A browser automation agent that plans multi‑step tasks, reasons with an LLM, and controls tools end‑to‑end.",
+            "A browser automation agent that plans multi‑step tasks, reasons with an LLM, and controls tools end‑to‑end to crawl any website and extract structured data.",
         },
         {
           id: "a2c9e1d4-6b3f-45e2-9f7a-0c8b9d3e4f56",
           name: "S2S Lipsync Unreal Avatar Backend",
           images: ["https://github.com/strcoder4007/S2S-Lipsync-UnrealAvatar-Backend/blob/main/images/2.gif?raw=true"],
-          tags: ["ml", "Speech", "TTS", "STT", "Unreal Engine", "Realtime", "2025"],
+          tags: ["2025", "ml", "Speech", "TTS", "STT", "Unreal Engine", "Realtime"],
           code: "https://github.com/strcoder4007/S2S-Lipsync-UnrealAvatar-Backend",
           blog: false,
           description:
@@ -46,7 +46,7 @@ const allProjects = [
           id: "a3b859f2-f5ea-49a2-ae91-c5be0ddf3e86",
           name: "Training Layer Visualization",
           images: ["https://github.com/strcoder4007/Training-Visualization/blob/main/images/layers.gif?raw=true"],
-          tags: ["ml", "PyTorch", "OpenCV", "Python", "2024"],
+          tags: ["2024", "ml", "PyTorch", "OpenCV", "Python"],
           code: "https://github.com/strcoder4007/Training-Visualization",
           blog: true,
           description:
@@ -56,7 +56,7 @@ const allProjects = [
           id: "e17a5c2b-4f6d-49c0-9b21-83f1c4a9d7e3",
           name: "Customer Call Sentiment Analysis",
           images: ["https://github.com/strcoder4007/voice-sentiment-analysis/blob/main/images/4.gif?raw=true"],
-          tags: ["ml", "Data", "multimodal model", "", "Analytics", "2025"],
+          tags: ["2025", "ml", "Data", "multimodal model", "Analytics"],
           code: "https://github.com/strcoder4007/voice-sentiment-analysis",
           blog: false,
           description:
@@ -66,7 +66,7 @@ const allProjects = [
           id: "85b39e2d-f5a0-67c7-ae2d-06297acbe963",
           name: "Multi Agent AI System",
           images: ["https://github.com/strcoder4007/Multi-Agent-AI-System/blob/main/image.jpg?raw=true"],
-          tags: ["ml", "Gen AI", "Crew AI", "Langchain", "Agent", "2024"],
+          tags: ["2024", "ml", "Gen AI", "Crew AI", "Langchain", "Agent"],
           code: "https://github.com/strcoder4007/Multi-Agent-AI-System",
           blog: false,
           description:
@@ -76,7 +76,7 @@ const allProjects = [
           id: "85b39e2d-f5a0-47c7-ae2d-06297acbe963",
           name: "NFS Self Driving Simulation",
           images: ["https://github.com/strcoder4007/Need-For-Speed-Self-driving/blob/main/images/nfsmw1.gif?raw=true"],
-          tags: ["ml", "Tensorflow 2", "InceptionResNetV2", "Vision", "OpenCV", "Python", "2024"],
+          tags: ["2024", "ml", "Tensorflow 2", "InceptionResNetV2", "Vision", "OpenCV", "Python"],
           code: "https://github.com/strcoder4007/Need-For-Speed-Self-driving",
           blog: true,
           description:
@@ -86,7 +86,7 @@ const allProjects = [
           id: "c5d7f9a1-83b2-4e9d-bc4f-2e7a6c9d0f12",
           name: "Unreal WebSocket Bridge",
           images: ["https://github.com/strcoder4007/unreal-websocket/blob/main/images/3.gif?raw=true"],
-          tags: ["ml", "Unreal Engine", "WebSocket", "Realtime", "2025"],
+          tags: ["2025", "ml", "Unreal Engine", "WebSocket", "Realtime"],
           code: "https://github.com/strcoder4007/unreal-websocket",
           blog: false,
           description:
@@ -96,7 +96,7 @@ const allProjects = [
           id: "eb66bcbb-9ff3-4bcc-a42f-1b944cfb33ed",
           name: "Codeforces Submissions (C++)",
           images: ["codeforces.png"],
-          tags: ["algo", "2014-2017", "C++", "Math", "Number theory", "Bitmask", "Graph Theory", "Dynamic Programming"],
+          tags: ["2014-2017", "Algorithms", "C++", "Math", "Number theory", "Bitmask", "Graph Theory", "Dynamic Programming"],
           code: "https://github.com/strcoder4007/Codeforces-Solutions",
           live: "https://codeforces.com/profile/__STR",
           description:
@@ -106,7 +106,7 @@ const allProjects = [
           id: "4e8a86ee-5a59-4c24-b0c1-d78cd165f771",
           name: "Mario Reinforcement Learning",
           images: ["https://github.com/strcoder4007/Mario-Reinforcement-Learning/blob/main/images/mario_ppo.gif?raw=true"],
-          tags: ["ml", "Tensorflow 2", "Reinforcement Learning", "OpenAI Gym", "PPO Algorithm", "Python", "2024"],
+          tags: ["2024", "ml", "Tensorflow 2", "Reinforcement Learning", "OpenAI Gym", "PPO Algorithm", "Python"],
           code: "https://github.com/strcoder4007/Mario-Reinforcement-Learning",
           blog: true,
           description:
@@ -126,7 +126,7 @@ const allProjects = [
           id: "d4d3bcde-6b2a-46e2-aef0-be0f7ec87589",
           name: "Medical MRI segmentation using UNet",
           images: ["unet.png"],
-          tags: ["ml", "Tensorflow 2", "UNet", "Python", "2024"],
+          tags: ["2024", "ml", "Tensorflow 2", "UNet", "Python"],
           code: "https://github.com/strcoder4007/U-Net-Image-Segmentation",
           description: "MRI image segmentation with a U‑Net in TensorFlow 2.",
         },
@@ -134,7 +134,7 @@ const allProjects = [
           id: "1c8c2951-fbd9-41ab-8bae-ccd0a437a7b2",
           name: "YOLO V1 Implementation",
           images: ["yolo_v1.png"],
-          tags: ["ml", "Tensorflow v1", "DarkNet-19", "Vision", "Python", "2021"],
+          tags: ["2021", "ml", "Tensorflow v1", "DarkNet-19", "Vision", "Python"],
           code: "https://github.com/strcoder4007/YOLO-V1-TF1",
           description:
             "A TensorFlow 1 re‑implementation of YOLOv1 using Darknet‑19 as the backbone.",
@@ -164,7 +164,7 @@ const allProjects = [
           id: "6c5ec8e8-cfe9-41df-bf90-d3d0d0efcded",
           name: "Real Time Gaze Tracking",
           images: ["face_detection.png"],
-          tags: ["ml", "web_dev", "OpenCV", "Python", "Javascript"],
+          tags: ["2023", "ml", "web_dev", "OpenCV", "Python", "Javascript"],
           code: "https://github.com/strcoder4007/tensorflow-face-detection",
           live: "https://strcoder4007.github.io/eye-tracking/",
           description: "Real‑time eye tracking and face mesh rendering with OpenCV and MediaPipe FaceMesh. Live demo included.",
