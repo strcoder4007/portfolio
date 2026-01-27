@@ -61,7 +61,7 @@ body {
 }
 button:hover {
   cursor: pointer;
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  /* transform: scale(1.05); Slightly enlarge on hover */
   transition: transform 0.2s ease-in-out;
 }
 

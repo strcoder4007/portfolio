@@ -31,20 +31,20 @@
             <span :key="tag" v-for="tag in filterTags(project.tags)">{{ tag }}</span>
           </div>
           <div class="links-container">
-            <div v-if="project.hasOwnProperty('live')" class="live" @click="goToLink(project.live)">
-              Live 
+            <button v-if="project.hasOwnProperty('live')" class="link-pill live" type="button" @click="goToLink(project.live)">
+              Live Web App
               <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" />
-            </div>
+            </button>
 
-            <div v-if="project.hasOwnProperty('code')" class="code" @click="goToLink(project.code)">
-              Code 
+            <button v-if="project.hasOwnProperty('code')" class="link-pill code" type="button" @click="goToLink(project.code)">
+              Github Code
               <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" />
-            </div>
+            </button>
 
-            <div v-if="project.hasOwnProperty('blog') && project.blog" class="blog" @click="goToLink(project.blog)">
-                Blog 
-                <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" />
-            </div>
+            <button v-if="project.hasOwnProperty('blog') && project.blog" class="link-pill blog" type="button" @click="goToLink(project.blog)">
+              Blog
+              <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" />
+            </button>
           </div>
         </div>
       </el-col>
@@ -309,25 +309,50 @@ export default {
 
 .links-container {
   display: flex;
-  flex-direction: row;
-  justify-content: start;
-  .live, .code, .blog, .behance, .figma {
-    font-size: 18px;
-    font-weight: 500;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+  justify-content: flex-start;
+
+  .link-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 6px 14px;
+    background: #0f0f0f;
+    border: 1px solid #2a2a2a;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
     font-family: 'Space Grotesk', Brandon;
-    margin-right: 30px;
-    color: #fff;
+    letter-spacing: 0.3px;
+    color: #ffffff;
     cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
     img {
-      height: 20px;
-      margin-bottom: -5px;
-      margin-left: 2px;
+      height: 14px;
+      width: 14px;
+      opacity: 0.85;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
   }
-  .live:hover, .code:hover, .blog:hover, .behance:hover, .figma:hover {
-    text-decoration: underline;
-    text-decoration-color: #1DB954;
-    text-decoration-thickness: 3px;
+
+  .link-pill:hover {
+    background-color: rgba(29, 185, 84, 0.12);
+    border-color: #1db954;
+    color: #1db954;
+  }
+
+  .link-pill:hover img {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+
+  .link-pill:focus-visible {
+    outline: 2px solid #1db954;
+    outline-offset: 2px;
   }
 }
 
@@ -388,8 +413,8 @@ export default {
   .project-description {
     font-size: 13px;
   }
-  .links-container .live, .links-container .code, .links-container .blog {
-    font-size: 16px;
+  .links-container .link-pill {
+    font-size: 12px;
   }
 }
 

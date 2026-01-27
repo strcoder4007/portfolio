@@ -6,7 +6,7 @@
     <div class="project-name">{{ name }}</div>
     <div class="project-description">{{ description }}</div>
     <div class="links-container">
-      <div class="live">Live</div>
+      <div class="live">Live Web App</div>
       <div class="code">Code</div>
     </div>
   </div>

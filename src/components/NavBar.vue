@@ -200,7 +200,7 @@ button.menu-toggle {
             height: 0px;
             background: #1DB954;
             margin-left: -12px;
-            margin-top: -17px;
+            margin-top: -20px;
           }
         }
       }
