@@ -2,111 +2,290 @@
   <div class="container" id="blogs-section">
     <el-row>
       <el-col class="blogs-section">
-        <div class="greetings">Blogs</div>
-
-        <div class="blog-card" v-for="(blog, idx) in localBlogs" :key="blog.title">
-          <div  @click="toggleBlog(idx)" class="blog-name">{{ blog.title }}</div>
-          <div  @click="toggleBlog(idx)" class="blog-date">{{ blog.time }}</div>
-          <div v-if="showBlogArray[idx]" class="blog-description" v-html="blog.content"></div>
-          <div v-else @click="toggleBlog(idx)" class="blog-description" v-html="blog.content.substring(0, 150) + '...'"></div>
+        <div class="header">
+          <div class="greetings">Blogs</div>
+          <p class="description">Notes on engineering, product, and experiments.</p>
+          <div class="meta-row">
+            <div class="stat">
+              <span class="stat-number">{{ totalBlogs }}</span> posts
+            </div>
+            <div class="stat">
+              <span class="stat-number">{{ tagCount }}</span> topics
+            </div>
+            <div v-if="filtersActive" class="stat">
+              Showing {{ filteredBlogs.length }} of {{ totalBlogs }}
+            </div>
+          </div>
         </div>
 
-        <br>
+        <div class="controls">
+          <div class="control-group">
+            <label class="control-label" for="blog-search">Search</label>
+            <input
+              id="blog-search"
+              v-model="searchQuery"
+              class="search-input"
+              type="text"
+              placeholder="Search titles, tags, or keywords"
+              aria-label="Search blogs"
+            >
+          </div>
 
+          <div class="control-group">
+            <label class="control-label" for="blog-sort">Sort</label>
+            <select id="blog-sort" v-model="sortBy" class="sort-select" aria-label="Sort blogs">
+              <option value="newest">Newest first</option>
+              <option value="oldest">Oldest first</option>
+              <option value="title-asc">Title A-Z</option>
+              <option value="title-desc">Title Z-A</option>
+            </select>
+          </div>
+
+          <button
+            v-if="filtersActive"
+            class="clear-btn"
+            type="button"
+            @click="clearFilters"
+          >
+            Clear filters
+          </button>
+        </div>
+
+        <div class="tags-row">
+          <button
+            v-for="tag in tagOptions"
+            :key="tag"
+            type="button"
+            class="tag-chip"
+            :class="{ active: selectedTag === tag }"
+            @click="selectTag(tag)"
+          >
+            {{ tag === 'all' ? 'All' : tag }}
+          </button>
+        </div>
+
+        <div v-if="filteredBlogs.length === 0" class="empty-state">
+          No posts match your filters. Try clearing or adjusting the search.
+        </div>
+
+        <div class="blog-list">
+          <article class="blog-card" v-for="blog in filteredBlogs" :key="blog.title">
+            <div class="blog-head">
+              <button class="blog-title" type="button" @click="toggleBlog(blog)">
+                {{ blog.title }}
+              </button>
+              <div class="blog-meta">
+                <span class="blog-date">{{ blog.time }}</span>
+                <span class="meta-dot"></span>
+                <span class="blog-read">{{ blog.readTime }} min read</span>
+              </div>
+            </div>
+
+            <div class="tag-line">
+              <button
+                v-for="tag in blog.tags || []"
+                :key="tag"
+                type="button"
+                class="tag-chip tag-chip--small"
+                @click.stop="selectTag(tag)"
+              >
+                {{ tag }}
+              </button>
+            </div>
+
+            <div
+              v-if="isExpanded(blog)"
+              class="blog-description"
+              v-html="blog.content"
+            ></div>
+            <div
+              v-else
+              class="blog-description blog-description--preview"
+              @click="toggleBlog(blog)"
+            >
+              {{ blog.excerpt }}
+            </div>
+
+            <div class="blog-actions">
+              <button class="ghost-btn" type="button" @click="toggleBlog(blog)">
+                {{ isExpanded(blog) ? 'Collapse' : 'Read full' }}
+              </button>
+            </div>
+          </article>
+        </div>
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
-import { ref } from 'vue'
 import data from '../../assets/blogs/blogs.json'
 
-const blogs = ref(data)
-
 const months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-      ]
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+]
 
 export default {
-  name: "BlogsSection",
+  name: 'BlogsSection',
   data() {
     return {
-      localBlogs: this.formatBlog(blogs.value),
-      showBlogArray: []
+      localBlogs: [],
+      searchQuery: '',
+      selectedTag: 'all',
+      sortBy: 'newest',
+      expandedTitle: ''
     }
   },
+  created() {
+    this.localBlogs = this.prepareBlogs(data)
+  },
   mounted() {
-    document.getElementById("blogs-section").scrollIntoView()
-    this.showBlogArray = this.localBlogs.map(() => false)
+    const node = document.getElementById('blogs-section')
+    if (node) {
+      node.scrollIntoView()
+    }
+  },
+  computed: {
+    tagOptions() {
+      const tags = new Set()
+      this.localBlogs.forEach((blog) => {
+        (blog.tags || []).forEach((tag) => tags.add(tag))
+      })
+      return ['all', ...Array.from(tags).sort()]
+    },
+    filteredBlogs() {
+      let list = this.localBlogs.slice()
+      const query = this.searchQuery.trim().toLowerCase()
+
+      if (query) {
+        list = list.filter((blog) => blog.searchText.includes(query))
+      }
+
+      if (this.selectedTag !== 'all') {
+        list = list.filter((blog) => (blog.tags || []).includes(this.selectedTag))
+      }
+
+      if (this.sortBy === 'oldest') {
+        list.sort((a, b) => a.dateValue - b.dateValue)
+      } else if (this.sortBy === 'title-asc') {
+        list.sort((a, b) => a.title.localeCompare(b.title))
+      } else if (this.sortBy === 'title-desc') {
+        list.sort((a, b) => b.title.localeCompare(a.title))
+      } else {
+        list.sort((a, b) => b.dateValue - a.dateValue)
+      }
+
+      return list
+    },
+    totalBlogs() {
+      return this.localBlogs.length
+    },
+    tagCount() {
+      return Math.max(this.tagOptions.length - 1, 0)
+    },
+    filtersActive() {
+      return this.searchQuery.trim() !== '' || this.selectedTag !== 'all' || this.sortBy !== 'newest'
+    }
   },
   methods: {
-    getMonthIndex(monthName) {
-      return months.indexOf(monthName);
+    selectTag(tag) {
+      if (tag === 'all') {
+        this.selectedTag = 'all'
+        return
+      }
+      this.selectedTag = this.selectedTag === tag ? 'all' : tag
     },
-    formatBlog(allBlogs) {
-
-      allBlogs = allBlogs.filter(blog => !blog.tags.includes('personal'))
-      // Sort blogs by the given date string in the format "day month year"
-      allBlogs.sort((a, b) => {
-        let dateA = a.time.split(' ')
-        let dateB = b.time.split(' ')
-
-        // Convert month names to their indices
-        let monthIndexA = this.getMonthIndex(dateA[1])
-        let monthIndexB = this.getMonthIndex(dateB[1])
-
-        // Compare years, then months, then days
-        if (dateA[2] !== dateB[2]) return parseInt(dateA[2]) - parseInt(dateB[2])
-        if (monthIndexA !== monthIndexB) return monthIndexA - monthIndexB
-        return parseInt(dateA[0]) - parseInt(dateB[0])
-      })
-      return allBlogs.reverse()
+    clearFilters() {
+      this.searchQuery = ''
+      this.selectedTag = 'all'
+      this.sortBy = 'newest'
     },
-    async toggleBlog(idx) {
-      const blogState = this.showBlogArray[idx]
-      this.showBlogArray = this.showBlogArray.map(() => false)
-      this.showBlogArray[idx] = !blogState
+    isExpanded(blog) {
+      return this.expandedTitle === blog.title
+    },
+    async toggleBlog(blog) {
+      const isOpen = this.isExpanded(blog)
+      this.expandedTitle = isOpen ? '' : blog.title
 
-      // Lazy-load full content if a contentSource is provided
-      const blog = this.localBlogs[idx]
-      if (this.showBlogArray[idx] && blog && blog.contentSource && !blog.contentLoaded) {
+      if (this.expandedTitle && blog && blog.contentSource && !blog.contentLoaded) {
         try {
           const base = process.env.BASE_URL || '/'
           const res = await fetch(base + blog.contentSource)
           const html = await res.text()
-          // Strip any <script> tags for safety
           const sanitized = html.replace(/<script[\s\S]*?<\/script>/gi, '')
-          this.localBlogs[idx].content = sanitized
-          this.localBlogs[idx].contentLoaded = true
+          blog.content = sanitized
+          blog.contentLoaded = true
         } catch (e) {
-          this.localBlogs[idx].content = '<p>Failed to load article. Please try again.</p>'
+          blog.content = '<p>Failed to load article. Please try again.</p>'
         }
       }
+    },
+    getMonthIndex(monthName) {
+      return months.indexOf(monthName)
+    },
+    getDateValue(dateString) {
+      if (!dateString) return 0
+      const parts = dateString.split(' ')
+      if (parts.length < 3) return 0
+
+      const day = parseInt(parts[0], 10)
+      const monthIndex = this.getMonthIndex(parts[1])
+      const year = parseInt(parts[2], 10)
+
+      if (Number.isNaN(day) || Number.isNaN(year) || monthIndex < 0) return 0
+      return new Date(year, monthIndex, day).getTime()
+    },
+    stripHtml(html) {
+      if (!html) return ''
+      return html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()
+    },
+    getExcerpt(text, maxLength = 200) {
+      if (!text) return ''
+      if (text.length <= maxLength) return text
+      const truncated = text.slice(0, maxLength)
+      return truncated.replace(/\s+\S*$/, '') + '...'
+    },
+    prepareBlogs(allBlogs) {
+      const cleaned = allBlogs.filter((blog) => !(blog.tags || []).includes('personal'))
+
+      return cleaned.map((blog) => {
+        const plain = this.stripHtml(blog.content || '')
+        const wordCount = plain ? plain.split(/\s+/).length : 0
+        const readTime = Math.max(1, Math.round(wordCount / 220))
+        const searchText = [blog.title, plain, ...(blog.tags || [])].join(' ').toLowerCase()
+
+        return {
+          ...blog,
+          excerpt: this.getExcerpt(plain, 220),
+          searchText,
+          wordCount,
+          readTime,
+          dateValue: this.getDateValue(blog.time)
+        }
+      })
     }
-  },  
-  components: {
   },
-};
+  components: {}
+}
 </script>
 
 <style lang="scss" scoped>
-
 .container {
   background: #222222;
   overflow-y: hidden;
 }
+
 .blogs-section {
   overflow-y: scroll;
   height: calc(100vh - 80px);
@@ -116,82 +295,316 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  padding-bottom: 60px;
+
+  .header {
+    width: min(960px, 90%);
+    text-align: left;
+    margin-top: 20px;
+  }
 
   .greetings {
-    margin-top: 20px;
     color: #fff;
     font-family: Bricolage;
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
-    line-height: 72px;
+    line-height: 56px;
     letter-spacing: -1px;
   }
 
   .description {
-    color: #fff;
-    text-align: center;
+    color: #cfcfcf;
     font-family: Bricolage;
-    font-size: 21px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 30px;
-    margin-top: 20px;
+    line-height: 28px;
+    margin: 6px 0 0 0;
+    max-width: 520px;
   }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .stat {
+    background: #111111;
+    border: 1px solid #2a2a2a;
+    border-radius: 999px;
+    color: #b5b5b5;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    text-transform: uppercase;
+  }
+
+  .stat-number {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .controls {
+    width: min(960px, 90%);
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 180px auto;
+    gap: 12px;
+    align-items: end;
+  }
+
+  .control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .control-label {
+    color: #9f9f9f;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .search-input,
+  .sort-select {
+    background: #111111;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    color: #ffffff;
+    font-family: Bricolage;
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .search-input:focus,
+  .sort-select:focus {
+    outline: 2px solid #1db954;
+    border-color: #1db954;
+  }
+
+  .clear-btn {
+    background: transparent;
+    border: 1px solid #2f2f2f;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Bricolage;
+    font-size: 13px;
+    padding: 10px 14px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .clear-btn:hover {
+    border-color: #1db954;
+    color: #1db954;
+  }
+
+  .tags-row {
+    width: min(960px, 90%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .tag-chip {
+    background: #111111;
+    border: 1px solid #2a2a2a;
+    border-radius: 999px;
+    color: #c2c2c2;
+    cursor: pointer;
+    font-family: 'Space Grotesk', Bricolage;
+    font-size: 12px;
+    padding: 6px 12px;
+    transition: all 0.2s ease;
+  }
+
+  .tag-chip:hover {
+    border-color: #1db954;
+    color: #1db954;
+  }
+
+  .tag-chip.active {
+    background: #1db954;
+    border-color: #1db954;
+    color: #111111;
+  }
+
+  .tag-chip--small {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .empty-state {
+    width: min(960px, 90%);
+    margin-top: 24px;
+    padding: 18px 20px;
+    border: 1px dashed #2a2a2a;
+    border-radius: 8px;
+    color: #bdbdbd;
+    font-family: Bricolage;
+    text-align: left;
+  }
+
+  .blog-list {
+    width: min(960px, 90%);
+  }
+
   .blog-card {
     margin-top: 30px;
-    width: 80%;
-    background: #111;
-    border-radius: 5px;
+    background: #111111;
+    border-radius: 8px;
     padding: 20px;
-    cursor: pointer;
     box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.3);
+    border: 1px solid #1f1f1f;
+  }
 
-    .blog-name {
-      font-size: 24px;
-      font-weight: 700;
-      text-align: left;
-      font-family: 'Space Grotesk', Bricolage;
-      color: #fff;
-    }
+  .blog-head {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
 
-    .blog-date {
-      margin-top: 5px;
-      font-size: 14px;
-      font-weight: 400;
-      text-align: left;
-      font-family: 'Space Grotesk', Bricolage;
-      color: #fff;
-    }
+  .blog-title {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Space Grotesk', Bricolage;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0;
+    text-align: left;
+  }
 
-    .blog-description {
-      font-size: 15px;
-      font-family: Bricolage;
-      font-weight: 300;
-      line-height: 22px;
-      text-align: left;
-      color: #fff;
-      overflow-x: clip;
-    }
+  .blog-title:hover {
+    color: #1db954;
+  }
+
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #bdbdbd;
+    font-family: 'Space Grotesk', Bricolage;
+    font-size: 13px;
+  }
+
+  .meta-dot {
+    width: 4px;
+    height: 4px;
+    background: #1db954;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .tag-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .blog-description {
+    font-size: 15px;
+    font-family: Bricolage;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+    color: #f0f0f0;
+    margin-top: 14px;
+  }
+
+  .blog-description--preview {
+    cursor: pointer;
+    color: #d6d6d6;
+  }
+
+  .blog-description img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin: 10px 0;
+  }
+
+  .blog-description pre {
+    overflow-x: auto;
+    padding: 10px 12px;
+    border-radius: 6px;
+  }
+
+  .blog-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 16px;
+  }
+
+  .ghost-btn {
+    background: transparent;
+    border: 1px solid #2f2f2f;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Space Grotesk', Bricolage;
+    font-size: 13px;
+    padding: 8px 14px;
+    transition: all 0.2s ease;
+  }
+
+  .ghost-btn:hover {
+    border-color: #1db954;
+    color: #1db954;
   }
 }
+
 @media (max-width: 768px) {
   .container {
     padding-top: 60px;
-    .blogs-section {
-      height: auto;
-      min-height: calc(100vh - 60px);
-      .greetings {
-        margin-top: 20px;
-        font-size: 30px;
-        font-weight: 700;
-      }
+  }
 
-      .description {
-        padding: 0 20px;
-        font-size: 15px;
-        line-height: 20px;
-      }
+  .blogs-section {
+    height: auto;
+    min-height: calc(100vh - 60px);
+
+    .header {
+      width: 92%;
+    }
+
+    .greetings {
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .description {
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    .controls {
+      width: 92%;
+      grid-template-columns: 1fr;
+    }
+
+    .tags-row,
+    .blog-list,
+    .empty-state {
+      width: 92%;
+    }
+
+    .tag-chip {
+      font-size: 11px;
+    }
+
+    .blog-title {
+      font-size: 20px;
+    }
+
+    .blog-description {
+      font-size: 14px;
+      line-height: 22px;
     }
   }
 }
