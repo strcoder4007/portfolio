@@ -58,7 +58,7 @@
           </span>
 
           <span class="policy-and-terms-section">
-            © 2025 Shubham Singh. All rights reserved.
+            © 2026 Shubham Singh. All rights reserved.
           </span>
         </div>
       </el-col>
@@ -133,7 +133,7 @@ export default {
     .profile-text {
       font-size: 40px;
       font-weight: 700;
-      font-family: Ubuntu;
+      font-family: 'Space Grotesk';
     }
     .profile-img {
       width: 150px;
@@ -236,7 +236,7 @@ export default {
     }
     .source-code {
       color: #ffffff;
-      font-family: Ubuntu, Brandon;
+      font-family: 'Space Grotesk', Brandon;
       font-size: 13px;
       font-style: normal;
       font-weight: 400;
@@ -251,7 +251,7 @@ export default {
     }
     .policy-and-terms-section {
       color: #ffffff;
-      font-family: Ubuntu, Brandon;
+      font-family: 'Space Grotesk', Brandon;
       font-size: 13px;
       font-style: normal;
       font-weight: 400;
@@ -281,7 +281,7 @@ export default {
       .profile-text {
         font-size: 27px;
         font-weight: 700;
-        font-family: Ubuntu;
+        font-family: 'Space Grotesk';
       }
       .profile-img {
         display: none;
@@ -308,7 +308,7 @@ export default {
       .profile-text {
         font-size: 25px;
         font-weight: 700;
-        font-family: Ubuntu;
+        font-family: 'Space Grotesk';
       }
       .profile-img {
         width: 150px;

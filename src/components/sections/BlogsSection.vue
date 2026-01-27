@@ -151,7 +151,7 @@ export default {
       font-size: 24px;
       font-weight: 700;
       text-align: left;
-      font-family: Ubuntu, Bricolage;
+      font-family: 'Space Grotesk', Bricolage;
       color: #fff;
     }
 
@@ -160,7 +160,7 @@ export default {
       font-size: 14px;
       font-weight: 400;
       text-align: left;
-      font-family: Ubuntu, Bricolage;
+      font-family: 'Space Grotesk', Bricolage;
       color: #fff;
     }
 

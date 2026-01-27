@@ -69,12 +69,12 @@ export default {
     .tab {
         background-color: #222222;
         border: none;
-        width: 90px;
+        width: 95px;
         padding: 5px 10px;
         gap: 10px;
         color: #ffffff;
         font-size: 14px;
-        font-family: Ubuntu, Brandon, sans-serif;
+        font-family: 'Space Grotesk', Brandon, sans-serif;
     }
 
     .tab.active {
@@ -101,7 +101,7 @@ export default {
             gap: 10px;
             color: #ffffff;
             font-size: 12px;
-            font-family: Ubuntu, Brandon, sans-serif;
+            font-family: 'Space Grotesk', Brandon, sans-serif;
         }
 
         .tab.active {

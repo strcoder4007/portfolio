@@ -77,7 +77,7 @@ export default {
 
 <style lang="scss" scoped>
 .terminal {
-  font-family: Ubuntu;
+  font-family: 'Space Grotesk';
   font-weight: 600;
   font-size: 20px;
   color: #ffffff;
@@ -131,7 +131,7 @@ button.menu-toggle {
 
   .shubhams-portfolio {
     color: #ffffff;
-    font-family: Ubuntu, Brandon, sans-serif;
+    font-family: 'Space Grotesk', Brandon, sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 900 !important;
@@ -200,7 +200,7 @@ button.menu-toggle {
             height: 0px;
             background: #1DB954;
             margin-left: -12px;
-            margin-top: -20px;
+            margin-top: -17px;
           }
         }
       }
@@ -281,7 +281,7 @@ button.menu-toggle {
       text-decoration: none;
       cursor: pointer;
 
-      font-family: Ubuntu, Brandon, sans-serif;
+      font-family: 'Space Grotesk', Brandon, sans-serif;
 
       border-radius: 1px;
       color: #1DB954;

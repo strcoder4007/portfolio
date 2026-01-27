@@ -160,7 +160,7 @@ export default {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 
-  font-family: Ubuntu, Brandon;
+  font-family: 'Space Grotesk', Brandon;
   font-size: 45px;
   font-style: normal;
   font-weight: 700;
@@ -170,7 +170,7 @@ export default {
 .text {
   display: block;
   color: #333333;
-  font-family: Ubuntu, Brandon;
+  font-family: 'Space Grotesk', Brandon;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -203,7 +203,7 @@ export default {
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 
-    font-family: Ubuntu, Brandon;
+    font-family: 'Space Grotesk', Brandon;
     font-size: 26px;
     font-style: normal;
     font-weight: 700;

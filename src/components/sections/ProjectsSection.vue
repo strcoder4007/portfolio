@@ -25,8 +25,8 @@ const allProjects = [
         {
           id: "6e8f4a2b-1c3d-4e5f-9a0b-1c2d3e4f5a6b",
           name: "Ecommerce Product Image generator",
-          images: ["https://github.com/strcoder4007/ecommerce-scene-generator/blob/main/image.png?raw=true"],
-          tags: ["2026", "ml", "agent", "Gen AI", "Web"],
+          images: ["ecommerce.png"],
+          tags: ["2026", "ml", "Image Gen", "Gen AI", "Web"],
           code: "https://github.com/strcoder4007/ecommerce-scene-generator",
           live: "https://strcoder4007.github.io/ecommerce-scene-generator/",
           blog: false,
@@ -37,7 +37,7 @@ const allProjects = [
           id: "7f9a0b1c-2d3e-4f5a-6b7c-8d9e0f1a2b3c",
           name: "AI Website Builder",
           images: ["https://github.com/strcoder4007/AI-Sandboxed-website-editor/blob/main/src/assets/image.png?raw=true"],
-          tags: ["2026", "ml", "agent", "Web", "Gen AI"],
+          tags: ["2026", "ml", "Agents", "Web", "Gen AI"],
           code: "https://github.com/strcoder4007/AI-Sandboxed-website-editor",
           live: "https://strcoder4007.github.io/AI-Sandboxed-website-editor/",
           blog: false,
@@ -48,7 +48,7 @@ const allProjects = [
           id: "8a0b1c2d-3e4f-5a6b-7c8d-9e0f1a2b3c4d",
           name: "Finance Insights AI",
           images: ["https://github.com/strcoder4007/Finance-Insights-AI/blob/main/image.png?raw=true"],
-          tags: ["2026", "ml", "agent", "Data", "LLM"],
+          tags: ["2026", "ml", "Agents", "Data", "LLM", "Text-to-SQL Agent"],
           code: "https://github.com/strcoder4007/Finance-Insights-AI",
           blog: false,
           description:
@@ -57,8 +57,8 @@ const allProjects = [
         {
           id: "9b1c2d3e-4f5a-6b7c-8d9e-0f1a2b3c4d5e",
           name: "Qwen Image Edit Virtual Try On",
-          images: ["https://github.com/strcoder4007/qwen-virtual-try-on/blob/main/example.png?raw=true"],
-          tags: ["2026", "ml", "agent", "Computer Vision", "LLM"],
+          images: ["qwen_edit.png"],
+          tags: ["2026", "ml", "Running Locally", "Computer Vision", "LLM"],
           code: "https://github.com/strcoder4007/qwen-virtual-try-on",
           blog: false,
           description:
@@ -68,7 +68,7 @@ const allProjects = [
           id: "0c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f",
           name: "Easy News",
           images: ["https://github.com/strcoder4007/easynews/blob/main/src/assets/easynews1.png?raw=true"],
-          tags: ["2026", "ml", "agent", "Web"],
+          tags: ["2026", "ml", "Web search Agent", "Web"],
           code: "https://github.com/strcoder4007/easynews",
           live: "https://strcoder4007.github.io/easynews/",
           blog: false,
@@ -78,8 +78,8 @@ const allProjects = [
         {
           id: "1d3e4f5a-6b7c-8d9e-0f1a-2b3c4d5e6f7a",
           name: "Tiny Deep Research Agent",
-          images: ["https://github.com/strcoder4007/lite-deep-research-agent/blob/main/image.png?raw=true"],
-          tags: ["2026", "ml", "agent", "LangGraph"],
+          images: ["tiny_deep_agents.png"],
+          tags: ["2026", "ml", "Multi Agent", "LangGraph"],
           code: "https://github.com/strcoder4007/lite-deep-research-agent",
           blog: false,
           description:
@@ -129,7 +129,7 @@ const allProjects = [
           id: "85b39e2d-f5a0-67c7-ae2d-06297acbe963",
           name: "Multi Agent AI System",
           images: ["https://github.com/strcoder4007/Multi-Agent-AI-System/blob/main/image.jpg?raw=true"],
-          tags: ["2024", "ml", "Gen AI", "Crew AI", "Langchain", "Agent"],
+          tags: ["2024", "ml", "Gen AI", "Crew AI", "Langchain", "Agents"],
           code: "https://github.com/strcoder4007/Multi-Agent-AI-System",
           blog: false,
           description:
