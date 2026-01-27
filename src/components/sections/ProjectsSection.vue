@@ -23,6 +23,69 @@ import LandingComponent from "./project/LandingComponent.vue";
 
 const allProjects = [
         {
+          id: "6e8f4a2b-1c3d-4e5f-9a0b-1c2d3e4f5a6b",
+          name: "Ecommerce Product Image generator",
+          images: ["https://github.com/strcoder4007/ecommerce-scene-generator/blob/main/image.png?raw=true"],
+          tags: ["2026", "ml", "agent", "Gen AI", "Web"],
+          code: "https://github.com/strcoder4007/ecommerce-scene-generator",
+          live: "https://strcoder4007.github.io/ecommerce-scene-generator/",
+          blog: false,
+          description:
+            "E-commerce image generation, creates human models and product placement with matching backgrounds and multiple angles.",
+        },
+        {
+          id: "7f9a0b1c-2d3e-4f5a-6b7c-8d9e0f1a2b3c",
+          name: "AI Website Builder",
+          images: ["https://github.com/strcoder4007/AI-Sandboxed-website-editor/blob/main/src/assets/image.png?raw=true"],
+          tags: ["2026", "ml", "agent", "Web", "Gen AI"],
+          code: "https://github.com/strcoder4007/AI-Sandboxed-website-editor",
+          live: "https://strcoder4007.github.io/AI-Sandboxed-website-editor/",
+          blog: false,
+          description:
+            "Chat with default website templates and customise & brand it to your liking right in the browser.",
+        },
+        {
+          id: "8a0b1c2d-3e4f-5a6b-7c8d-9e0f1a2b3c4d",
+          name: "Finance Insights AI",
+          images: ["https://github.com/strcoder4007/Finance-Insights-AI/blob/main/image.png?raw=true"],
+          tags: ["2026", "ml", "agent", "Data", "LLM"],
+          code: "https://github.com/strcoder4007/Finance-Insights-AI",
+          blog: false,
+          description:
+            "RESTful API engine enabling natural language queries on financial datasets with LLM-generated narratives.",
+        },
+        {
+          id: "9b1c2d3e-4f5a-6b7c-8d9e-0f1a2b3c4d5e",
+          name: "Qwen Image Edit Virtual Try On",
+          images: ["https://github.com/strcoder4007/qwen-virtual-try-on/blob/main/example.png?raw=true"],
+          tags: ["2026", "ml", "agent", "Computer Vision", "LLM"],
+          code: "https://github.com/strcoder4007/qwen-virtual-try-on",
+          blog: false,
+          description:
+            "A small Flask API plus static UI for experimenting with the Qwen image edit pipeline. The backend loads the real GGUF models when they are available.",
+        },
+        {
+          id: "0c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f",
+          name: "Easy News",
+          images: ["https://github.com/strcoder4007/easynews/blob/main/src/assets/easynews1.png?raw=true"],
+          tags: ["2026", "ml", "agent", "Web"],
+          code: "https://github.com/strcoder4007/easynews",
+          live: "https://strcoder4007.github.io/easynews/",
+          blog: false,
+          description:
+            "Deep research agent with web access that keeps every topic on a swappable deck, digs for breaking coverage, and lets you steer the prompt with explicit constraints.",
+        },
+        {
+          id: "1d3e4f5a-6b7c-8d9e-0f1a-2b3c4d5e6f7a",
+          name: "Tiny Deep Research Agent",
+          images: ["https://github.com/strcoder4007/lite-deep-research-agent/blob/main/image.png?raw=true"],
+          tags: ["2026", "ml", "agent", "LangGraph"],
+          code: "https://github.com/strcoder4007/lite-deep-research-agent",
+          blog: false,
+          description:
+            "Local web research agent built with LangGraph. It plans, searches, fetches, extracts facts, recalls prior memory, and synthesizes a grounded report while staying within a 16 GB VRAM budget.",
+        },
+        {
           id: "f0b5a7b2-2a4d-4f1e-9c51-7a8b3e50b1a1",
           name: "Browser Agent",
           images: ["https://github.com/strcoder4007/browser-agent/blob/main/1.gif?raw=true"],
