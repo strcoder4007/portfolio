@@ -2,7 +2,7 @@
   <div class="container" id="about-section">
     <el-row class="about-section">
       <el-col :span="24">
-        <span class="header">Hi! I’m Shubham</span>
+        <span class="header">Hi! I'm Shubham</span>
         <span class="text" v-html="intro"></span>
         <span class="header">Work Experience</span>
         <span class="text" v-html="workExperience"></span>
@@ -23,16 +23,32 @@ export default {
   setup() {
     const intro = `
 
-      <p>I’m a Senior AI/ML Engineer with seven years of hands-on experience — two years focused on GenAI, agentic systems, RAG, and LLMs; four years as an ML engineer; and one year in software engineering.</p>
+      <p>I'm a Senior AI/ML Engineer with seven years of hands-on experience — two years focused on GenAI, agentic systems, RAG, and LLMs; four years as an ML engineer; and one year in software engineering.</p>
 
-      <p>I build end-to-end systems: data, modeling, evaluation, and production. I concentrate on RAG pipelines, autonomous agents, and squeezing models down for real-time use with quantization, pruning, and distillation. In the last two years I’ve dug deep into agent architectures (including RL-trained agents) and learned the practical pitfalls teams hit when they try to run agents in production.</p>
+      <p>I build end-to-end systems: data, modeling, evaluation, and production. I concentrate on RAG pipelines, autonomous agents, and squeezing models down for real-time use with quantization, pruning, and distillation. In the last two years I've dug deep into agent architectures (including RL-trained agents) and learned the practical pitfalls teams hit when they try to run agents in production.</p>
 
-      <p>I’ve shipped AI across government intelligence, healthcare diagnostics, education, and cultural heritage. At Tagbin I worked on MCP-style architectures that improved reasoning and cut inference latency by roughly 80% for interactive systems.</p>
+      <p>I've shipped AI across government intelligence, healthcare diagnostics, education, and cultural heritage. Currently at Optum (UnitedHealth Group), I'm building AI agents that work with policy documents and medical claims — including a multi-document comparison agent that surfaces exact differences and similarities using LLMs.</p>
 
       <p>I also solve problems on Codeforces — 800+ solved — which keeps my algorithms and problem-solving muscles sharp.</p>`
 
       const workExperience = `
-      <h2><strong>Senior AI/ML Engineer</strong> @ Tagbin (December 2024 - Present)</h2>
+      <h2><strong>Senior AI/ML Engineer</strong> @ Optum Health Inc (February 2026 - Present)</h2>
+      <p>Optum is the health services platform of UnitedHealth Group, serving millions of members across the US healthcare system.</p>
+
+      <h4>Key Projects:</h4>
+      <ul>
+        <li><b>Multi-Document Comparison Agent</b>
+          <ul>
+            <li>Built an AI agent that ingests multiple policy documents and medical claims, then uses an LLM to surface exact differences and similarities across versions — enabling rapid, auditable document review at scale</li>
+            <li>Evaluation results: <strong>[FILL: e.g. 94.2% accuracy, 0.91 F1, 0.89 precision, 0.93 recall on held-out test set]</strong></li>
+            <li>Reduced manual document review time by <strong>[FILL: e.g. 60%]</strong> compared to side-by-side human comparison</li>
+            <li>Cut downstream processing latency by <strong>[FILL: e.g. 40%]</strong> compared to baseline batch comparison pipeline</li>
+            <li>Key technologies: LLMs, RAG, Agentic Pipelines, Document Intelligence, Evaluation Frameworks</li>
+          </ul>
+        </li>
+      </ul>
+      <br>
+      <h2><strong>Senior AI/ML Engineer</strong> @ Tagbin (December 2024 - February 2026)</h2>
       <p>Tagbin is a company focused on creating immersive and interactive experiences.</p>
 
       <h4>Key Projects:</h4>
