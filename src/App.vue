@@ -17,6 +17,40 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
+:root {
+  /* Light theme — subtle grid pattern */
+  --bg-texture-light: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 19px,
+    rgba(0, 0, 0, 0.025) 19px,
+    rgba(0, 0, 0, 0.025) 20px
+  ),
+  repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 19px,
+    rgba(0, 0, 0, 0.025) 19px,
+    rgba(0, 0, 0, 0.025) 20px
+  );
+
+  /* Dark theme — subtle diagonal crosshatch */
+  --bg-texture-dark: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 255, 255, 0.012) 10px,
+    rgba(255, 255, 255, 0.012) 11px
+  ),
+  repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 255, 255, 0.012) 10px,
+    rgba(255, 255, 255, 0.012) 11px
+  );
+}
+
 @font-face {
   font-family: 'Bricolage';
   src: url('./assets/fonts/BricolageGrotesque.ttf');

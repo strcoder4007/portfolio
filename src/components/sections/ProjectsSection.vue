@@ -334,7 +334,8 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  background: #222222;
+  background-color: #222222;
+  background-image: var(--bg-texture-dark);
   height: 100%;
   overflow-y: hidden;
 }

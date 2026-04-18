@@ -58,7 +58,8 @@ a {
 .floating-card {
   height: calc(100vh - 60px);
   width: 100%;
-  background-color: white;
+  background-color: #ffffff;
+  background-image: var(--bg-texture-light);
   overflow-y: hidden;
 }
 @media (max-width: 768px) {
