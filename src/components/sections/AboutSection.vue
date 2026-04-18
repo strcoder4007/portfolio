@@ -139,11 +139,12 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+  height: 100%;
   overflow-y: hidden;
 }
 .about-section {
   overflow-y: scroll;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

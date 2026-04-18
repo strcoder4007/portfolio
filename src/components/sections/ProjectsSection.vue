@@ -335,11 +335,12 @@ export default {
 <style lang="scss" scoped>
 .container {
   background: #222222;
+  height: 100%;
   overflow-y: hidden;
 }
 .projects-section {
   overflow-y: scroll;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 60px);
   background: transparent;
   backdrop-filter: blur(2px);
   display: flex;

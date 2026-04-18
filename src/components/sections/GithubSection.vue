@@ -24,11 +24,12 @@ export default {
 
 .container {
   background: #222222;
+  height: 100%;
   overflow-y: hidden;
 }
 .github-section {
   overflow-y: scroll;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 60px);
   background: #222;
   backdrop-filter: blur(2px);
   display: flex;
