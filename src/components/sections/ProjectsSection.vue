@@ -33,6 +33,26 @@ const allProjects = [
             "Local web research agent built with LangGraph. It plans, searches, fetches, extracts facts, recalls prior memory, and synthesizes a grounded report while staying within a 16 GB VRAM budget.",
         },
         {
+          id: "f0b5a7b2-2a4d-4f1e-9c51-7a8b3e50b1a1",
+          name: "Browser Agent",
+          images: ["https://github.com/strcoder4007/browser-agent/blob/main/1.gif?raw=true"],
+          tags: ["2025", "ml", "Autonomous Agent", "LLM", "Automation"],
+          code: "https://github.com/strcoder4007/browser-agent",
+          blog: false,
+          description:
+            "A browser automation agent that plans multi‑step tasks, reasons with an LLM, and controls tools end‑to‑end to crawl any website and extract structured data.",
+        },
+        {
+          id: "a2c9e1d4-6b3f-45e2-9f7a-0c8b9d3e4f56",
+          name: "S2S Lipsync Unreal Avatar Backend",
+          images: ["https://github.com/strcoder4007/S2S-Lipsync-UnrealAvatar-Backend/blob/main/images/2.gif?raw=true"],
+          tags: ["2025", "ml", "Speech", "TTS", "STT", "Unreal Engine", "Realtime"],
+          code: "https://github.com/strcoder4007/S2S-Lipsync-UnrealAvatar-Backend",
+          blog: false,
+          description:
+            "Speech‑to‑speech backend for a real‑time Unreal Engine avatar — STT in, LLM response, TTS out, plus viseme timing for accurate lip‑sync.",
+        },
+        {
           id: "6e8f4a2b-1c3d-4e5f-9a0b-1c2d3e4f5a6b",
           name: "Ecommerce Product Image generator",
           images: ["ecommerce.png"],
@@ -84,26 +104,6 @@ const allProjects = [
           blog: false,
           description:
             "Deep research agent with web access that keeps every topic on a swappable deck, digs for breaking coverage, and lets you steer the prompt with explicit constraints.",
-        },
-        {
-          id: "f0b5a7b2-2a4d-4f1e-9c51-7a8b3e50b1a1",
-          name: "Browser Agent",
-          images: ["https://github.com/strcoder4007/browser-agent/blob/main/1.gif?raw=true"],
-          tags: ["2025", "ml", "Autonomous Agent", "LLM", "Automation"],
-          code: "https://github.com/strcoder4007/browser-agent",
-          blog: false,
-          description:
-            "A browser automation agent that plans multi‑step tasks, reasons with an LLM, and controls tools end‑to‑end to crawl any website and extract structured data.",
-        },
-        {
-          id: "a2c9e1d4-6b3f-45e2-9f7a-0c8b9d3e4f56",
-          name: "S2S Lipsync Unreal Avatar Backend",
-          images: ["https://github.com/strcoder4007/S2S-Lipsync-UnrealAvatar-Backend/blob/main/images/2.gif?raw=true"],
-          tags: ["2025", "ml", "Speech", "TTS", "STT", "Unreal Engine", "Realtime"],
-          code: "https://github.com/strcoder4007/S2S-Lipsync-UnrealAvatar-Backend",
-          blog: false,
-          description:
-            "Speech‑to‑speech backend for a real‑time Unreal Engine avatar — STT in, LLM response, TTS out, plus viseme timing for accurate lip‑sync.",
         },
         {
           id: "a3b859f2-f5ea-49a2-ae91-c5be0ddf3e86",
