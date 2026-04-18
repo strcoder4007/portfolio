@@ -56,19 +56,17 @@ a {
   color: #42b983;
 }
 .floating-card {
-  height: calc(100vh - 60px - 20px);
-  width: 96.5%;
-  margin: 0 20px 20px 20px;
+  height: calc(100vh - 60px);
+  width: 100%;
   background-color: white;
   overflow-y: hidden;
 }
 @media (max-width: 768px) {
   .floating-card {
     height: auto;
-    width: 100vw;
+    width: 100%;
     background-color: white;
     overflow-y: hidden;
-    margin: 0;
   }
 }
 </style>
