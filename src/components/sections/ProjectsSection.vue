@@ -23,6 +23,16 @@ import LandingComponent from "./project/LandingComponent.vue";
 
 const allProjects = [
         {
+          id: "1d3e4f5a-6b7c-8d9e-0f1a-2b3c4d5e6f7a",
+          name: "Tiny Deep Research Agent",
+          images: ["tiny_deep_agents.png"],
+          tags: ["2026", "ml", "Multi Agent", "LangGraph"],
+          code: "https://github.com/strcoder4007/lite-deep-research-agent",
+          blog: false,
+          description:
+            "Local web research agent built with LangGraph. It plans, searches, fetches, extracts facts, recalls prior memory, and synthesizes a grounded report while staying within a 16 GB VRAM budget.",
+        },
+        {
           id: "6e8f4a2b-1c3d-4e5f-9a0b-1c2d3e4f5a6b",
           name: "Ecommerce Product Image generator",
           images: ["ecommerce.png"],
@@ -74,16 +84,6 @@ const allProjects = [
           blog: false,
           description:
             "Deep research agent with web access that keeps every topic on a swappable deck, digs for breaking coverage, and lets you steer the prompt with explicit constraints.",
-        },
-        {
-          id: "1d3e4f5a-6b7c-8d9e-0f1a-2b3c4d5e6f7a",
-          name: "Tiny Deep Research Agent",
-          images: ["tiny_deep_agents.png"],
-          tags: ["2026", "ml", "Multi Agent", "LangGraph"],
-          code: "https://github.com/strcoder4007/lite-deep-research-agent",
-          blog: false,
-          description:
-            "Local web research agent built with LangGraph. It plans, searches, fetches, extracts facts, recalls prior memory, and synthesizes a grounded report while staying within a 16 GB VRAM budget.",
         },
         {
           id: "f0b5a7b2-2a4d-4f1e-9c51-7a8b3e50b1a1",
