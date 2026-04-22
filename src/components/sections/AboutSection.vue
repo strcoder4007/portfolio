@@ -14,11 +14,10 @@
 </template>
 
 <script>
-
 export default {
   name: "AboutPage",
   mounted() {
-    document.getElementById("about-section").scrollIntoView()
+    document.getElementById("about-section").scrollIntoView();
   },
   setup() {
     const intro = `
@@ -27,28 +26,11 @@ export default {
 
       <p>I build end-to-end systems: data, modeling, evaluation, and production. I concentrate on RAG pipelines, autonomous agents, and squeezing models down for real-time use with quantization, pruning, and distillation. In the last two years I've dug deep into agent architectures (including RL-trained agents) and learned the practical pitfalls teams hit when they try to run agents in production.</p>
 
-      <p>I've shipped AI across government intelligence, healthcare diagnostics, education, and cultural heritage. Currently at Optum (UnitedHealth Group), I'm building AI agents that work with policy documents and medical claims — including a multi-document comparison agent that surfaces exact differences and similarities using LLMs.</p>
+      <p>I've shipped AI across government intelligence, healthcare diagnostics, education, and cultural heritage. I build AI agents that work with policy documents and medical claims — including a multi-document comparison agent that surfaces exact differences and similarities using LLMs.</p>
 
-      <p>I also solve problems on Codeforces — 800+ solved — which keeps my algorithms and problem-solving muscles sharp.</p>`
+      <p>I also solve problems on Codeforces — 800+ solved — which keeps my algorithms and problem-solving muscles sharp.</p>`;
 
-      const workExperience = `
-      <h2><strong>Senior AI/ML Engineer</strong> @ Optum Health Inc (February 2026 - Present)</h2>
-      <p>Optum is the health services platform of UnitedHealth Group, serving millions of members across the US healthcare system.</p>
-
-      <h4>Key Projects:</h4>
-      <ul>
-        <li><b>Multi-Document Comparison Agent</b>
-          <ul>
-            <li>Built an AI agent that ingests multiple policy documents and medical claims, then uses an LLM to surface exact differences and similarities across versions — enabling rapid, auditable document review at scale</li>
-            <li>Evaluation results: <strong>[FILL: e.g. 94.2% accuracy, 0.91 F1, 0.89 precision, 0.93 recall on held-out test set]</strong></li>
-            <li>Reduced manual document review time by <strong>[FILL: e.g. 60%]</strong> compared to side-by-side human comparison</li>
-            <li>Cut downstream processing latency by <strong>[FILL: e.g. 40%]</strong> compared to baseline batch comparison pipeline</li>
-            <li>Key technologies: LLMs, RAG, Agentic Pipelines, Document Intelligence, Evaluation Frameworks</li>
-          </ul>
-        </li>
-      </ul>
-      <br>
-      <h2><strong>Senior AI/ML Engineer</strong> @ Tagbin (December 2024 - February 2026)</h2>
+    const workExperience = `
       <p>Tagbin is a company focused on creating immersive and interactive experiences.</p>
 
       <h4>Key Projects:</h4>
@@ -130,24 +112,24 @@ export default {
         <li>Led the development and maintenance of the company's proprietary content management system, reducing critical bugs by 70% and implementing key features that improved system functionality and user experience.</li>
         <li>Redesigned and optimized CI/CD pipelines, resulting in a 50% reduction in rollbacks and a 30% increase in deployment frequency, significantly enhancing product release efficiency and reliability.</li>
       </ul>
-`
+`;
 
-      const deeplearninginterests = `<ul>
+    const deeplearninginterests = `<ul>
         <li>ML Modeling</li>
         <li>Data Engineering</li>
         <li>Computer Vision</li>
         <li>Recommendation Systems</li>
         <li>LLMs, RAG, Agents</li>
         <li>Multimodal Models</li>
-        </ul>`
+        </ul>`;
 
-      const interests = `<p style="font-size: 17px">I enjoy working with GPUs, building PCs, running home servers, and reading about psychology and psychoanalysis.</p>`
+    const interests = `<p style="font-size: 17px">I enjoy working with GPUs, building PCs, running home servers, and reading about psychology and psychoanalysis.</p>`;
     return {
       intro,
       workExperience,
       deeplearninginterests,
-      interests
-    }
+      interests,
+    };
   },
   components: {},
 };
@@ -171,13 +153,13 @@ export default {
 
 .header {
   display: block;
-  background-color: #111111 ;
+  background-color: #111111;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 
-  font-family: 'Space Grotesk', Brandon;
+  font-family: "Space Grotesk", Brandon;
   font-size: 45px;
   font-style: normal;
   font-weight: 700;
@@ -187,7 +169,7 @@ export default {
 .text {
   display: block;
   color: #333333;
-  font-family: 'Space Grotesk', Brandon;
+  font-family: "Space Grotesk", Brandon;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -214,13 +196,13 @@ export default {
 
   .header {
     display: block;
-    background-color: #111111 ;
+    background-color: #111111;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 
-    font-family: 'Space Grotesk', Brandon;
+    font-family: "Space Grotesk", Brandon;
     font-size: 26px;
     font-style: normal;
     font-weight: 700;
@@ -239,5 +221,4 @@ export default {
     word-break: break-word;
   }
 }
-
 </style>
