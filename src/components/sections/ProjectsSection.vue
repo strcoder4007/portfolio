@@ -363,10 +363,13 @@ export default {
 @media (max-width: 768px) {
   .container {
     padding-top: 60px;
+    overflow-y: visible;
   }
   .projects-section {
     height: auto;
-    width: 100vw;
+    min-height: calc(100vh - 60px);
+    width: 100%;
+    overflow-y: visible;
     .greetings {
       float: left;
       text-align: left;

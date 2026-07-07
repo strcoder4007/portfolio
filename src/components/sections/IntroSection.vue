@@ -120,16 +120,21 @@ export default {
 }
 .intro-section {
   height: calc(100vh - 60px);
+  min-height: 600px;
   background: transparent;
   backdrop-filter: blur(2px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: 0 70px 0 30px;
+  padding: 40px 70px 40px 30px;
+  overflow-y: auto;
 
   .intro-text {
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
     .profile-text {
       font-size: 40px;
       font-weight: 700;
@@ -211,7 +216,7 @@ export default {
     .cta-row {
       display: flex;
       gap: 12px;
-      align-items: center;
+      align-items: stretch;
       margin: 10px 0 0 0;
     }
     .cta-row .btn {
@@ -219,8 +224,9 @@ export default {
       align-items: center;
       gap: 6px;
       margin-bottom: 0;
-      padding: 8px 14px;
+      padding: 10px 14px;
       border-radius: 3px;
+      white-space: nowrap;
     }
     .social-section {
       display: flex;
@@ -232,7 +238,6 @@ export default {
         width: 30px;
         height: auto;
       }
-      /* social icons only in this row; buttons live in .cta-row */
     }
     .source-code {
       color: #ffffff;
@@ -240,9 +245,9 @@ export default {
       font-size: 13px;
       font-style: normal;
       font-weight: 400;
-      line-height: 50px;
-      position: absolute;
-      bottom: 20px;
+      line-height: 1.4;
+      margin-top: auto;
+      padding-top: 20px;
       a {
         text-decoration-color: #1db954;
         color: #1db954;
@@ -255,8 +260,8 @@ export default {
       font-size: 13px;
       font-style: normal;
       font-weight: 400;
-      position: absolute;
-      bottom: 15px;
+      padding-top: 6px;
+      padding-bottom: 10px;
     }
   }
 
@@ -267,14 +272,15 @@ export default {
     font-size: 119px;
     font-style: normal;
     font-weight: 700;
-    line-height: 144px; /* 121.008% */
+    line-height: 144px;
     letter-spacing: -3.57px;
   }
 }
 
 @media (max-width: 1200px) {
   .intro-section {
-    padding: 20px 10px 0 10px ;
+    padding: 20px 10px 0 10px;
+    min-height: 500px;
 
     .intro-text {
       padding: 10px 10px 0 10px;
@@ -296,12 +302,14 @@ export default {
 
 @media (max-width: 768px) {
   .intro-section {
-    height: calc(100vh - 60px);
+    height: auto;
+    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 30px 10px 0 10px ;
+    padding: 30px 10px 20px 10px;
+    overflow-y: visible;
 
     .intro-text {
       padding: 10px 10px 0 10px;
@@ -329,7 +337,7 @@ export default {
         }
       }
       .about {
-        margin: 30px 0;
+        margin: 20px 0;
         font-size: 15px;
       }
       .btn {
@@ -356,10 +364,35 @@ export default {
         }
       }
       .source-code {
-        display: none;
+        display: block;
+        margin-top: 12px;
+        padding-top: 12px;
       }
       .policy-and-terms-section {
-        display: none;
+        display: block;
+        padding-top: 6px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-height: 700px) {
+  .intro-section {
+    justify-content: flex-start;
+    padding: 20px 70px 20px 30px;
+
+    .intro-text {
+      .profile-text {
+        font-size: 28px;
+      }
+      .about {
+        margin: 16px 0;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .cta-row {
+        flex-wrap: wrap;
       }
     }
   }

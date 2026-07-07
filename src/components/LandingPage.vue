@@ -60,14 +60,15 @@ a {
   width: 100%;
   background-color: #ffffff;
   background-image: var(--bg-texture-light);
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 @media (max-width: 768px) {
   .floating-card {
     height: auto;
+    min-height: calc(100vh - 60px);
     width: 100%;
     background-color: white;
-    overflow-y: hidden;
+    overflow-y: visible;
   }
 }
 </style>

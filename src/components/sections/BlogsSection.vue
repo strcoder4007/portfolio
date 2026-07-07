@@ -565,6 +565,7 @@ export default {
 @media (max-width: 768px) {
   .container {
     padding-top: 60px;
+    overflow-y: visible;
   }
 
   .blogs-section {

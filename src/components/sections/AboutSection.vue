@@ -159,19 +159,19 @@ export default {
   overflow-y: hidden;
 }
 .about-section {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: baseline;
-  padding: 200px 100px 50px 100px;
+  padding: 40px 100px 60px 100px;
   text-align: left;
 }
 
 .header {
   display: block;
-  background-color: #111111 ;
+  background-color: #111111;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -197,47 +197,41 @@ export default {
   margin-bottom: 80px;
 }
 
+@media (max-width: 1200px) {
+  .about-section {
+    padding: 40px 40px 60px 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding-top: 60px;
+    overflow-y: visible;
   }
   .about-section {
-    overflow-y: scroll;
-    height: calc(100vh - 60px);
+    overflow-y: auto;
+    height: auto;
+    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: baseline;
-    padding: 60px 10px;
+    padding: 30px 16px 40px 16px;
     width: 100%;
   }
 
   .header {
-    display: block;
-    background-color: #111111 ;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-
-    font-family: 'Space Grotesk', Brandon;
     font-size: 26px;
-    font-style: normal;
-    font-weight: 700;
     line-height: 40px;
     margin-bottom: 20px;
   }
   .text {
     font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
     width: auto;
-    min-width: calc(100vw - 20px);
-    max-width: calc(100vw - 20px);
+    min-width: auto;
+    max-width: 100%;
     margin-bottom: 40px;
     word-break: break-word;
   }
 }
-
 </style>

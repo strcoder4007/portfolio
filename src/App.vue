@@ -60,9 +60,19 @@ export default {
   src: url('./assets/fonts/Brandon_reg.otf');
 }
 
+body {
+  margin: 0;
+  background: #111111;
+  background-position: 0 0;
+  background-size: 200% 100%;
+  animation: background-move 10s linear infinite;
+  position: relative;
+  overflow-x: hidden;
+}
 html {
   scroll-behavior: smooth;
   height: auto;
+  overflow-x: hidden;
 }
 ::selection {
   color: #111111;

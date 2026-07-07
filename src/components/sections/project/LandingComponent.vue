@@ -180,6 +180,7 @@ export default {
 }
 
 .image-container {
+    max-width: 100%;
     width: 320px;
     height: 200px;
     background-color: #111;
@@ -250,6 +251,7 @@ export default {
 
 .cvfy-container {
   max-width: 320px;
+  width: 100%;
   margin: 20px auto;
 }
 
@@ -421,7 +423,26 @@ export default {
 @media (max-width: 768px) {
   .project-landing-page {
     margin: 0;
-    width: 100vw;
+    width: 100%;
+  }
+  .image-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+  .cvfy-container {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+  .project-name {
+    font-size: 18px;
+  }
+  .project-description {
+    font-size: 13px;
+  }
+  .tags-section span {
+    font-size: 11px;
+    padding: 3px 5px;
   }
 }
 </style>

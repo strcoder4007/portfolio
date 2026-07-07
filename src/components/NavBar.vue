@@ -181,7 +181,7 @@ button.menu-toggle {
         display: flex;
         flex-grow: 1;
         justify-content: end;
-        gap: 100px;
+        gap: 40px;
 
         .menu-item {
           list-style: none;
@@ -259,16 +259,15 @@ button.menu-toggle {
     justify-content: center !important;
     flex-direction: column;
     align-items: center !important;
-    gap: 0px;
-    padding: 0;
+    gap: 16px;
+    padding: 20px 0;
     margin: 0;
 
     position: absolute;
-    height: 350px;
     top: 60px;
     left: 0;
-    z-index: 10;
-    width: 100vw;
+    z-index: 99;
+    width: 100%;
 
     background-color: #111111;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
@@ -283,29 +282,24 @@ button.menu-toggle {
 
       font-family: 'Space Grotesk', Brandon, sans-serif;
 
-      border-radius: 1px;
       color: #1DB954;
-      margin-top: -47px;
-      margin-bottom: -26px;
-      line-height: 50px;
-      height: 50px;
+      line-height: 32px;
       width: 200px;
       background: transparent;
+      text-align: left;
+      padding-left: 20px;
 
           &.active::after {
             content: '>';
-            display: block;
-            width: 0px;
-            height: 0px;
-            background: #1DB954;
-            margin-left: 36px !important;
-            margin-top: -51px !important;
+            display: inline;
+            margin-left: 10px;
+            color: #1DB954;
           }
     }
   }
 
   .menu-items.is-open {
-    transform: translateX(0); /* Show menu when isMenuOpen becomes true */
+    transform: translateX(0);
   }
 }
 </style>

@@ -56,12 +56,16 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
     margin: 20px 0;
 
-    width: 500px;
-    gap: 20px;
-    height: 60px;
+    max-width: 500px;
+    width: 90vw;
+    gap: 10px;
+    height: auto;
+    min-height: 60px;
+    padding: 10px;
     background-color: #111111;
     border-radius: 5px;
     box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.3);
@@ -69,12 +73,14 @@ export default {
     .tab {
         background-color: #222222;
         border: none;
-        width: 95px;
-        padding: 5px 10px;
+        min-width: 70px;
+        padding: 8px 12px;
         gap: 10px;
         color: #ffffff;
         font-size: 14px;
         font-family: 'Space Grotesk', Brandon, sans-serif;
+        cursor: pointer;
+        border-radius: 3px;
     }
 
     .tab.active {
@@ -83,29 +89,25 @@ export default {
 }
 @media (max-width: 768px) {
     .tab-card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        margin-top: 20px;
-
         width: 95vw;
-        gap: 10px;
-        height: 60px;
+        max-width: 95vw;
+        gap: 8px;
+        padding: 8px 6px;
 
         .tab {
-            background-color: #222222;
-            border: none;
-            width: 75px;
-            padding: 5px;
-            gap: 10px;
-            color: #ffffff;
+            min-width: 60px;
+            padding: 6px 8px;
             font-size: 12px;
-            font-family: 'Space Grotesk', Brandon, sans-serif;
         }
-
-        .tab.active {
-            border: 2px solid white;
+    }
+}
+@media (max-width: 360px) {
+    .tab-card {
+        gap: 4px;
+        .tab {
+            min-width: 50px;
+            padding: 5px 6px;
+            font-size: 11px;
         }
     }
 }

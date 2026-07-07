@@ -51,16 +51,35 @@ export default {
 
   .container {
     margin-top: 40px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }
 @media (max-width: 768px) {
+  .container {
+    padding-top: 60px;
+    overflow-y: visible;
+  }
   .github-section {
+    height: auto;
+    min-height: calc(100vh - 60px);
+    overflow-y: visible;
+
     .greetings {
       margin-top: 20px;
-      font-size: 40px;
+      font-size: 30px;
       font-weight: 700;
     }
 
+    .container {
+      margin-top: 20px;
+      img {
+        max-width: 95vw;
+        height: auto;
+      }
+    }
   }
 }
 </style>
