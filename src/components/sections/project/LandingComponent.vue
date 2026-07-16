@@ -18,7 +18,7 @@
                  </svg>
               </div>
               <template v-for="image in project.images" :key="image">
-                <img :src="resolveImage(image)" />
+                <ShimmerImage :src="resolveImage(image)" :alt="project.name" />
               </template>
               
             </div>
@@ -89,6 +89,7 @@ import qwenEdit from '../../../assets/projects/qwen_edit.png';
 import tinyDeepAgents from '../../../assets/projects/tiny_deep_agents.png';
 
 import { ref } from 'vue';
+import ShimmerImage from '../../ShimmerImage.vue';
 
 export default {
   name: "ProjectLandingPage",
@@ -169,6 +170,7 @@ export default {
     }
   },
   components: {
+    ShimmerImage,
   },
 };
 </script>

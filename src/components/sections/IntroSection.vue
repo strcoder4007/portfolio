@@ -21,7 +21,7 @@
           </p>
           <section class="about">
             <p>
-              I’m a Senior AI/ML Engineer with around seven years of hands-on experience — about two years deep into GenAI, agentic systems, RAG, and LLMs, five years building and deploying ML systems, and a year in software engineering.<br><br>Over the years, I’ve worked on projects across government, healthcare, education, and even cultural heritage — actually putting AI into production where it matters. Outside of work, I like to stay sharp with algorithms and problem-solving — I’ve solved over 800 problems on Codeforces.<br><br>Open to AI Engineering roles.
+              I’m a Senior AI/ML Engineer with around seven years of hands-on experience — about two years deep into GenAI, agentic systems, RAG, and LLMs, and five years building and deploying ML systems.<br><br>Over the years, I’ve worked on projects across government, healthcare, education, and even cultural heritage — actually putting AI into production where it matters. Outside of work, I like to stay sharp with algorithms and problem-solving — I’ve solved over 800 problems on Codeforces.<br><br>Open to AI Engineering roles.
             </p>
           </section>
           <div class="cta-row">
@@ -52,14 +52,13 @@
             /></a>
           </div>
 
-          <span class="source-code">
-            Built with Vue 3 —
-            <a href="https://github.com/strcoder4007/portfolio" target="_blank">Code</a>
-          </span>
-
-          <span class="policy-and-terms-section">
-            © 2026 Shubham Singh. All rights reserved.
-          </span>
+          <div class="footer">
+            <span class="source-code">
+              Built with Vue 3 —
+              <a href="https://github.com/strcoder4007/portfolio" target="_blank">Code</a>
+              © 2026 Shubham Singh. All rights reserved.
+            </span>
+          </div>
         </div>
       </el-col>
     </el-row>
@@ -127,7 +126,7 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 40px 70px 40px 30px;
+  padding: 80px 70px 40px 30px;
   overflow-y: auto;
 
   .intro-text {
@@ -135,6 +134,7 @@ export default {
     display: flex;
     flex-direction: column;
     min-height: 0;
+    height: 100%;
     .profile-text {
       font-size: 40px;
       font-weight: 700;
@@ -239,6 +239,11 @@ export default {
         height: auto;
       }
     }
+    .footer {
+      margin-top: auto;
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
     .source-code {
       color: #ffffff;
       font-family: 'Space Grotesk', Brandon;
@@ -246,22 +251,11 @@ export default {
       font-style: normal;
       font-weight: 400;
       line-height: 1.4;
-      margin-top: auto;
-      padding-top: 20px;
       a {
         text-decoration-color: #1db954;
         color: #1db954;
         cursor: pointer;
       }
-    }
-    .policy-and-terms-section {
-      color: #ffffff;
-      font-family: 'Space Grotesk', Brandon;
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 400;
-      padding-top: 6px;
-      padding-bottom: 10px;
     }
   }
 

@@ -23,7 +23,7 @@ export default {
   setup() {
     const intro = `
 
-      <p>I'm a Senior AI/ML Engineer with seven years of hands-on experience — two years focused on GenAI, agentic systems, RAG, and LLMs; four years as an ML engineer; and one year in software engineering.</p>
+      <p>I'm a Senior AI/ML Engineer with seven years of hands-on experience — two years focused on GenAI, agentic systems, RAG, and LLMs, and four years as an ML engineer.</p>
 
       <p>I build end-to-end systems: data, modeling, evaluation, and production. I concentrate on RAG pipelines, autonomous agents, and squeezing models down for real-time use with quantization, pruning, and distillation. In the last two years I've dug deep into agent architectures (including RL-trained agents) and learned the practical pitfalls teams hit when they try to run agents in production.</p>
 
@@ -100,7 +100,7 @@ export default {
         <li>Facilitated seamless collaboration between cross-functional teams across international boundaries, driving product innovation and timely delivery.</li>
       </ul>
       <br>
-      <h3><strong>Software Engineer</strong> @ ALLPS Digital GmbH (2018 - 2019)</h3>
+      <h2><strong>Software Engineer</strong> @ ALLPS Digital GmbH (2018 - 2019)</h2>
       Skills: <b>Python · SQL · Javascript · ReactJS · Computer Vision · Machine Learning</b>
       <p>ALLPS is a Swiss fintech startup partnering with banks to revolutionize invoice processing through digitization.</p>
 
@@ -111,7 +111,7 @@ export default {
         <li>Optimized in-house OCR algorithm, improving character recognition accuracy by 25% through refined machine learning models and optimized data inputs.</li>
       </ul>
       <br>
-      <h3>Cartesian (3 Months in 2018 • Internship)</h3>
+      <h2>Cartesian (3 Months in 2018 • Internship)</h2>
       <strong>Software Engineering Intern</strong>
       <br>
       Skills: <b>Javascript · AWS · C++ · FFmpeg · Python</b>
@@ -120,7 +120,7 @@ export default {
         <li>Gained hands-on experience in cloud computing, real-time video processing, and large-scale system design, laying the foundation for future roles in high-performance computing.</li>
       </ul>
       <br>
-      <h3>Wallfruit Technologies (4 Months in 2017 • Internship)</h3>
+      <h2>Wallfruit Technologies (4 Months in 2017 • Internship)</h2>
       <strong>Software Engineer</strong>
       <br>
       Skills: <b>Python · Software Engineering · SQL · CI/CD</b>
@@ -165,7 +165,7 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: baseline;
-  padding: 40px 100px 60px 100px;
+  padding: 80px 100px 60px 100px;
   text-align: left;
 }
 
@@ -195,6 +195,34 @@ export default {
   width: auto;
   min-width: 400px;
   margin-bottom: 80px;
+
+  :deep(h2) {
+    margin-top: 80px;
+    margin-bottom: 18px;
+  }
+  :deep(h2:first-of-type) {
+    margin-top: 0;
+  }
+  :deep(h3) {
+    margin-top: 64px;
+    margin-bottom: 14px;
+  }
+  :deep(h3:first-of-type) {
+    margin-top: 0;
+  }
+  :deep(h4) {
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+  :deep(p) {
+    margin: 0 0 12px 0;
+  }
+  :deep(ul) {
+    margin: 0 0 16px 0;
+  }
+  :deep(li) {
+    margin-bottom: 6px;
+  }
 }
 
 @media (max-width: 1200px) {
