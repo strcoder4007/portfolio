@@ -4,21 +4,25 @@
       <el-col class="github-section">
         <div class="greetings">GitHub</div>
         <div class="github-cards">
-          <div class="card">
-            <span class="card-label">Contribution Streak</span>
-            <img src="https://streak-stats.demolab.com?user=strcoder4007&theme=&background=111111&border=111111&stroke=1DB954&ring=1DB954&fire=1DB954&currStreakNum=1DB954&sideNums=1DB954&currStreakLabel=1DB954&sideLabels=1DB954&dates=1DB954&card_width=600&border_radius=2" alt="GitHub Streak" />
-          </div>
-          <div class="card">
-            <span class="card-label">GitHub Stats</span>
-            <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=strcoder4007&show_icons=true&theme=dark&bg_color=111111&hide_border=true&title_color=1DB954&icon_color=1DB954&text_color=ffffff" alt="GitHub Stats" />
-          </div>
-          <div class="card">
-            <span class="card-label">Top Languages</span>
-            <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=strcoder4007&layout=compact&theme=dark&bg_color=111111&hide_border=true&title_color=1DB954&text_color=ffffff" alt="Top Languages" />
-          </div>
-          <div class="card card-wide">
-            <span class="card-label">Contribution Graph</span>
-            <img src="https://github-readme-activity-graph.vercel.app/graph?username=strcoder4007&theme=github-compact&bg_color=111111&color=1DB954&line=1DB954&point=ffffff&hide_border=true" alt="GitHub Activity Graph" />
+          <div
+            v-for="(card, i) in cards"
+            :key="card.label"
+            :class="['card', { 'card-wide': i === cards.length - 1 }]"
+          >
+            <span class="card-label">{{ card.label }}</span>
+            <img
+              v-if="!failed[i]"
+              :src="card.src"
+              :alt="card.label"
+              @error="onError($event, i)"
+            />
+            <a
+              v-else
+              :href="card.link"
+              target="_blank"
+              rel="noopener"
+              class="card-link"
+            >View {{ card.label }} on GitHub &rarr;</a>
           </div>
         </div>
       </el-col>
@@ -29,8 +33,51 @@
 <script>
 export default {
   name: "GithubSection",
+  data() {
+    return {
+      failed: {},
+      usedFallback: {},
+      cards: [
+        {
+          label: "Contribution Streak",
+          src: "https://streak-stats.demolab.com?user=strcoder4007&theme=&background=111111&border=111111&stroke=1DB954&ring=1DB954&fire=1DB954&currStreakNum=1DB954&sideNums=1DB954&currStreakLabel=1DB954&sideLabels=1DB954&dates=1DB954&card_width=600&border_radius=2",
+          fallback: "",
+          link: "https://github.com/strcoder4007"
+        },
+        {
+          label: "GitHub Stats",
+          src: "https://github-readme-stats-sigma-five.vercel.app/api?username=strcoder4007&show_icons=true&theme=dark&bg_color=111111&hide_border=true&title_color=1DB954&icon_color=1DB954&text_color=ffffff",
+          fallback: "",
+          link: "https://github.com/strcoder4007"
+        },
+        {
+          label: "Top Languages",
+          src: "https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=strcoder4007&layout=compact&theme=dark&bg_color=111111&hide_border=true&title_color=1DB954&text_color=ffffff",
+          fallback: "",
+          link: "https://github.com/strcoder4007"
+        },
+        {
+          label: "Contribution Graph",
+          src: "https://github-readme-activity-graph.vercel.app/graph?username=strcoder4007&theme=github-compact&bg_color=111111&color=1DB954&line=1DB954&point=ffffff&hide_border=true",
+          fallback: "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=strcoder4007&theme=github_dark",
+          link: "https://github.com/strcoder4007/contributions"
+        }
+      ]
+    };
+  },
+  methods: {
+    onError(e, i) {
+      const card = this.cards[i];
+      if (card.fallback && !this.usedFallback[i]) {
+        this.usedFallback[i] = true;
+        e.target.src = card.fallback;
+        return;
+      }
+      this.failed[i] = true;
+    }
+  },
   mounted() {
-    document.getElementById("github-section").scrollIntoView()
+    document.getElementById("github-section").scrollIntoView();
   }
 };
 </script>
@@ -96,6 +143,19 @@ export default {
       letter-spacing: 0.5px;
       text-transform: uppercase;
       align-self: flex-start;
+    }
+
+    .card-link {
+      color: #1db954;
+      font-family: 'Space Grotesk', Bricolage;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 28px 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     img {
