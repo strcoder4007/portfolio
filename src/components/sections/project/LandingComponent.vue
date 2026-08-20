@@ -11,7 +11,7 @@
         class="project-container"
       >
         <div class="cvfy-container">
-          <div class="cvfy-card" @click="openModal(resolveImage(project.images[0]))" @mouseenter="scheduleHoverOpen($event, resolveImage(project.images[0]))" @mouseleave="cancelHoverOpen">
+          <div class="cvfy-card" @click="openModal(resolveImage(project.images[0]))">
             <div class="card-header">
               <div class="window-controls">
                 <span class="control red"></span>
@@ -114,7 +114,6 @@ export default {
     const router = useRouter();
     const showModal = ref(false);
     const modalImage = ref('');
-    const hoverTimer = ref(null);
     const goToLink = (url) => {
       if (typeof url === 'boolean') {
         router.push('/blogs');
@@ -161,22 +160,6 @@ export default {
       showModal.value = false;
     };
 
-    const scheduleHoverOpen = (event, image) => {
-      if (event && event.pointerType && event.pointerType !== 'mouse') return;
-      if (window.matchMedia && !window.matchMedia('(hover: hover)').matches) return;
-      if (hoverTimer.value) clearTimeout(hoverTimer.value);
-      hoverTimer.value = setTimeout(() => {
-        modalImage.value = resolveImage(image);
-        showModal.value = true;
-      }, 250);
-    };
-
-    const cancelHoverOpen = () => {
-      if (hoverTimer.value) {
-        clearTimeout(hoverTimer.value);
-        hoverTimer.value = null;
-      }
-    };
     return {
       imageSources,
       goToLink,
@@ -184,12 +167,9 @@ export default {
       modalImage,
       openModal,
       closeModal,
-      resolveImage,
-      scheduleHoverOpen,
-      cancelHoverOpen
+      resolveImage
     };
   },
-
   props: {
     projectList: {
       type: Array,
@@ -270,6 +250,7 @@ export default {
   transform: scale(1.05);
 }
 .tags-section {
+  display: flex;
   flex-wrap: wrap;
   gap: 8px 10px;
   margin-bottom: 12px;
