@@ -281,6 +281,7 @@ export default {
   text-align: left;
 }
 .blogs-section .greetings {
+  padding-top: 20px;
   color: var(--color-text);
   font-family: var(--font-heading);
   font-size: 40px;
