@@ -1,29 +1,33 @@
 <template>
   <div class="project-landing-page">
-    <el-row>
-      <el-col :md="12" :lg="8" :xl="6" v-for="project in projectList" :key="project.id" class="project-container">
+    <el-row :gutter="40">
+      <el-col
+        :xs="24"
+        :sm="12"
+        :md="8"
+        :xl="6"
+        v-for="project in projectList"
+        :key="project.id"
+        class="project-container"
+      >
         <div class="cvfy-container">
-          <div class="cvfy-card">
+          <div class="cvfy-card" @click="openModal(resolveImage(project.images[0]))">
             <div class="card-header">
               <div class="window-controls">
                 <span class="control red"></span>
                 <span class="control yellow"></span>
                 <span class="control green"></span>
               </div>
+              <span class="card-filename mono-meta">{{ project.name }}</span>
             </div>
             <div class="card-body image-container">
-              <div class="overlay" @click="openModal(project.images[0])">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="maximize-icon">
-                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-                 </svg>
+              <img :src="resolveImage(project.images[0])" :alt="project.name" />
+              <div class="overlay">
+                <svg class="maximize-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
               </div>
-              <template v-for="image in project.images" :key="image">
-                <ShimmerImage :src="resolveImage(image)" :alt="project.name" />
-              </template>
-              
             </div>
           </div>
-          <div class="project-name">{{  project.name }}</div>
+          <div class="project-name">{{ project.name }}</div>
           <div class="project-description">
             {{ project.description }}
           </div>
@@ -31,19 +35,32 @@
             <span :key="tag" v-for="tag in filterTags(project.tags)">{{ tag }}</span>
           </div>
           <div class="links-container">
-            <button v-if="project.hasOwnProperty('live')" class="link-pill live" type="button" @click="goToLink(project.live)">
-              Live Web App
-              <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" />
+            <button
+              v-if="project.hasOwnProperty('live')"
+              class="link-pill live"
+              type="button"
+              @click="goToLink(project.live)"
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              Live
             </button>
-
-            <button v-if="project.hasOwnProperty('code')" class="link-pill code" type="button" @click="goToLink(project.code)">
-              Github Code
-              <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" />
+            <button
+              v-if="project.hasOwnProperty('code')"
+              class="link-pill code"
+              type="button"
+              @click="goToLink(project.code)"
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
             </button>
-
-            <button v-if="project.hasOwnProperty('blog') && project.blog" class="link-pill blog" type="button" @click="goToLink(project.blog)">
+            <button
+              v-if="project.hasOwnProperty('blog') && project.blog"
+              class="link-pill blog"
+              type="button"
+              @click="goToLink(project.blog)"
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
               Blog
-              <img src="../../../assets/icons/right-arrow.png" alt="Arrow Right Icon" />
             </button>
           </div>
         </div>
@@ -89,10 +106,9 @@ import qwenEdit from '../../../assets/projects/qwen_edit.png';
 import tinyDeepAgents from '../../../assets/projects/tiny_deep_agents.png';
 
 import { ref } from 'vue';
-import ShimmerImage from '../../ShimmerImage.vue';
 
 export default {
-  name: "ProjectLandingPage",
+  name: 'ProjectLandingPage',
 
   setup() {
     const router = useRouter();
@@ -102,8 +118,10 @@ export default {
     const goToLink = (url) => {
       if (typeof url === 'boolean') {
         router.push('/blogs');
-      } else window.open(url, '_blank');
-    }
+      } else {
+        window.open(url, '_blank');
+      }
+    };
 
     const imageSources = {
       'nfs_self_driving.png': nfsSelfDriving,
@@ -125,7 +143,7 @@ export default {
       'ecommerce.png': ecommerce,
       'qwen_edit.png': qwenEdit,
       'tiny_deep_agents.png': tinyDeepAgents
-    }
+    };
 
     const resolveImage = (imageName) => {
       if (imageSources[imageName]) {
@@ -151,290 +169,242 @@ export default {
       openModal,
       closeModal,
       resolveImage
-    }
+    };
   },
 
   props: {
     projectList: {
       type: Array,
       required: true
-    },
-  },  
+    }
+  },
   data() {
-    return {}
+    return {};
   },
   methods: {
     filterTags(projectTags) {
-      let tabs = ['show_all', 'ml', 'web_dev', 'algo']
-      return projectTags.filter(tag => !tabs.includes(tag))
+      let tabs = ['show_all', 'ml', 'web_dev', 'algo'];
+      return projectTags.filter(tag => !tabs.includes(tag));
     }
-  },
-  components: {
-    ShimmerImage,
-  },
+  }
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .project-landing-page {
-  margin: 0 20px;
-  width: 96%;
+  margin: 0 auto;
+  padding: 0 48px 64px;
+  max-width: 1400px;
+  width: 100%;
 }
-
+.project-container {
+  margin-bottom: 40px;
+}
 .image-container {
-    max-width: 100%;
-    width: 320px;
-    height: 200px;
-    background-color: #111;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  background-color: var(--color-bg-alt);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid var(--color-border);
 }
-
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(38, 44, 53, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
   z-index: 10;
   cursor: pointer;
 }
-
 .image-container:hover .overlay {
   opacity: 1;
 }
-
 .maximize-icon {
-  width: 24px;
-  height: 24px;
-  stroke: #fff;
+  width: 22px;
+  height: 22px;
+  stroke: var(--color-bg);
   transition: transform 0.2s ease;
 }
-
 .overlay:hover .maximize-icon {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
-
 .image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    display: block;
-    background-color: #000;
-    margin: 0 auto;
-    position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: block;
+  background-color: var(--color-bg-alt);
 }
-
 .tags-section {
-  white-space: nowrap;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10px;
-  span {
-    border: 2px solid #fff;
-    margin-right: 10px;
-    margin-bottom: 5px;
-    border-radius: 15px;
-    padding: 5px;
-    font-size: 12px;
-    line-height: 13px;
-  }
+  gap: 6px;
+  margin-bottom: 12px;
+  margin-top: 14px;
 }
-
-
+.tags-section span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+  border: 1px solid var(--color-border);
+  padding: 3px 8px;
+  background: transparent;
+}
 .cvfy-container {
-  max-width: 320px;
+  max-width: 100%;
   width: 100%;
-  margin: 20px auto;
+  margin: 0;
 }
-
 .cvfy-card {
-  background-color: #111;
-  border-radius: 5px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   overflow: hidden;
-  margin-bottom: 40px;
   cursor: pointer;
-  box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-
+.cvfy-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0 var(--color-border);
+}
 .card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px 10px 10px;
-  height: 5px;
+  padding: 10px 14px;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
 }
-
 .window-controls {
   display: flex;
-  gap: 5px;
+  gap: 6px;
 }
-
 .control {
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
+  border: 1px solid var(--color-border);
 }
-
-.control.red { background-color: #666; }
-.control.yellow { background-color: #666; }
-.control.green { background-color: #666; }
-
+.control.red { background-color: #E55C5C; }
+.control.yellow { background-color: #E5C15C; }
+.control.green { background-color: #5CE55C; }
+.card-filename {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-dim);
+  letter-spacing: 0.3px;
+}
 .project-name {
-  font-size: 23px;
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
   text-align: left;
-  font-family: 'Space Grotesk', Bricolage;
-  display: flex;
-  color: #fff;
-  margin-top: -20px;
+  color: var(--color-text);
+  margin-top: 14px;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
-
 .project-description {
-  font-size: 15px;
-  font-family: Bricolage;
-  font-weight: 300;
-  line-height: 19px;
-  letter-spacing: 1px;
-  display: flex;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
   text-align: left;
-  margin: 10px 0;
-  color: #fff;
+  margin: 8px 0 0;
+  color: var(--color-text-dim);
+  display: block;
 }
-
 .links-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 6px;
+  gap: 8px;
+  margin-top: 14px;
   justify-content: flex-start;
-
-  .link-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    min-height: 44px;
-    padding: 6px 14px;
-    background: #0f0f0f;
-    border: 1px solid #2a2a2a;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 600;
-    font-family: 'Space Grotesk', Brandon;
-    letter-spacing: 0.3px;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-
-    img {
-      height: 14px;
-      width: 14px;
-      opacity: 0.85;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-  }
-
-  .link-pill:hover {
-    background-color: rgba(29, 185, 84, 0.12);
-    border-color: #1db954;
-    color: #1db954;
-  }
-
-  .link-pill:hover img {
-    opacity: 1;
-    transform: translateX(2px);
-  }
-
-  .link-pill:focus-visible {
-    outline: 2px solid #1db954;
-    outline-offset: 2px;
-  }
 }
-
-/* Modal Styles */
+.links-container .link-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.links-container .link-pill svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.15s ease;
+}
+.links-container .link-pill:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+  border-color: var(--color-text);
+}
+.links-container .link-pill:hover svg {
+  transform: translateX(2px);
+}
+.links-container .link-pill:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(38, 44, 53, 0.92);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
-
 .modal-content {
   position: relative;
   max-width: 90%;
   max-height: 90%;
 }
-
 .modal-image {
   max-width: 100%;
-  max-height: 90vh;
   object-fit: contain;
-  border-radius: 4px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--color-border);
+  box-shadow: 8px 8px 0 var(--color-border);
 }
-
-.modal-close {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: white;
-  padding: 5px;
-}
-
-.modal-close:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-}
-
-@media (min-width: 1200px) and (max-width: 1400px) {
-  .image-container {
-    width: 280px;
-  }
-  .cvfy-container {
-    max-width: 280px;
-  }
-  .project-name {
-    font-size: 21px;
-  }
-  .project-description {
-    font-size: 13px;
-  }
-  .links-container .link-pill {
-    font-size: 12px;
+  object-fit: contain;
+@media (max-width: 1023px) {
+  .project-container {
+    margin-bottom: 32px;
   }
 }
-
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .project-landing-page {
-    margin: 0;
-    width: 100%;
+    padding: 0 16px 48px;
+  }
+  .project-container {
+    margin-bottom: 28px;
   }
   .image-container {
-    width: 100%;
-    height: auto;
     aspect-ratio: 16 / 10;
-  }
-  .cvfy-container {
-    max-width: 100%;
-    padding: 0 12px;
   }
   .project-name {
     font-size: 18px;
@@ -443,8 +413,12 @@ export default {
     font-size: 13px;
   }
   .tags-section span {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+  .links-container .link-pill {
+    padding: 6px 10px;
     font-size: 11px;
-    padding: 3px 5px;
   }
 }
 </style>

@@ -46,12 +46,12 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    100deg,
-    #1a1a1a 30%,
-    #2a2a2a 50%,
-    #1a1a1a 70%
-  );
+    background: linear-gradient(
+      100deg,
+      var(--color-bg-alt) 30%,
+      var(--color-surface) 50%,
+      var(--color-bg-alt) 70%
+    );
   background-size: 200% 100%;
   animation: shimmer 1.4s infinite linear;
   z-index: 1;
@@ -71,7 +71,7 @@ export default {
   height: 100%;
   object-fit: contain;
   display: block;
-  background-color: #000;
+  background-color: var(--color-bg-alt);
   opacity: 0;
   transition: opacity 0.4s ease;
   position: relative;

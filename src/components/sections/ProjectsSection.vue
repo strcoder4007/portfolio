@@ -4,7 +4,7 @@
       <el-col class="projects-section">
         <div class="greetings">Projects</div>
         <TabsComponent
-          :projectList="projectList"
+          :allProjects="allProjects"
           @tabChange="tabChange">
         </TabsComponent>
 
@@ -314,7 +314,8 @@ export default {
   data() {
     return {
       activeTab: 'show_all',
-      projectList: allProjects
+      projectList: allProjects,
+      allProjects
     };
   },
   methods: {
@@ -334,8 +335,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  background-color: #222222;
-  background-image: var(--bg-texture-dark);
+  background: transparent;
   height: 100%;
   overflow-y: hidden;
 }
@@ -343,7 +343,6 @@ export default {
   overflow-y: scroll;
   height: calc(100vh - 60px);
   background: transparent;
-  backdrop-filter: blur(2px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -351,13 +350,13 @@ export default {
 
   .greetings {
     margin-top: 20px;
-    color: #fff;
-    font-family: Bricolage;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 72px;
-    letter-spacing: -1px;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
   }
 }
 @media (max-width: 768px) {
@@ -374,7 +373,7 @@ export default {
       float: left;
       text-align: left;
       margin-top: 20px;
-      font-size: 30px;
+      font-size: 40px;
       font-weight: 700;
     }
   }

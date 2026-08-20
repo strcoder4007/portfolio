@@ -15,41 +15,12 @@ export default {
 </script>
 
 <style>
+/* ============================================================
+   PrismML Design System — Global Foundation
+   ============================================================ */
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
-:root {
-  /* Light theme — subtle grid pattern */
-  --bg-texture-light: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 19px,
-    rgba(0, 0, 0, 0.025) 19px,
-    rgba(0, 0, 0, 0.025) 20px
-  ),
-  repeating-linear-gradient(
-    90deg,
-    transparent,
-    transparent 19px,
-    rgba(0, 0, 0, 0.025) 19px,
-    rgba(0, 0, 0, 0.025) 20px
-  );
-
-  /* Dark theme — subtle diagonal crosshatch */
-  --bg-texture-dark: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 10px,
-    rgba(255, 255, 255, 0.012) 10px,
-    rgba(255, 255, 255, 0.012) 11px
-  ),
-  repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    rgba(255, 255, 255, 0.012) 10px,
-    rgba(255, 255, 255, 0.012) 11px
-  );
-}
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 
 @font-face {
   font-family: 'Bricolage';
@@ -60,81 +31,136 @@ export default {
   src: url('./assets/fonts/Brandon_reg.otf');
 }
 
-body {
-  margin: 0;
-  background: #111111;
-  background-position: 0 0;
-  background-size: 200% 100%;
-  animation: background-move 10s linear infinite;
-  position: relative;
-  overflow-x: hidden;
-}
-html {
-  scroll-behavior: smooth;
-  height: auto;
-  overflow-x: hidden;
-}
-::selection {
-  color: #111111;
-  background: #1DB954;
+:root {
+  /* Core palette */
+  --color-bg:        #E9E4E0;
+  --color-bg-alt:    #E2DDD8;
+  --color-text:      #262C35;
+  --color-text-dim:  #5A606B;
+  --color-border:    #262C35;
+  --color-accent:    #CFBEBE;
+  --color-accent-dim:#B8A8A8;
+  --color-surface:   #FFFFFF;
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', 'Bricolage', Brandon, sans-serif;
+  --font-body:    'Bricolage', 'Space Grotesk', sans-serif;
+  --font-mono:    'JetBrains Mono', 'Space Grotesk', monospace;
+
+  /* Grid */
+  --grid-color: rgba(38, 44, 53, 0.10);
+  --grid-size: 24px;
+
+  /* Angular CTA clip-path */
+  --clip-arrow: polygon(0 0, 88% 0, 100% 50%, 88% 100%, 0 100%, 12% 50%);
+  --clip-arrow-sm: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%, 15% 50%);
 }
 
-#app {
-  font-family: Bricolage, Avenir, Helvetica, Arial, sans-serif;
+
+/* Override Element Plus theme to match PrismML */
+:root {
+  --el-color-primary: var(--color-text);
+  --el-color-primary-light-3: var(--color-accent);
+  --el-color-primary-light-5: var(--color-accent);
+  --el-color-primary-light-7: var(--color-accent);
+  --el-color-primary-light-8: var(--color-accent);
+  --el-color-primary-light-9: var(--color-accent);
+  --el-bg-color: var(--color-surface);
+  --el-bg-color-overlay: var(--color-surface);
+  --el-text-color-primary: var(--color-text);
+  --el-text-color-regular: var(--color-text-dim);
+  --el-border-color: var(--color-border);
+  --el-border-color-light: var(--color-border);
+  --el-border-radius: 0px;
+}
+/* Visible structural grid on warm paper */
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  background-image:
+    linear-gradient(to right,  var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  background-position: 0 0;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #fff;
-  opacity: 0; /* Start invisible */
-  animation: fade-in 1s ease-in-out forwards;
 }
 
-/* Subtle noise texture overlay — works on both dark and light backgrounds */
-#app::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.035;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  background-size: 200px 200px;
-  mix-blend-mode: soft-light;
-  -webkit-mix-blend-mode: soft-light;
-}
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-body {
-  margin: 0;
-  background: #111111;
-  background-position: 0 0;
-  background-size: 200% 100%;
-  animation: background-move 10s linear infinite;
+/* Angular CTA base class */
+.btn-angular {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   position: relative;
-}
-@keyframes background-move {
-  from { background-position: 0 0; }
-  to { background-position: -200% 0; }
-}
-button:hover {
+  padding: 12px 22px;
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  border: none;
+  clip-path: var(--clip-arrow);
   cursor: pointer;
-  /* transform: scale(1.05); Slightly enlarge on hover */
-  transition: transform 0.2s ease-in-out;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn-angular:hover {
+  background: var(--color-accent);
+  color: var(--color-text);
+}
+.btn-angular:active {
+  transform: translateY(2px);
 }
 
-button:active {
-  transform: translateY(2px); /* Slightly sink on press */
-  transition: transform 0.1s ease-in-out;
+/* Angular ghost CTA */
+.btn-angular-ghost {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-text);
+}
+.btn-angular-ghost:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
 }
 
-input:focus {
-  border-color: #f00; /* Change border color on focus */
-  transition: border-color 0.2s ease-in-out;
+/* Structural border utility */
+.border-structural {
+  border: 1px solid var(--color-border);
 }
 
+/* Mono metadata utility */
+.mono-meta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+}
+
+/* Oversized heading */
+.heading-display {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+/* Remove Element Plus default dark theme interference */
 .el-message__content {
-  font-family: Bricolage;
+  font-family: var(--font-body);
 }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border: 2px solid var(--color-bg);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
 </style>

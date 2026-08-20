@@ -1,16 +1,18 @@
 <template>
-  <div>
-    <el-row class="app-container" id="app-container">
-      <el-col :sm="24" :md="7">
+  <div class="app-container" id="app-container">
+    <div class="layout-grid">
+      <!-- Left rail: intro -->
+      <aside class="rail rail-intro">
         <IntroSection></IntroSection>
-      </el-col>
-      <el-col :sm="24" :md="17">
-        <div class="floating-card">
-          <!-- Dynamically render the section based on the current route -->
+      </aside>
+
+      <!-- Right rail: dynamic section -->
+      <main class="rail rail-content">
+        <section class="content-frame">
           <component :is="currentSection"></component>
-        </div>
-      </el-col>
-    </el-row>
+        </section>
+      </main>
+    </div>
   </div>
 </template>
 
@@ -25,7 +27,6 @@ import AboutSection from "./sections/AboutSection.vue";
 
 const route = useRoute();
 
-// Define a reactive section to watch for changes in the current path
 const sectionsMap = {
   '/': ProjectsSection,
   '/projects': ProjectsSection,
@@ -33,42 +34,55 @@ const sectionsMap = {
   '/github': GithubSection,
   '/about': AboutSection
 };
-const currentSection = computed(() => sectionsMap[route.path] || ProjectsSection);
 
+const currentSection = computed(() => sectionsMap[route.path] || ProjectsSection);
 </script>
 
 <style scoped>
 .app-container {
-  padding-top: 60px;
+  padding-top: 64px;
 }
-h3 {
-  margin: 40px 0 0;
+
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 425px 1fr;
+  min-height: calc(100vh - 64px);
+  background-color: var(--color-bg);
+  background-image:
+    linear-gradient(to right,  var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  background-position: 0 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-.floating-card {
-  height: calc(100vh - 60px);
-  width: 100%;
-  background-color: #ffffff;
-  background-image: var(--bg-texture-light);
+
+.rail-intro {
+  border-right: 1px solid var(--color-border);
+  background-color: var(--color-bg-alt);
+  position: sticky;
+  top: 64px;
+  height: calc(100vh - 64px);
   overflow-y: auto;
 }
-@media (max-width: 768px) {
-  .floating-card {
+
+.rail-content {
+  min-height: calc(100vh - 64px);
+  overflow-y: auto;
+}
+
+.content-frame {
+  min-height: 100%;
+}
+
+@media (max-width: 1023px) {
+  .layout-grid {
+    grid-template-columns: 1fr;
+  }
+  .rail-intro {
+    position: static;
     height: auto;
-    min-height: calc(100vh - 60px);
-    width: 100%;
-    background-color: white;
-    overflow-y: visible;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
   }
 }
 </style>

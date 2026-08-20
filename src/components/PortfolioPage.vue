@@ -1,6 +1,10 @@
 <template>
   <div class="portfolio-page">
-    <div class="greetings">Projects</div>
+    <div class="page-header">
+      <span class="page-eyebrow mono-meta">// projects</span>
+      <h1 class="page-title heading-display">Selected Work</h1>
+      <div class="header-line"></div>
+    </div>
     <LandingComponent></LandingComponent>
   </div>
 </template>
@@ -9,8 +13,6 @@
 import LandingComponent from "./sections/project/LandingComponent.vue"
 export default {
   name: "PortfolioPage",
-  mounted() {
-  },
   components: {
     LandingComponent
   },
@@ -19,28 +21,35 @@ export default {
 
 <style scoped>
 .portfolio-page {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  height: auto;
-  overflow: scroll;
-  background-color: transparent;
+  padding: 48px 56px 64px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-.greetings {
-  margin-top: 100px;
-  color: var(--Black, #261F22);
-  font-family: 'Space Grotesk', Brandon;
-  font-size: 59px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 80px;
-  letter-spacing: -1.77px;
-  letter-spacing: .5px;
-  background: #111111 ;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+
+.page-header {
+  margin-bottom: 48px;
+}
+
+.page-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.page-title {
+  font-size: clamp(48px, 7vw, 96px);
+  color: var(--color-text);
+  margin: 0 0 24px;
+}
+
+.header-line {
+  width: 80px;
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .portfolio-page {
+    padding: 32px 16px 48px;
+  }
 }
 </style>
-  

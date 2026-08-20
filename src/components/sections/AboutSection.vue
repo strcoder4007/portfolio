@@ -171,23 +171,22 @@ export default {
 
 .header {
   display: block;
-  background-color: #111111;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-
-  font-family: 'Space Grotesk', Brandon;
+  font-family: var(--font-heading);
   font-size: 45px;
   font-style: normal;
   font-weight: 700;
   line-height: 62px;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
   margin-bottom: 40px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--color-accent);
 }
 .text {
   display: block;
-  color: #333333;
-  font-family: 'Space Grotesk', Brandon;
+  color: var(--color-text-dim);
+  font-family: var(--font-body);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -199,6 +198,8 @@ export default {
   :deep(h2) {
     margin-top: 80px;
     margin-bottom: 18px;
+    color: var(--color-text);
+    font-family: var(--font-heading);
   }
   :deep(h2:first-of-type) {
     margin-top: 0;
@@ -206,6 +207,8 @@ export default {
   :deep(h3) {
     margin-top: 64px;
     margin-bottom: 14px;
+    color: var(--color-text);
+    font-family: var(--font-heading);
   }
   :deep(h3:first-of-type) {
     margin-top: 0;
@@ -213,15 +216,23 @@ export default {
   :deep(h4) {
     margin-top: 28px;
     margin-bottom: 12px;
+    color: var(--color-text);
+    font-family: var(--font-heading);
   }
   :deep(p) {
     margin: 0 0 12px 0;
+    color: var(--color-text-dim);
+    font-family: var(--font-body);
   }
   :deep(ul) {
     margin: 0 0 16px 0;
+    color: var(--color-text-dim);
+    font-family: var(--font-body);
   }
   :deep(li) {
     margin-bottom: 6px;
+    color: var(--color-text-dim);
+    font-family: var(--font-body);
   }
 }
 

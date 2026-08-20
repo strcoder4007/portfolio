@@ -1,114 +1,136 @@
 <template>
-    <div class="project-tabs-page">
-        <el-row>
-            <div class="tab-card">
-                <button id="show_all" class="tab active" @click="selectTab('show_all')">All</button>
-                <button id="ml" class="tab" @click="selectTab('ml')">AI/ML</button>
-                <button id="web_dev" class="tab" @click="selectTab('web_dev')">Web Apps</button>
-                <button id="algo" class="tab" @click="selectTab('algo')">Algorithms</button>
-            </div>
-        </el-row>
+  <div class="project-tabs-page">
+    <div class="tab-card">
+      <button
+        v-for="tab in tabs"
+        :key="tab.id"
+        :id="tab.id"
+        class="tab"
+        :class="{ 'active': activeTab === tab.id }"
+        @click="selectTab(tab.id)"
+      >
+        <span class="tab-label">{{ tab.label }}</span>
+        <span class="tab-count">{{ tab.count }}</span>
+      </button>
     </div>
+  </div>
 </template>
 
 <script>
+const TAB_IDS = ['show_all', 'ml', 'web_dev', 'algo'];
+
+const TAB_LABELS = {
+  show_all: 'All',
+  ml: 'AI/ML',
+  web_dev: 'Web',
+  algo: 'Algo'
+};
+
 export default {
-    name: "ProjectTabsPage",
-
-    setup() {
-
+  name: "ProjectTabsPage",
+  props: {
+    allProjects: {
+      type: Array,
+      required: true
+    }
+  },
+  emits: ['tabChange'],
+  data() {
+    return {
+      activeTab: 'show_all'
+    };
+  },
+  computed: {
+    tabs() {
+      return TAB_IDS.map(id => ({
+        id,
+        label: TAB_LABELS[id],
+        count: this.getCount(id)
+      }));
+    }
+  },
+  methods: {
+    getCount(id) {
+      if (id === 'show_all') return this.allProjects.length;
+      return this.allProjects.filter(p => p.tags && p.tags.includes(id)).length;
     },
-    data() {
-        return {
-            activeTab: 'show_all'
-        }
+    removeAllActiveClasses() {
+      for (const id of TAB_IDS) {
+        const btn = document.getElementById(id);
+        if (btn) btn.classList.remove('active');
+      }
     },
-    mounted() {
-        
-    },
-    methods: {
-        removeAllActiveClasses() {
-            let tabs = ['show_all', 'ml', 'web_dev', 'algo']
-            for (let i in tabs) {
-                let tab = tabs[i]
-                let btn = document.getElementById(tab)
-                btn.classList.remove('active')
-            }
-        },
-        selectTab(tab) {
-            this.removeAllActiveClasses()
-            this.activeTab = tab
-            var btn = document.getElementById(tab)
-            btn.classList.add('active')
-
-            this.$emit('tabChange', this.activeTab)
-        }
-    },
-    components: {
-
-    },
+    selectTab(tab) {
+      this.activeTab = tab;
+      this.$emit('tabChange', tab);
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
+.project-tabs-page {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 40px;
+}
 
 .tab-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    margin: 20px 0;
-
-    max-width: 500px;
-    width: 90vw;
-    gap: 10px;
-    height: auto;
-    min-height: 60px;
-    padding: 10px;
-    background-color: #111111;
-    border-radius: 5px;
-    box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.3);
-
-    .tab {
-        background-color: #222222;
-        border: none;
-        min-width: 70px;
-        padding: 8px 12px;
-        gap: 10px;
-        color: #ffffff;
-        font-size: 14px;
-        font-family: 'Space Grotesk', Brandon, sans-serif;
-        cursor: pointer;
-        border-radius: 3px;
-    }
-
-    .tab.active {
-        border: 2px solid white;
-    }
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 4px;
 }
+
+.tab {
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+  position: relative;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.tab:hover {
+  color: var(--color-text);
+  background: rgba(38, 44, 53, 0.05);
+}
+
+.tab.active {
+  color: var(--color-bg);
+  background: var(--color-text);
+}
+
+.tab-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  margin-left: 6px;
+  opacity: 0.6;
+}
+
 @media (max-width: 768px) {
-    .tab-card {
-        width: 95vw;
-        max-width: 95vw;
-        gap: 8px;
-        padding: 8px 6px;
-
-        .tab {
-            min-width: 60px;
-            padding: 6px 8px;
-            font-size: 12px;
-        }
-    }
-}
-@media (max-width: 360px) {
-    .tab-card {
-        gap: 4px;
-        .tab {
-            min-width: 50px;
-            padding: 5px 6px;
-            font-size: 11px;
-        }
-    }
+  .tab-card {
+    width: 95vw;
+    justify-content: space-between;
+    padding: 3px;
+  }
+  .tab {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+  .tab-label {
+    display: inline-block;
+  }
+  .tab-count {
+    display: none;
+  }
 }
 </style>
