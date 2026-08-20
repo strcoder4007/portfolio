@@ -201,9 +201,15 @@ export default {
 
 .cta-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
+  flex-wrap: nowrap;
+  gap: 12px;
   margin-bottom: 40px;
+}
+
+@media (max-width: 480px) {
+  .cta-row {
+    flex-wrap: wrap;
+  }
 }
 
 .social-section {

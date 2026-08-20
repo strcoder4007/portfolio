@@ -98,15 +98,15 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
   position: relative;
-  min-height: 60px;
-  padding: 16px 36px;
+  min-height: 44px;
+  padding: 10px 24px;
   background: var(--color-text);
   color: var(--color-bg);
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   border: 1px solid var(--color-text);
@@ -140,13 +140,12 @@ body {
   border-color: var(--color-text);
 }
 
-/* Reduce button size on small viewports */
+/* Compact buttons on small viewports */
 @media (max-width: 768px) {
   .btn-angular {
-    min-height: 48px;
-    padding: 12px 24px;
-    font-size: 13px;
-    gap: 8px;
+    min-height: 40px;
+    padding: 8px 18px;
+    font-size: 12px;
   }
 }
 
