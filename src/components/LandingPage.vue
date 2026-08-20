@@ -46,7 +46,7 @@ const currentSection = computed(() => sectionsMap[route.path] || ProjectsSection
 
 .layout-grid {
   display: grid;
-  grid-template-columns: 425px 1fr;
+  grid-template-columns: 410px 1fr;
   min-height: calc(100vh - 64px);
   background-color: var(--color-bg);
   background-image:
