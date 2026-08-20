@@ -142,8 +142,7 @@ export default {
 }
 
 .role-title {
-  padding-top: 24px;
-  font-family: var(--font-heading);
+  padding-top: 40px;
   font-size: clamp(36px, 4.5vw, 60px);
   font-weight: 700;
   letter-spacing: -0.03em;

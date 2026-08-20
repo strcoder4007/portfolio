@@ -241,12 +241,17 @@ export default {
 .image-container img {
   max-width: 100%;
   max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
   background-color: var(--color-bg-alt);
+  transition: transform 0.35s ease;
+}
+.image-container:hover img {
+  transform: scale(1.05);
 }
 .tags-section {
-  display: flex;
   flex-wrap: wrap;
   gap: 6px;
   margin-bottom: 12px;
