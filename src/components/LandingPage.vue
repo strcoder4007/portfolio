@@ -70,6 +70,8 @@ const currentSection = computed(() => sectionsMap[route.path] || ProjectsSection
   min-height: calc(100vh - 64px);
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: var(--color-bg);
+  background-image: none;
 }
 
 .content-frame {
