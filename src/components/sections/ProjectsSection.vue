@@ -44,7 +44,7 @@ const allProjects = [
         },
         {
           id: "a2c9e1d4-6b3f-45e2-9f7a-0c8b9d3e4f56",
-          name: "S2S Lipsync Unreal Avatar Backend",
+          name: "Speech to Speech Avatar Agent",
           images: ["https://github.com/strcoder4007/S2S-Lipsync-UnrealAvatar-Backend/blob/main/images/2.gif?raw=true"],
           tags: ["2025", "ml", "Speech", "TTS", "STT", "Unreal Engine", "Realtime"],
           code: "https://github.com/strcoder4007/S2S-Lipsync-UnrealAvatar-Backend",
