@@ -158,7 +158,7 @@ export default {
 .contact-link {
   font-family: var(--font-mono);
   font-size: 14px;
-  color: var(--color-text-dim);
+  color: var(--color-text);
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
@@ -172,7 +172,7 @@ export default {
 }
 
 .copy-hint {
-  color: var(--color-accent);
+  color: var(--color-text-dim);
   font-size: 11px;
   opacity: 0;
   transition: opacity 0.15s ease;
