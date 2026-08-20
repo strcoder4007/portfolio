@@ -72,7 +72,7 @@ export default {
 .project-tabs-page {
   display: flex;
   justify-content: center;
-  margin: 0 0 40px;
+  margin: 28px 0 40px;
 }
 
 .tab-card {

@@ -47,7 +47,7 @@ const currentSection = computed(() => sectionsMap[route.path] || ProjectsSection
 .layout-grid {
   display: grid;
   grid-template-columns: 410px 1fr;
-  min-height: calc(100vh - 64px);
+  height: calc(100vh - 64px);
   background-color: var(--color-bg);
   background-image:
     linear-gradient(to right,  var(--grid-color) 1px, transparent 1px),
@@ -67,7 +67,7 @@ const currentSection = computed(() => sectionsMap[route.path] || ProjectsSection
 }
 
 .rail-content {
-  min-height: calc(100vh - 64px);
+  height: calc(100vh - 64px);
   overflow-x: hidden;
   overflow-y: auto;
   background-color: var(--color-bg);
@@ -81,12 +81,19 @@ const currentSection = computed(() => sectionsMap[route.path] || ProjectsSection
 @media (max-width: 1023px) {
   .layout-grid {
     grid-template-columns: 1fr;
+    height: auto;
+    min-height: calc(100vh - 64px);
   }
   .rail-intro {
     position: static;
     height: auto;
+    max-height: none;
     border-right: none;
     border-bottom: 1px solid var(--color-border);
+  }
+  .rail-content {
+    height: auto;
+    min-height: calc(100vh - 64px);
   }
 }
 </style>

@@ -6,12 +6,20 @@
         <span class="brand-text">SHUBHAM_SINGH</span>
       </div>
 
+      <button
+        class="menu-toggle"
+        :class="{ 'is-open': isMenuOpen }"
+        type="button"
+        @click="toggleMenu"
+        aria-label="Toggle menu"
+        :aria-expanded="isMenuOpen"
+      >
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
       <nav class="navbar-menu" :class="{ 'is-open': isMenuOpen }">
-        <button class="menu-toggle" @click="toggleMenu" aria-label="Toggle menu">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
         <ul class="menu-items">
           <li class="menu-item"
               :class="{ 'active': ['home', 'projects'].includes(activeIndex) }"
@@ -99,21 +107,12 @@ export default {
   z-index: 100;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  overflow-x: hidden;
+  overflow: visible;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -202,10 +201,15 @@ export default {
   display: none;
   background: none;
   border: 1px solid var(--color-border);
-  padding: 8px 10px;
+  padding: 0;
   cursor: pointer;
   flex-direction: column;
   gap: 4px;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  width: 40px;
+  height: 36px;
 }
 
 .menu-toggle span.icon-bar {
@@ -213,7 +217,8 @@ export default {
   width: 18px;
   height: 2px;
   background-color: var(--color-text);
-  transition: 0.2s;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transform-origin: center;
 }
 
 @media (max-width: 1100px) {
@@ -233,6 +238,9 @@ export default {
   .menu-toggle {
     display: none;
   }
+  .navbar-menu {
+    display: flex;
+  }
 }
 
 /* Mobile */
@@ -246,6 +254,16 @@ export default {
     z-index: 101;
   }
 
+  .menu-toggle.is-open span.icon-bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  .menu-toggle.is-open span.icon-bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.is-open span.icon-bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
   .navbar-menu {
     display: none;
     position: fixed;
@@ -256,6 +274,8 @@ export default {
     background-color: var(--color-bg);
     border-bottom: 1px solid var(--color-border);
     padding: 0;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
   }
 
   .navbar-menu.is-open {

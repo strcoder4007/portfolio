@@ -162,7 +162,7 @@ export default {
 .about-section {
   overflow-x: hidden;
   overflow-y: auto;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -246,14 +246,14 @@ export default {
 
 @media (max-width: 768px) {
   .container {
-    padding-top: 60px;
+    padding-top: 64px;
     overflow-x: hidden;
     overflow-y: visible;
   }
   .about-section {
     overflow-y: auto;
     height: auto;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 64px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

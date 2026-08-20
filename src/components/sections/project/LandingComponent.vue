@@ -68,15 +68,52 @@
     </el-row>
 
     <Teleport to="body">
-      <div v-if="showModal" class="modal-overlay" @click="closeModal">
+      <div
+        v-if="showModal"
+        class="modal-overlay"
+        role="dialog"
+        aria-modal="true"
+        :aria-label="modalAlt || 'Project preview'"
+        @click.self="closeModal"
+      >
+        <button
+          class="modal-close"
+          type="button"
+          aria-label="Close preview"
+          @click="closeModal"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
         <div class="modal-content" @click.stop>
-          <img :src="modalImage" class="modal-image" />
-          <button class="modal-close" @click="closeModal">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
+          <img
+            v-if="!isVideo"
+            :src="modalImage"
+            :alt="modalAlt"
+            class="modal-media"
+          />
+          <video
+            v-else
+            :src="modalImage"
+            class="modal-media"
+            controls
+            autoplay
+            loop
+            playsinline
+          ></video>
         </div>
       </div>
     </Teleport>
@@ -105,7 +142,7 @@ import ecommerce from '../../../assets/projects/ecommerce.png';
 import qwenEdit from '../../../assets/projects/qwen_edit.png';
 import tinyDeepAgents from '../../../assets/projects/tiny_deep_agents.png';
 
-import { ref } from 'vue';
+import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue';
 
 export default {
   name: 'ProjectLandingPage',
@@ -114,6 +151,8 @@ export default {
     const router = useRouter();
     const showModal = ref(false);
     const modalImage = ref('');
+    const modalAlt = ref('');
+
     const goToLink = (url) => {
       if (typeof url === 'boolean') {
         router.push('/blogs');
@@ -151,20 +190,50 @@ export default {
       return imageName;
     };
 
-    const openModal = (image) => {
+    const isVideo = computed(() => {
+      const src = modalImage.value;
+      if (!src) return false;
+      const cleaned = String(src).split('?')[0].split('#')[0].toLowerCase();
+      return /\.(mp4|webm|ogg|mov|m4v)(\s|$)/.test(cleaned);
+    });
+
+    const openModal = (image, alt) => {
       modalImage.value = resolveImage(image);
+      modalAlt.value = alt || '';
       showModal.value = true;
     };
 
     const closeModal = () => {
       showModal.value = false;
+      modalImage.value = '';
+      modalAlt.value = '';
     };
+
+    const onKeydown = (e) => {
+      if (e.key === 'Escape' && showModal.value) {
+        closeModal();
+      }
+    };
+
+    onMounted(() => {
+      window.addEventListener('keydown', onKeydown);
+    });
+    onBeforeUnmount(() => {
+      window.removeEventListener('keydown', onKeydown);
+      document.body.style.overflow = '';
+    });
+
+    watch(showModal, (open) => {
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
 
     return {
       imageSources,
       goToLink,
       showModal,
       modalImage,
+      modalAlt,
+      isVideo,
       openModal,
       closeModal,
       resolveImage
@@ -373,28 +442,117 @@ export default {
 }
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(38, 44, 53, 0.92);
+  background-color: rgba(38, 44, 53, 0.94);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  padding: 72px 20px 20px;
+  animation: modal-fade-in 0.18s ease-out;
+  overflow: auto;
+}
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 .modal-content {
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
-}
-.modal-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 100%;
+  max-height: 100%;
+}
+.modal-media {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 92px);
+  width: auto;
+  height: auto;
   object-fit: contain;
   border: 1px solid var(--color-border);
   box-shadow: 8px 8px 0 var(--color-border);
+  background-color: var(--color-surface);
 }
-  object-fit: contain;
+video.modal-media {
+  width: auto;
+  max-width: min(1200px, 100%);
+}
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #1a1f26;
+  color: #ffffff;
+  border: 1px solid #1a1f26;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.modal-close:hover {
+  background: #000000;
+  transform: scale(1.06);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+.modal-close:active {
+  transform: scale(0.96);
+}
+.modal-close:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+.modal-close svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+@media (max-width: 767px) {
+  .modal-overlay {
+    padding: 64px 12px 12px;
+  }
+  .modal-media {
+    max-height: calc(100vh - 76px);
+  }
+  .modal-close {
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+  }
+  .modal-close svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (max-width: 380px) {
+  .modal-close {
+    top: 8px;
+    right: 8px;
+    width: 34px;
+    height: 34px;
+  }
+  .modal-close svg {
+    width: 16px;
+    height: 16px;
+  }
+  .modal-overlay {
+    padding: 56px 8px 8px;
+  }
+  .modal-media {
+    max-height: calc(100vh - 64px);
+  }
+}
 @media (max-width: 1023px) {
   .project-container {
     margin-bottom: 32px;

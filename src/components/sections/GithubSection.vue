@@ -96,8 +96,8 @@ export default {
   height: 100%;
 }
 .github-section {
-  overflow-y: visible;
-  min-height: calc(100vh - 64px);
+  overflow-y: auto;
+  height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

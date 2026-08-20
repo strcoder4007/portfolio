@@ -341,8 +341,7 @@ export default {
 }
 .projects-section {
   overflow-x: hidden;
-  overflow-y: scroll;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 64px);
   background: transparent;
   display: flex;
   flex-direction: column;
@@ -362,13 +361,13 @@ export default {
 }
 @media (max-width: 768px) {
   .container {
-    padding-top: 60px;
+    padding-top: 64px;
     overflow-x: hidden;
     overflow-y: visible;
   }
   .projects-section {
     height: auto;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 64px);
     width: 100%;
     overflow-x: hidden;
     overflow-y: visible;
