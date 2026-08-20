@@ -108,7 +108,6 @@ body {
   font-size: 12px;
   text-transform: uppercase;
   border: 1px solid var(--color-text);
-  clip-path: var(--clip-arrow);
   cursor: pointer;
   transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
