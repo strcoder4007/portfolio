@@ -99,15 +99,13 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  position: relative;
-  min-height: 44px;
-  padding: 10px 24px;
+  min-height: 38px;
+  padding: 8px 20px;
   background: var(--color-text);
   color: var(--color-bg);
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.5px;
+  font-size: 12px;
   text-transform: uppercase;
   border: 1px solid var(--color-text);
   clip-path: var(--clip-arrow);

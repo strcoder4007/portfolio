@@ -54,7 +54,6 @@
           <span class="source-code">
             Built with Vue 3 —
             <a href="https://github.com/strcoder4007/portfolio" target="_blank">Code</a>
-            © 2026 Shubham Singh. All rights reserved.
           </span>
         </div>
       </div>
@@ -142,8 +141,7 @@ export default {
 }
 
 .role-title {
-  padding-top: 40px;
-  font-size: clamp(36px, 4.5vw, 60px);
+  padding-top: 30px;
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 0.9;
@@ -232,8 +230,8 @@ export default {
 }
 
 .social-icon {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
 }
 
@@ -250,7 +248,7 @@ export default {
 }
 
 .source-code a {
-  color: var(--color-accent);
+  color: var(--color-text);
   text-decoration: none;
 }
 
