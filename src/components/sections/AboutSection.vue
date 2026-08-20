@@ -156,9 +156,11 @@ export default {
 <style lang="scss" scoped>
 .container {
   height: 100%;
+  overflow-x: hidden;
   overflow-y: hidden;
 }
 .about-section {
+  overflow-x: hidden;
   overflow-y: auto;
   height: calc(100vh - 60px);
   display: flex;
@@ -245,6 +247,7 @@ export default {
 @media (max-width: 768px) {
   .container {
     padding-top: 60px;
+    overflow-x: hidden;
     overflow-y: visible;
   }
   .about-section {

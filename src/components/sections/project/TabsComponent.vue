@@ -118,7 +118,7 @@ export default {
 
 @media (max-width: 768px) {
   .tab-card {
-    width: 95vw;
+    max-width: 100%;
     justify-content: space-between;
     padding: 3px;
   }

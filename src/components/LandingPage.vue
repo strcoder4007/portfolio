@@ -62,11 +62,13 @@ const currentSection = computed(() => sectionsMap[route.path] || ProjectsSection
   position: sticky;
   top: 64px;
   height: calc(100vh - 64px);
+  overflow-x: hidden;
   overflow-y: auto;
 }
 
 .rail-content {
   min-height: calc(100vh - 64px);
+  overflow-x: hidden;
   overflow-y: auto;
 }
 

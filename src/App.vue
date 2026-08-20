@@ -74,6 +74,12 @@ export default {
   --el-border-radius: 0px;
 }
 /* Visible structural grid on warm paper */
+html, body {
+  overflow-x: hidden;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   background-color: var(--color-bg);
@@ -89,7 +95,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Angular CTA base class */
 .btn-angular {
   display: inline-flex;
   align-items: center;

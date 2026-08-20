@@ -337,9 +337,10 @@ export default {
 .container {
   background: transparent;
   height: 100%;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .projects-section {
+  overflow-x: hidden;
   overflow-y: scroll;
   height: calc(100vh - 60px);
   background: transparent;
@@ -362,12 +363,14 @@ export default {
 @media (max-width: 768px) {
   .container {
     padding-top: 60px;
+    overflow-x: hidden;
     overflow-y: visible;
   }
   .projects-section {
     height: auto;
     min-height: calc(100vh - 60px);
     width: 100%;
+    overflow-x: hidden;
     overflow-y: visible;
     .greetings {
       float: left;

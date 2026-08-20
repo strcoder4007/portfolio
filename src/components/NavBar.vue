@@ -103,6 +103,17 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -112,6 +123,9 @@ export default {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  min-width: 0;
+  box-sizing: border-box;
+  gap: 16px;
 }
 
 .brand {
@@ -122,9 +136,11 @@ export default {
   font-family: var(--font-mono);
   font-size: 15px;
   font-weight: 500;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--color-text);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .brand-mark {
@@ -136,12 +152,13 @@ export default {
 .navbar-menu {
   display: flex;
   flex-grow: 1;
+  min-width: 0;
   justify-content: flex-end;
 }
 
 .menu-items {
   display: flex;
-  gap: 36px;
+  gap: 28px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -150,7 +167,7 @@ export default {
 .menu-item {
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 0.3px;
   text-transform: uppercase;
   color: var(--color-text-dim);
@@ -159,9 +176,10 @@ export default {
   border: none;
   padding: 0;
   position: relative;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: color 0.15s ease;
 }
-
 .menu-item:hover {
   color: var(--color-text);
 }
@@ -196,6 +214,18 @@ export default {
   height: 2px;
   background-color: var(--color-text);
   transition: 0.2s;
+}
+
+@media (max-width: 1100px) {
+  .navbar {
+    padding: 0 1.25rem;
+  }
+  .menu-items {
+    gap: 18px;
+  }
+  .menu-item {
+    font-size: 13px;
+  }
 }
 
 /* Desktop: hide toggle */
