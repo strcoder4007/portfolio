@@ -50,10 +50,9 @@ export default {
   /* Grid */
   --grid-color: rgba(38, 44, 53, 0.10);
   --grid-size: 24px;
-
-  /* Angular CTA clip-path */
-  --clip-arrow: polygon(0 0, 88% 0, 100% 50%, 88% 100%, 0 100%, 12% 50%);
-  --clip-arrow-sm: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%, 15% 50%);
+  /* PrismML angular CTA clip-path — diagonal right edge */
+  --clip-arrow: polygon(0 0, 100% 0, 92% 100%, 0 100%);
+  --clip-arrow-sm: polygon(0 0, 100% 0, 88% 100%, 0 100%);
 }
 
 
@@ -94,42 +93,61 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-
+/* PrismML CTA — sharp, technical, neo-brutalist */
 .btn-angular {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 12px;
   position: relative;
-  padding: 12px 22px;
+  min-height: 60px;
+  padding: 16px 36px;
   background: var(--color-text);
   color: var(--color-bg);
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.4px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  border: none;
+  border: 1px solid var(--color-text);
   clip-path: var(--clip-arrow);
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
 .btn-angular:hover {
   background: var(--color-accent);
   color: var(--color-text);
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
 }
 .btn-angular:active {
-  transform: translateY(2px);
+  transform: translateY(0);
+}
+.btn-angular:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
-/* Angular ghost CTA */
+/* PrismML ghost CTA */
 .btn-angular-ghost {
   background: transparent;
   color: var(--color-text);
-  border: 1px solid var(--color-text);
+  border-color: var(--color-text);
 }
 .btn-angular-ghost:hover {
   background: var(--color-text);
   color: var(--color-bg);
+  border-color: var(--color-text);
+}
+
+/* Reduce button size on small viewports */
+@media (max-width: 768px) {
+  .btn-angular {
+    min-height: 48px;
+    padding: 12px 24px;
+    font-size: 13px;
+    gap: 8px;
+  }
 }
 
 /* Structural border utility */
